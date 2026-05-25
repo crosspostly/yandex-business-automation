@@ -1,0 +1,24 @@
+{
+  "name": "yandex-business-automation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Automation for Yandex Business cards",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node scripts/run.ts",
+    "auth": "ts-node scripts/auth.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^25.9.1",
+    "dotenv": "^17.4.2",
+    "playwright": "^1.60.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
