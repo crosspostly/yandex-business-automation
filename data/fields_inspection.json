@@ -1,0 +1,448 @@
+[
+  {
+    "label": "Режим работы",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "publish",
+    "className": ""
+  },
+  {
+    "label": "Время работы",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "Введите в формате «Пн-Пт 9:00-18:00»",
+    "value": "круглосуточно",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Время работы",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "Введите в формате «Пн-Пт 9:00-18:00»",
+    "value": "круглосуточно",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Праздники и нерабочие дни"
+  },
+  {
+    "label": "Сайт и социальные сети",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "nanobloger",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "ВКонтакте",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "nanobloger",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "ВКонтакте",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "nanobloger",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Телефоны",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "+7 (977) 330-77-20",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Телефон",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "+7 (977) 330-77-20",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Телефон",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "+7 (977) 330-77-20",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Добавочный",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "1",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Добавочный",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "1",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Описание",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": " (updated by automation 2026-05-25T17:51:17.533Z)",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Описание",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": " (updated by automation 2026-05-25T17:51:17.533Z)",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Электронная почта",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Электронная почта",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Электронная почта",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Название на разных языках",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "Клубика",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Обычное название",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "Клубика",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Обычное название",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "Клубика",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Короткое название0/25",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Короткое название",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Расположение и входы",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "Начните вводить адрес, а затем выберите из списка",
+    "value": "Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2",
+    "className": "Textinput-Control"
+  },
+  {
+    "label": "Комментарий к адресу: Этаж, номер офиса, и т.п.",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Комментарий к адресу: Этаж, номер офиса, и т.п.",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Рубрика",
+    "tagName": "INPUT",
+    "type": "search",
+    "placeholder": "",
+    "value": "Маркетинговые услуги",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Основная рубрика",
+    "tagName": "INPUT",
+    "type": "search",
+    "placeholder": "",
+    "value": "Маркетинговые услуги",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Основная рубрика",
+    "tagName": "INPUT",
+    "type": "search",
+    "placeholder": "",
+    "value": "Маркетинговые услуги",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Вторичные рубрики (не более 2)0/2",
+    "tagName": "INPUT",
+    "type": "search",
+    "placeholder": "",
+    "value": "Маркетинговые услуги",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "",
+    "tagName": "INPUT",
+    "type": "search",
+    "placeholder": " ",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Особенности и реквизиты"
+  },
+  {
+    "label": "Дата",
+    "tagName": "INPUT",
+    "type": "tel",
+    "placeholder": "00.00.0000",
+    "value": "26.05.2026",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Дата",
+    "tagName": "INPUT",
+    "type": "tel",
+    "placeholder": "00.00.0000",
+    "value": "26.05.2026",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Открыто с",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Открыто с",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Открыто до",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Открыто до",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "",
+    "tagName": "INPUT",
+    "type": "tel",
+    "placeholder": "00.00.0000",
+    "value": "26.05.2026",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Выходной",
+    "tagName": "INPUT",
+    "type": "tel",
+    "placeholder": "00.00.0000",
+    "value": "26.05.2026",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Перерыв с",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Перерыв с",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Перерыв до",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Перерыв до",
+    "tagName": "INPUT",
+    "type": "text",
+    "placeholder": "",
+    "value": "",
+    "className": "ya-business-input__control ym-record-keys"
+  },
+  {
+    "label": "Базовые",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "RUB",
+    "className": ""
+  },
+  {
+    "label": "разрешено со всеми животными",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "RUB",
+    "className": ""
+  },
+  {
+    "label": "разрешено только с кошками",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "RUB",
+    "className": ""
+  },
+  {
+    "label": "разрешено с кошками и собаками",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "RUB",
+    "className": ""
+  },
+  {
+    "label": "разрешено только с собаками",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "RUB",
+    "className": ""
+  },
+  {
+    "label": "разрешено с собаками до 35 см.",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "RUB",
+    "className": ""
+  },
+  {
+    "label": "запрещено с животными",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "RUB",
+    "className": ""
+  },
+  {
+    "label": "Маркетинговые услуги",
+    "tagName": "INPUT",
+    "type": "hidden",
+    "placeholder": "",
+    "value": "",
+    "className": ""
+  },
+  {
+    "label": "Доступность",
+    "tagName": "INPUT",
+    "type": "radio",
+    "placeholder": "",
+    "value": "3501618483",
+    "className": "ya-business-radio__control"
+  },
+  {
+    "label": "недоступно",
+    "tagName": "INPUT",
+    "type": "radio",
+    "placeholder": "",
+    "value": "3501618483",
+    "className": "ya-business-radio__control"
+  },
+  {
+    "label": "доступно",
+    "tagName": "INPUT",
+    "type": "radio",
+    "placeholder": "",
+    "value": "3501618483",
+    "className": "ya-business-radio__control"
+  },
+  {
+    "label": "недоступно",
+    "tagName": "INPUT",
+    "type": "radio",
+    "placeholder": "",
+    "value": "3501618483",
+    "className": "ya-business-radio__control"
+  },
+  {
+    "label": "частично доступно",
+    "tagName": "INPUT",
+    "type": "radio",
+    "placeholder": "",
+    "value": "3501618483",
+    "className": "ya-business-radio__control"
+  },
+  {
+    "label": "доступно",
+    "tagName": "INPUT",
+    "type": "radio",
+    "placeholder": "",
+    "value": "3501618483",
+    "className": "ya-business-radio__control"
+  }
+]

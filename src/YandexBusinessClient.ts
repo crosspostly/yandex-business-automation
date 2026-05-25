@@ -8,60 +8,41 @@ chromium.use(stealth());
 
 export interface OrganizationData {
   name?: string;
-  category?: string;
-  phones?: string[];
-  website?: string;
   description?: string;
-  address?: string;
-  hours?: string;
+  website?: string;
+  phones?: string[];
   socials?: {
     vk?: string;
     telegram?: string;
-    instagram?: string;
   };
 }
 
 export class YandexBusinessClient {
   private orgId: string;
-  private storageStatePath: string;
-  private browser?: Browser;
-  private context?: BrowserContext;
+  private browser: Browser | null = null;
   private dryRun: boolean;
 
-  constructor(
-    orgId: string,
-    storageStatePath: string = path.resolve(process.cwd(), 'cookies/yandex.json'),
-    dryRun: boolean = false
-  ) {
+  constructor(orgId: string, dryRun: boolean = false) {
     this.orgId = orgId;
-    this.storageStatePath = storageStatePath;
     this.dryRun = dryRun;
   }
 
   private async getPage(): Promise<Page> {
-    if (!this.browser) {
-      this.browser = await chromium.launch({
-        headless: true,
-        args: [
-          '--disable-http2',
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-blink-features=AutomationControlled',
-        ],
-      });
-      this.context = await this.browser.newContext({
-        storageState: fs.existsSync(this.storageStatePath)
-          ? this.storageStatePath
-          : undefined,
-        viewport: { width: 1280, height: 900 },
-        userAgent:
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        locale: 'ru-RU',
-        timezoneId: 'Europe/Moscow',
-      });
+    const storageStatePath = path.resolve(process.cwd(), 'cookies/yandex.json');
+    if (!fs.existsSync(storageStatePath)) {
+      throw new Error(`Session file not found at ${storageStatePath}. Please run auth script first.`);
     }
-    const page = await this.context!.newPage();
-    page.setDefaultTimeout(60000);
+
+    if (!this.browser) {
+      this.browser = await chromium.launch({ headless: true });
+    }
+
+    const context = await this.browser.newContext({
+      storageState: storageStatePath,
+      viewport: { width: 1440, height: 900 }
+    });
+
+    const page = await context.newPage();
     return page;
   }
 
@@ -69,286 +50,199 @@ export class YandexBusinessClient {
     if (this.browser) await this.browser.close();
   }
 
-  /**
-   * Safely navigate to a Yandex SPA page.
-   * Uses 'load' instead of 'commit' or 'networkidle' to avoid hangs.
-   */
+  private async dismissPopups(page: Page): Promise<void> {
+    await page.evaluate(() => {
+      const selectors = [
+        '.ya-business-ui-popup__screen-overlay',
+        '[data-state="popup-visible"]',
+        '.NotificationPopup',
+        '.CrossPlatformModal',
+        '.Modal-Wrapper',
+        '.sc-sidebar-ya-business-ui-popup',
+        '.sc-sidebar-ya-business-ui-modal',
+        '.Paranja',
+      ];
+      for (const sel of selectors) {
+        document.querySelectorAll(sel).forEach(el => {
+          (el as HTMLElement).style.display = 'none';
+          (el as HTMLElement).style.pointerEvents = 'none';
+        });
+      }
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    });
+  }
+
   private async safeGoto(page: Page, url: string): Promise<void> {
     console.log(`  → Navigating to ${url}`);
     try {
-      await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      await page.waitForTimeout(5000);
+      await this.dismissPopups(page);
     } catch (e: any) {
-      // If 'load' times out (SPA doesn't fire load), try domcontentloaded
-      if (e?.name === 'TimeoutError') {
-        console.log('  ⚠ load timed out, retrying with domcontentloaded...');
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      } else {
-        throw e;
-      }
+      console.log(`  ⚠ Navigation warning: ${e.message}`);
     }
-    // Wait extra for React/Vue hydration
-    await page.waitForTimeout(3000);
   }
 
-  /**
-   * Handle auth redirect and captcha detection
-   */
   private async handleAuthAndCaptcha(page: Page): Promise<void> {
     const url = page.url();
-
     if (url.includes('passport.yandex.ru')) {
-      console.log('⚠ Redirected to login page — cookies may be expired');
-      throw new Error('Authentication failed: redirected to passport.yandex.ru. Please re-export cookies.');
+      throw new Error('Authentication failed: cookies may be expired');
     }
-
-    // Check for captcha
-    const captchaVisible =
-      (await page.locator('.CheckboxCaptcha, .smartcaptcha-body, [class*="captcha"]').first().isVisible().catch(() => false));
-
+    const captchaVisible = await page.locator('.CheckboxCaptcha, .smartcaptcha-body, [class*="captcha"]').first().isVisible().catch(() => false);
     if (captchaVisible || (await page.title()).includes('робот')) {
-      console.log('🔒 CAPTCHA DETECTED — cannot proceed automatically');
-      throw new Error('Captcha encountered. Please open the page manually and solve it, then re-export cookies.');
+      throw new Error('Captcha encountered');
     }
   }
 
-  /**
-   * Wait for the edit form to appear. Tries multiple selectors.
-   */
   private async waitForEditForm(page: Page): Promise<void> {
-    const selectors = [
-      'input[name="name"]',
-      'input[placeholder*="назван"]',
-      'input[placeholder*="имя"]',
-      '.CompanyEditForm',
-      '[class*="EditForm"]',
-      '[class*="edit-form"]',
-      'form input',
-      'main input',
-    ];
-
+    const selectors = ['input', 'button:has-text("Сохранить")', '[class*="Form"]'];
     for (const sel of selectors) {
       try {
-        await page.waitForSelector(sel, { timeout: 10000 });
-        console.log(`  ✓ Edit form found via: ${sel}`);
-        return;
-      } catch {
-        // try next
-      }
+        if (await page.locator(sel).first().isVisible({ timeout: 10000 })) return;
+      } catch { }
     }
-
-    // Last resort: take screenshot and throw with context
-    await page.screenshot({ path: `data/form_not_found_${Date.now()}.png`, fullPage: true });
-    throw new Error('Edit form not found. Check data/form_not_found_*.png screenshot.');
+    throw new Error('Edit form not found');
   }
 
-  /**
-   * Fill a field safely: find it, clear it, type the value.
-   * Returns true if field was filled.
-   */
-  private async fillField(page: Page, selectors: string[], value: string, label: string): Promise<boolean> {
-    for (const sel of selectors) {
-      try {
-        const locator = page.locator(sel).first();
-        if (await locator.isVisible({ timeout: 3000 })) {
-          await locator.click({ force: true });
-          await locator.selectAll?.();
+  private async autoScroll(page: Page): Promise<void> {
+    await page.evaluate(async () => {
+      await new Promise<void>((resolve) => {
+        let totalHeight = 0;
+        const distance = 150;
+        const timer = setInterval(() => {
+          const scrollHeight = document.body.scrollHeight;
+          window.scrollBy(0, distance);
+          totalHeight += distance;
+          if (totalHeight >= scrollHeight) {
+            clearInterval(timer);
+            window.scrollTo(0, 0);
+            resolve();
+          }
+        }, 100);
+      });
+    });
+    await page.waitForTimeout(2000);
+  }
+
+  private async fillFieldByLabel(page: Page, labelText: string, value: string): Promise<boolean> {
+    console.log(`  📝 Filling "${labelText}"...`);
+    try {
+      const isPhoneField = labelText.toLowerCase().includes('телефон') || labelText.toLowerCase().includes('добавочный');
+      let locator = page.locator(`label:has-text("${labelText}"), div:has-text("${labelText}")`);
+      
+      if (labelText === 'Описание' && !isPhoneField) {
+          locator = locator.filter({ hasNot: page.locator('.PhoneControl') });
+      }
+
+      const label = locator.last();
+      let field = label.locator('input, textarea, [contenteditable="true"]').first();
+      
+      if (!(await field.isVisible({ timeout: 2000 }))) {
+          field = page.locator(`label:has-text("${labelText}") + div input, label:has-text("${labelText}") + div textarea, label:has-text("${labelText}") + span input`).first();
+      }
+
+      if (await field.isVisible({ timeout: 5000 })) {
+          await field.scrollIntoViewIfNeeded();
+          await field.click({ force: true });
           await page.keyboard.press('Control+A');
           await page.keyboard.press('Delete');
-          await locator.fill(value);
-          await page.keyboard.press('Tab'); // trigger blur/validation
-          console.log(`  ✓ ${label} filled via ${sel}`);
+          await field.evaluate(el => {
+              if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) el.value = '';
+              else el.textContent = '';
+          });
+          await field.type(value, { delay: 20 });
+          await field.evaluate((el) => {
+              const eventOpts = { bubbles: true, cancelable: true };
+              el.dispatchEvent(new Event('input', eventOpts));
+              el.dispatchEvent(new Event('change', eventOpts));
+              el.dispatchEvent(new Event('blur', eventOpts));
+          });
+          await page.keyboard.press('Tab');
+          console.log(`    ✓ Success`);
           return true;
-        }
-      } catch {
-        // try next selector
       }
+    } catch (e) {
+      console.log(`    ✗ Failed: ${e}`);
     }
-    console.log(`  ✗ ${label} — field not found (tried ${selectors.length} selectors)`);
     return false;
+  }
+
+  async getBasicInfo(): Promise<OrganizationData> {
+    const page = await this.getPage();
+    try {
+      console.log(`\n🔍 Reading organization ${this.orgId}...`);
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/`);
+      await this.handleAuthAndCaptcha(page);
+      
+      const data = await page.evaluate(`(() => {
+          const state = window.__PRELOAD_DATA || window.__INITIAL_STATE__;
+          if (!state) return null;
+          function findC(obj, d = 0) {
+              if (d > 15 || !obj || typeof obj !== 'object') return null;
+              if (obj.names && obj.displayName && obj.phones) return obj;
+              for (const k in obj) {
+                  try {
+                      const f = findC(obj[k], d + 1);
+                      if (f) return f;
+                  } catch(e) {}
+              }
+              return null;
+          }
+          const c = findC(state);
+          if (!c) return null;
+          return {
+              name: c.names && c.names[0] && c.names[0].value ? c.names[0].value.value : c.displayName,
+              description: c.description || "",
+              website: (c.urls || []).find(u => u.type === 'main' || !u.type)?.value || (c.urls && c.urls[0] ? c.urls[0].value : ""),
+              phones: (c.phones || []).map(p => p.formatted || p.number)
+          };
+      })()`);
+
+      if (data) {
+          console.log('  Current data (from state):', JSON.stringify(data, null, 2));
+          return data;
+      }
+      return {};
+    } finally {
+      await page.close();
+    }
   }
 
   async updateBasicInfo(data: OrganizationData): Promise<void> {
     const page = await this.getPage();
-
     try {
       console.log(`\n🚀 Updating organization ${this.orgId}...`);
-      if (this.dryRun) console.log('  (DRY RUN mode — will NOT click Save)');
-
-      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/edit/common`);
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/`);
       await this.handleAuthAndCaptcha(page);
-
-      console.log(`  Current URL: ${page.url()}`);
-      console.log(`  Page title: ${await page.title()}`);
-
-      // Take initial screenshot
-      await page.screenshot({ path: `data/before_edit_${Date.now()}.png`, fullPage: false });
-
+      await this.autoScroll(page);
       await this.waitForEditForm(page);
 
-      // === Fill Name ===
-      if (data.name) {
-        console.log(`\n📝 Setting name: "${data.name}"`);
-        await this.fillField(
-          page,
-          [
-            'input[name="name"]',
-            'input[placeholder*="назван"]',
-            'input[placeholder*="Назван"]',
-            '#name',
-            '[data-testid="name-input"]',
-            'label:has-text("Название") input',
-            'label:has-text("название") + input',
-            '.CompanyName input',
-          ],
-          data.name,
-          'Name'
-        );
-      }
-
-      // === Fill Description ===
+      if (data.name) await this.fillFieldByLabel(page, 'Обычное название', data.name);
+      
       if (data.description) {
-        console.log(`\n📝 Setting description...`);
-        await this.fillField(
-          page,
-          [
-            'textarea[name="description"]',
-            'textarea[placeholder*="писание"]',
-            'textarea[placeholder*="Описание"]',
-            '#description',
-            '[data-testid="description-input"]',
-            'label:has-text("Описание") textarea',
-            '.textarea__control',
-          ],
-          data.description,
-          'Description'
-        );
-      }
-
-      // === Fill Website ===
-      if (data.website) {
-        console.log(`\n🌐 Setting website: ${data.website}`);
-        await this.fillField(
-          page,
-          [
-            'input[name^="links"][name*="url"]',
-            'input[placeholder*="сайт"]',
-            'input[placeholder*="Сайт"]',
-            'input[placeholder*="http"]',
-            'input[type="url"]',
-            '[data-testid="website-input"]',
-            'label:has-text("Сайт") input',
-          ],
-          data.website,
-          'Website'
-        );
-      }
-
-      // === Fill Phones ===
-      if (data.phones && data.phones.length > 0) {
-        console.log(`\n📞 Setting phones...`);
-        // Look for phone inputs
-        const phoneSelectors = [
-          'input[name^="phones"]',
-          'input[type="tel"]',
-          'input[placeholder*="елефон"]',
-          'input[placeholder*="Телефон"]',
-          '[data-testid="phone-input"]',
-        ];
-
-        let phoneIndex = 0;
-        for (const phone of data.phones) {
-          const phoneInputs = await page.locator(phoneSelectors.join(',')).all();
-          if (phoneIndex < phoneInputs.length) {
-            try {
-              const input = phoneInputs[phoneIndex];
-              await input.click({ force: true });
-              await page.keyboard.press('Control+A');
-              await input.fill(phone);
-              await page.keyboard.press('Tab');
-              console.log(`  ✓ Phone ${phoneIndex + 1} filled: ${phone}`);
-            } catch (e) {
-              console.log(`  ✗ Phone ${phoneIndex + 1} failed: ${e}`);
-            }
-            phoneIndex++;
-          } else {
-            // Try to click "Add phone" button
-            const addBtn = page.locator('button:has-text("Добавить телефон"), button:has-text("+ телефон"), [class*="add-phone"]').first();
-            if (await addBtn.isVisible().catch(() => false)) {
-              await addBtn.click();
-              await page.waitForTimeout(1000);
-              const newInputs = await page.locator(phoneSelectors.join(',')).all();
-              if (newInputs.length > phoneIndex) {
-                await newInputs[phoneIndex].fill(phone);
-                await page.keyboard.press('Tab');
-                console.log(`  ✓ Phone ${phoneIndex + 1} filled (after add): ${phone}`);
+          const success = await this.fillFieldByLabel(page, 'Описание', data.description);
+          if (!success) {
+              console.log('  ⚠ Description label failed, trying generic textarea...');
+              const mainTextarea = page.locator('textarea:not(.PhoneControl textarea)').first();
+              if (await mainTextarea.isVisible({ timeout: 2000 })) {
+                  await mainTextarea.fill(data.description);
+                  console.log('    ✓ Success via generic textarea');
               }
-              phoneIndex++;
-            }
           }
-        }
       }
+      
+      if (data.website) await this.fillFieldByLabel(page, 'Сайт', data.website);
 
-      // === Screenshot after filling ===
-      await page.waitForTimeout(1000);
-      const screenshotPath = `data/after_fill_${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: false });
-      console.log(`\n📸 Screenshot saved: ${screenshotPath}`);
+      if (this.dryRun) return;
 
-      if (this.dryRun) {
-        console.log('\n✅ DRY RUN complete — fields filled but NOT saved');
-        return;
+      const saveBtn = page.locator('button:has-text("Сохранить"), button[type="submit"]').filter({ hasText: /изменения|сохранить/i }).first();
+      if (await saveBtn.isVisible({ timeout: 5000 })) {
+          console.log('  Clicking save button...');
+          await saveBtn.click({ force: true });
+          await page.waitForTimeout(5000);
+          console.log('  ✨ Save clicked');
       }
-
-      // === Click Save ===
-      console.log('\n💾 Clicking Save button...');
-      const saveSelectors = [
-        'button[type="submit"]',
-        'button:has-text("Сохранить")',
-        'button:has-text("сохранить")',
-        '[data-testid="save-button"]',
-        'button:has-text("Готово")',
-        'button:has-text("Применить")',
-        '.Button_view_action',
-        'button.save',
-      ];
-
-      let saved = false;
-      for (const sel of saveSelectors) {
-        try {
-          const btn = page.locator(sel).first();
-          if (await btn.isVisible({ timeout: 3000 })) {
-            await btn.click();
-            console.log(`  ✓ Save button clicked via: ${sel}`);
-            saved = true;
-            break;
-          }
-        } catch {
-          // try next
-        }
-      }
-
-      if (!saved) {
-        await page.screenshot({ path: `data/save_btn_not_found_${Date.now()}.png`, fullPage: true });
-        throw new Error('Save button not found. Check screenshot.');
-      }
-
-      // Wait for save confirmation
-      await page.waitForTimeout(3000);
-      const finalScreenshotPath = `data/after_save_${Date.now()}.png`;
-      await page.screenshot({ path: finalScreenshotPath, fullPage: false });
-      console.log(`\n📸 Final screenshot: ${finalScreenshotPath}`);
-      console.log(`   URL after save: ${page.url()}`);
-      console.log('\n✅ Organization updated successfully!');
-
-    } catch (error) {
-      console.error('\n❌ Update failed!');
-      console.error('  URL:', page.url());
-      try {
-        console.error('  Title:', await page.title());
-      } catch {}
-      console.error('  Error:', error);
-      await page.screenshot({ path: `data/error_${Date.now()}.png`, fullPage: true }).catch(() => {});
-      throw error;
     } finally {
       await page.close();
     }
@@ -357,10 +251,91 @@ export class YandexBusinessClient {
   async updatePhotos(photoPaths: string[]) {
     const page = await this.getPage();
     try {
-      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/edit/photos`);
+      console.log(`\n📸 Uploading photos for organization ${this.orgId}...`);
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/photos/`);
       await this.handleAuthAndCaptcha(page);
-      // Photo upload logic placeholder
-      console.log('Photo update not yet implemented');
+
+      for (const photoPath of photoPaths) {
+          const absolutePath = path.resolve(photoPath);
+          if (!fs.existsSync(absolutePath)) continue;
+
+          console.log(`  Uploading ${photoPath}...`);
+          try {
+              const uploadInput = page.locator('input[type="file"]').first();
+              if (await uploadInput.isHidden()) {
+                  await page.click('button:has-text("Добавить"), .add-photo-button, [class*="Upload"]', { force: true });
+              }
+              await uploadInput.setInputFiles(absolutePath);
+              await page.waitForTimeout(5000);
+              console.log(`    ✓ Uploaded ${photoPath}`);
+          } catch (e) {
+              console.log(`    ✗ Failed to upload ${photoPath}: ${e}`);
+          }
+      }
+    } finally {
+      await page.close();
+    }
+  }
+
+  async deletePhotos(count: number = 10) {
+    const page = await this.getPage();
+    try {
+      console.log(`\n🗑 Deleting up to ${count} photos for organization ${this.orgId}...`);
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/photos/`);
+      await this.handleAuthAndCaptcha(page);
+      await this.dismissPopups(page);
+
+      for (let i = 0; i < count; i++) {
+          const photo = page.locator('.PhotosPage-Item, [class*="PhotoCard"]').first();
+          if (!(await photo.isVisible({ timeout: 5000 }))) {
+              console.log('  ✨ No more photos to delete');
+              break;
+          }
+          
+          await photo.hover();
+          const deleteBtn = photo.locator('button[title*="Удалить"], .delete-button, [class*="Delete"]').first();
+          await deleteBtn.click({ force: true });
+          
+          const confirmBtn = page.locator('button:has-text("Удалить"), button:has-text("Да")').first();
+          if (await confirmBtn.isVisible({ timeout: 2000 })) {
+              await confirmBtn.click({ force: true });
+          }
+          
+          await page.waitForTimeout(1000);
+          console.log(`    ✓ Deleted photo ${i + 1}`);
+      }
+    } finally {
+      await page.close();
+    }
+  }
+
+  async respondToReviews(template: string = "Спасибо за ваш отзыв! Мы рады стараться для вас.") {
+    const page = await this.getPage();
+    try {
+      console.log(`\n💬 Responding to unreplied reviews for organization ${this.orgId}...`);
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/reviews/`);
+      await this.handleAuthAndCaptcha(page);
+
+      const unreplied = page.locator('.ReviewItem:has-not(.ReviewItem-Reply), [class*="ReviewCard"]:not(:has([class*="Reply"]))');
+      const count = await unreplied.count();
+      console.log(`  Found ${count} unreplied reviews`);
+
+      for (let i = 0; i < Math.min(count, 5); i++) {
+          const review = unreplied.nth(i);
+          const replyBtn = review.locator('button:has-text("Ответить"), .reply-button').first();
+          
+          if (await replyBtn.isVisible()) {
+              await replyBtn.click({ force: true });
+              const textarea = page.locator('textarea[placeholder*="ответ"], textarea').first();
+              await textarea.fill(template);
+              
+              if (!this.dryRun) {
+                  await page.click('button:has-text("Отправить"), button:has-text("Сохранить")', { force: true });
+                  console.log(`    ✓ Replied to review ${i + 1}`);
+              }
+              await page.waitForTimeout(2000);
+          }
+      }
     } finally {
       await page.close();
     }

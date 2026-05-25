@@ -1,0 +1,1323 @@
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+[
+  {
+    "text": ".yandex-header{position:relative;z-index:20;padding:0 20px;font-family:'YS Text',arial,sans-serif;background:#fff}.yandex-header__content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;max-width:1400px;height:60px;margin:auto;background:#fff}.yandex-header .favorites-icon,.yandex-header .notifier,.yandex-header .yaplus,.yandex-header__extra,.yandex-header__nav{-webkit-transition:opacity .2s ease;transition:opacity .2s ease}.yandex-header_suggest-opened .favorites-icon,.yandex-header_suggest-opened .notifier,.yandex-header_suggest-opened .yandex-header__extra,.yandex-header_suggest-opened .yandex-header__nav,.yandex-header_suggest-opened .yaplus{opacity:0}.yandex-header .link{text-decoration:none;outline:0;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer}.yandex-header .utilityfocus .link:focus{outline:2px solid #fc0}.yandex-header .link[aria-disabled=true]{pointer-events:none;color:#ddd;cursor:default}.yandex-header .link__icon{-webkit-transition:opacity .15s ease-out;transition:opacity .15s ease-out}.yandex-header .link[aria-disabled=true]:hover{color:#ddd}.yandex-header .login-button{position:relative;display:inline-block;vertical-align:top;white-space:nowrap;text-decoration:none}.yandex-header .login-button__text{white-space:nowrap}.yandex-header .link__inner{color:inherit}.yandex-header_theme_default .yandex-header__nav .yandex-header__nav-link,.yandex-header_theme_default .yandex-header__nav .yandex-header__nav-link:visited{color:#222426}.yandex-header_theme_default .yandex-header__nav .yandex-header__nav-link:active,.yandex-header_theme_default .yandex-header__nav .yandex-header__nav-link:focus,.yandex-header_theme_default .yandex-header__nav .yandex-header__nav-link:hover,.yandex-header_theme_default .yandex-header__nav .yandex-header__nav-link_active_yes[class],.yandex-header_theme_default .yandex-header__nav .yandex-header__nav-link_active_yes[class]:visited{color:#d00}.yandex-header_theme_default .yandex-header__input{background-color:rgba(147,156,176,.15)}.yandex-header_theme_default .yandex-header__input::-webkit-input-placeholder{color:#939cb0}.yandex-header_theme_default .yandex-header__input:-moz-placeholder,.yandex-header_theme_default .yandex-header__input::-moz-placeholder{color:#939cb0}.yandex-header_theme_default .yandex-header__input:focus{border:2px solid #fdde55;background-color:#fff}.yandex-header_theme_default .yandex-header__search-icon svg{fill:#939cb0}.yandex-header_theme_default .yandex-header__search-icon:focus svg,.yandex-header_theme_default .yandex-header__search-icon:hover svg{fill:#4b4c5a}.yandex-header_theme_default .yandex-header__extra .yandex-header__extra-link:hover{color:#222426}.yandex-header__logo{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;margin-right:29px;white-space:nowrap}.yandex-header__logo-base,.yandex-header__logo-service{display:inline-block;vertical-align:top;outline:0}.yandex-header__logo-base{width:26px;height:26px;background-repeat:no-repeat;background-position:center center;background-size:contain}.yandex-header__logo-base,.yandex-header__logo-base_lang_be,.yandex-header__logo-base_lang_kk,.yandex-header__logo-base_lang_ru,.yandex-header__logo-base_lang_uk{background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/2xwAb33a.svg)}.yandex-header__logo-base_lang_en,.yandex-header__logo-base_lang_tr,.yandex-header__logo-base_lang_uz{background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/3mZ6Xs8W.svg)}@media screen and (max-width:1279px){.yandex-header_collapse .yandex-header__logo{margin-right:17px}}@media screen and (max-width:1024px){.yandex-header__logo[class]{margin-right:20px}}.yandex-header__logo-service{height:26px;background-repeat:no-repeat;background-position:center center;background-size:contain}.yandex-header__logo-service_lang_be,.yandex-header__logo-service_lang_kk,.yandex-header__logo-service_lang_ru,.yandex-header__logo-service_lang_uk{width:130px;background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/2j2GAdTV.svg)}.yandex-header__logo-service_lang_en,.yandex-header__logo-service_lang_uz{width:98px;background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/4s1Va9FN.svg)}.yandex-header__logo-service_lang_tr{width:76px;background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/2Xn1ukaW.svg)}.yandex-header__nav{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}@media screen and (max-width:1279px){.yandex-header__nav .yandex-header__nav-link:not([data-s-text='']) span{display:none}.yandex-header__nav .yandex-header__nav-link::before{display:block}}@media screen and (max-width:1023px){.yandex-header_wrap-nav{padding-bottom:34px}.yandex-header_wrap-nav .yandex-header__nav{position:absolute;top:52px;left:20px}}.yandex-header__nav-link{display:inline-block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:8px 2px;font-size:16px;font-weight:500;line-height:21px;white-space:nowrap;border:2px solid transparent;-webkit-transition:.1s;transition:.1s}.yandex-header__nav-link,.yandex-header__nav-link:visited{text-decoration:none;color:#939cb0;fill:#939cb0}.yandex-header__nav-link:active,.yandex-header__nav-link:hover{color:#222426;outline:0;fill:#222426}.yandex-header__nav-link+.yandex-header__nav-link{margin-left:12px}.yandex-header__nav-link:focus{color:#222426;outline:0;fill:#222426}.yandex-header__nav-link::before{display:none;content:attr(data-s-text)}@media screen and (max-width:1279px){.yandex-header__nav-link+.yandex-header__nav-link{margin-left:8px}}.yandex-header__search{width:100%;min-width:220px;max-width:470px;margin-left:29px}.yandex-header__search form{margin:0}.yandex-header__input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;height:36px;padding-right:64px;padding-left:12px;font-size:16px;color:#222426;border:2px solid transparent;border-radius:6px;outline:0}.yandex-header__search-icon{position:absolute;top:0;bottom:0;display:inline-block;width:36px;height:36px;margin:auto;padding:0;cursor:pointer;border:0;outline:0;background-color:transparent}.yandex-header__search-icon svg{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto}.yandex-header__submit svg{width:20px;height:20px}.yandex-header__submit{right:4px;display:inline-block}.yandex-header__clear{right:40px;display:none}.yandex-header__search_show-clear_yes .yandex-header__clear{display:inline-block}@media screen and (max-width:1279px){.yandex-header__search{margin-left:20px}}@media screen and (max-width:1024px){.yandex-header__search{margin-left:20px}}@media (min-width:1024px){.yandex-header__nav-icon{display:inline-block;margin-right:8px;vertical-align:baseline;background-repeat:no-repeat;background-position:center center;background-size:contain}.yandex-header__nav-icon_type_all{display:inline-block!important;width:20px;height:20px}.yandex-header__nav-icon_type_all svg{padding:2px 0 0 2px}.yandex-header__nav-icon_type_sport{width:21px;height:19px;background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/291umYDY.svg)}.yandex-header__nav-icon_type_weather{width:20px;height:20px;background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/3RD2tCrH.svg)}.yandex-header__nav-icon_type_news{width:20px;height:20px;background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/3Cg1ajVM.svg)}}.yandex-header__search{position:relative}.yandex-header__extra,.yandex-header__extra-link{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.yandex-header__extra-link{-webkit-transition:.1s;transition:.1s}.yandex-header__extra{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding-left:24px}.yandex-header__logo+.yandex-header__extra{margin-left:3px}.yandex-header__extra .yandex-header__nav-link,.yandex-header__extra .yandex-header__nav-link:visited{text-decoration:none;color:#939cb0}@media screen and (max-width:1279px){.yandex-header_collapse-extra .yandex-header__extra-link:not(.yandex-header__extra-link_type_all),.yandex-header_collapse-extra .yandex-header__extra-link_type_all .yandex-header__nav-text{display:none}.yandex-header_collapse-extra .yandex-header__extra-link_type_all::after{content:attr(data-s-text)}}@media screen and (max-width:1024px){.yandex-header__extra{padding-left:12px}}.yandex-header__actions{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-left:auto;padding-left:24px}.yandex-header__actions .user-account .user-account__pic,.yandex-header__actions .user-account .user-pic__image{width:42px;height:42px}.yandex-header__actions .legouser,.yandex-header__actions .signup-link,.yandex-header__actions .user2{margin-left:12px}.yandex-header__actions .legouser__current-account .user-account__name,.yandex-header__actions .user2__current-account .user-account__name{display:none}.yandex-header .login-button{height:36px;padding:0 16px;line-height:36px}.yandex-header .login-button_pic_yes svg{margin-top:8px;vertical-align:top}.yandex-header .login-button__text{margin-left:6px}.yandex-header .signup-link{position:relative;display:inline-block;height:40px;margin-right:16px;padding:0;font:16px/40px 'YS Text',arial,sans-serif;vertical-align:top;white-space:nowrap;text-decoration:none;color:#222426}.yandex-header .signup-link:focus{color:#d00;outline:0}.yandex-header__services-icon{width:40px;height:44px;opacity:.3;background:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/2HTKebBu.svg) center 9px no-repeat}.yandex-header__services-icon:hover{opacity:1}.yandex-header__nav-icon_type_all{display:none}",
+    "parent": "STYLE",
+    "className": ""
+  },
+  {
+    "text": "Продвижение",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Организации",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Заявки",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "@-webkit-keyframes islands-spin2{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes islands-spin2{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.spin2{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.spin2{display:none;border:2px solid transparent;border-radius:100px;background-image:url(//yastatic.net/s3/frontend/yandex-lego/serp-header/_/2tekx3xQ.gif);background-image:-webkit-gradient(linear,left top,right top,from(transparent),to(transparent));background-image:-webkit-linear-gradient(left,transparent,transparent);background-image:linear-gradient(to right,transparent,transparent)}.spin2:after{visibility:hidden;content:'\\00A0'}.spin2_progress_yes{display:inline-block;-webkit-animation:islands-spin2 1s .21s infinite linear;animation:islands-spin2 1s .21s infinite linear;-webkit-backface-visibility:hidden;backface-visibility:hidden}.spin2_size_m{width:32px;height:32px;font-size:15px;line-height:28px;background-position:-2px -73px}.spin2_size_m.spin2_position_center{margin-top:-16px;margin-left:-16px}.spin2_position_center{position:absolute;top:50%;left:50%}.notifier__content{overflow:hidden;width:376px;height:564px;max-height:-webkit-calc(100vh - 100px);max-height:calc(100vh - 100px)}.notifier__popup{background-color:#fff}.notifier__popup_loaded_yes::after{visibility:hidden;opacity:0}.notifier__popup[class]{right:0;overflow:hidden;width:auto;border-radius:8px;-webkit-box-shadow:0 1.5ex 2ex -1ex rgba(0,0,0,.3),0 0 0 1px rgba(0,0,0,.05);box-shadow:0 1.5ex 2ex -1ex rgba(0,0,0,.3),0 0 0 1px rgba(0,0,0,.05)}.light-popup{position:absolute;top:100%;visibility:hidden;width:100%;margin:-9999px 0 0 -9999px}.light-popup_visible_yes{visibility:visible;margin:0}.light-popup{display:none}.light-popup_visible_yes,.notifier{display:block}.notifier{position:relative;overflow:visible;margin:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-align:center;border:0;outline:0;background:0 0;-webkit-tap-highlight-color:transparent;-ms-touch-action:manipulation;touch-action:manipulation}.notifier::before{display:inline-block;height:100%;content:'';vertical-align:middle}.notifier::-moz-focus-inner{padding:0;border:0}.notifier:active,.notifier__box:active{-webkit-transform:scale(.95);transform:scale(.95)}.notifier[class]:active{-webkit-transform:none;transform:none}.notifier__content{position:relative;z-index:1}.body-notifier-opened .notifier__icon[class]{opacity:1}.notifier_white.notifier_has-unread_yes .notifier__icon[class][class] svg{opacity:1;fill:#fff}.notifier_fade_yes .notifier__icon{opacity:.3;-webkit-transition:opacity .1s ease-out;transition:opacity .1s ease-out;-webkit-transform:translateZ(0);transform:translateZ(0)}.notifier_fade_yes.notifier_has-unread_yes .notifier__icon,.notifier_fade_yes:hover .notifier__icon{opacity:1}.spin2_view_default.spin2_tone_default.spin2_progress_yes{border-top-color:#fc0;border-left-color:#fc0}.notifier__box{position:relative;display:inline-block;width:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle}.notifier__bell{-webkit-transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out;-webkit-transform:translateZ(0);transform:translateZ(0);will-change:transform}.notifier__icon svg{overflow:visible;width:24px;height:24px;fill:#000}.notifier_has-unread_yes .notifier__icon{opacity:1;-webkit-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out}.notifier__ticker{position:absolute;border-radius:50%;background-color:red;background-clip:padding-box;-webkit-transition:-webkit-transform .08s ease-out;transition:transform .08s ease-out;transition:transform .08s ease-out,-webkit-transform .08s ease-out;-webkit-transform:scale(0);transform:scale(0)}.notifier_has-unread_yes .notifier__ticker{-webkit-transform:scale(1);transform:scale(1)}.notifier_has-unread_yes .notifier__icon[class][class] svg{fill:#000}.notifier_has-unread_yes .notifier__bell{-webkit-transform:rotate(8deg);transform:rotate(8deg)}.notifier_size_s.notifier_has-unread_yes .notifier__ticker[class]{top:-4px;right:auto;left:23px;display:inline-block;width:auto;height:auto;padding:0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;line-height:15px;text-align:right;color:#fff;border:0;border-radius:15px;-webkit-box-shadow:0 0 0 2px #fff;box-shadow:0 0 0 2px #fff;-webkit-transform:scale(.8);transform:scale(.8)}.notifier_size_m,.notifier_size_m .notifier__box{width:40px;height:40px}.notifier_size_m .notifier__ticker{top:6px;right:auto;left:23px;display:inline-block;width:auto;height:auto;padding:0 4px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;line-height:15px;text-align:right;color:#fff;border:0;border-radius:15px;-webkit-box-shadow:0 0 0 2px #fff;box-shadow:0 0 0 2px #fff}.notifier_size_m .notifier__icon{padding-top:7px}.notifier_size_m .notifier__bell{-webkit-transform-origin:11px 0;transform-origin:11px 0}",
+    "parent": "STYLE",
+    "className": ""
+  },
+  {
+    "text": "Павел",
+    "parent": "DIV",
+    "className": "Header-UserName"
+  },
+  {
+    "text": "99+",
+    "parent": "DIV",
+    "className": "UserID-Badge-Dot UserID-Badge-Dot_colorScheme_undefined UserID-Badge-Dot_variant_number"
+  },
+  {
+    "text": "Клубика",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-company-plate__last-word"
+  },
+  {
+    "text": "Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-label sc-sidebar-ya-business-label_level_hint sc-sidebar-ya-business-label_muted sc-sidebar-ya-business-label_view_default sc-sidebar-ya-business-label_theme_on-color"
+  },
+  {
+    "text": "Главная",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "О компании",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "Данные",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Фото и видео",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Товары и услуги",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Публикации",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Истории",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "События",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Акции",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Новое",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-yabs-sidebar-item-badge sc-sidebar-ya-business-sidebar-item__nav-item-counter"
+  },
+  {
+    "text": "Доставка",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Отзывы",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Рейтинг компании",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Промоматериалы",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Карта на сайт",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Изменения",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Конкуренты",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "Продвижение",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "Статистика",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "Форма заявки",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "Заявки",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Настройки",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Сайт",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "Основное",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Магазин",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Доступы",
+    "parent": "SPAN",
+    "className": "sc-sidebar-ya-business-sidebar-item__nav-item-name"
+  },
+  {
+    "text": "Данные",
+    "parent": "DIV",
+    "className": "PageTitle-Title"
+  },
+  {
+    "text": "Режим работы",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Режим работы и статус видны в Поиске и Картах",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Текущий статус",
+    "parent": "SPAN",
+    "className": "ya-business-select__label"
+  },
+  {
+    "text": "Работает",
+    "parent": "DIV",
+    "className": "ya-business-select__button-content"
+  },
+  {
+    "text": "Время работы",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Будни",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_mark ya-business-label_view_default ya-business-label_ellipsised ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Ежедневно",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_mark ya-business-label_view_default ya-business-label_ellipsised ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Круглосуточно",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_mark ya-business-label_view_default ya-business-label_ellipsised ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Выходные",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_mark ya-business-label_view_default ya-business-label_ellipsised ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Перерыв",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_mark ya-business-label_view_default ya-business-label_ellipsised ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Праздники и нерабочие дни",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Режим работы в праздники может отличаться от основного",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Показать все",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Добавить режим работы",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Сайт и социальные сети",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Ваше представление в интернете",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Добавить",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "ВКонтакте",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Телефоны",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Контакты для пользователей и Яндекс Бизнеса с организацией. Скрытые номера не отображаются в карточке организации",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Добавить",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Телефон",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Добавочный",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Описание",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Скрыть",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Электронная почта",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Исключительно для связи Яндекс Бизнеса с организацией",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Электронная почта",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Название на разных языках",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Поможет для навигации, если на вывесках фигурируют несколько языков. Просто переводить название не стоит",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Добавить",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "На русском",
+    "parent": "H3",
+    "className": "ya-business-label ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Обычное название",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Короткое название",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "0/25",
+    "parent": "SPAN",
+    "className": "ya-business-input__counter"
+  },
+  {
+    "text": "Удалить",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Расположение и входы",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Рекомендуется располагать метку посередине площади организации. Входы в здание можно разметить отдельно",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Комментарий к адресу: Этаж, номер офиса, и т.п.",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Рубрика",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Рубрика полезна для поиска без точного запроса. Например, при запросе «Ресторан» или «Кафе»",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Основная рубрика",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Вторичные рубрики (не более 2)",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-geoadv-multiselect-autocomplete__label ya-business-label_level_mark ya-business-label_muted ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "0/2",
+    "parent": "DIV",
+    "className": "ya-business-geoadv-multiselect-autocomplete__counter"
+  },
+  {
+    "text": "Особенности и реквизиты",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Свойства вашей компании. Влияют на появление в поисковой выдаче",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Показать все",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Базовые",
+    "parent": "H3",
+    "className": "ya-business-label ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Посещение с животными?",
+    "parent": "SPAN",
+    "className": "ya-business-link__text"
+  },
+  {
+    "text": "Маркетинговые услуги",
+    "parent": "H3",
+    "className": "ya-business-label ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Подарочный сертификат?",
+    "parent": "SPAN",
+    "className": "ya-business-link__text"
+  },
+  {
+    "text": "Способ оплаты?",
+    "parent": "SPAN",
+    "className": "ya-business-link__text"
+  },
+  {
+    "text": "Предварительная запись?",
+    "parent": "SPAN",
+    "className": "ya-business-link__text"
+  },
+  {
+    "text": "Доступность",
+    "parent": "H3",
+    "className": "ya-business-label ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Парковка для людей с инвалидностью?",
+    "parent": "SPAN",
+    "className": "ya-business-link__text"
+  },
+  {
+    "text": "Доступность входа на инвалидной коляске?",
+    "parent": "SPAN",
+    "className": "ya-business-link__text"
+  },
+  {
+    "text": "Туалет для людей с инвалидностью?",
+    "parent": "SPAN",
+    "className": "ya-business-link__text"
+  },
+  {
+    "text": "Сохранить изменения",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Карты",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Поиск",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Как сейчас организация выглядит для пользователей",
+    "parent": "DIV",
+    "className": "ya-business-label Preview-Text ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Пользовательское соглашение",
+    "parent": "A",
+    "className": "Link Link_theme_ghost Footer-Item"
+  },
+  {
+    "text": "Политика конфиденциальности",
+    "parent": "A",
+    "className": "Link Link_theme_ghost Footer-Item"
+  },
+  {
+    "text": "Уведомления",
+    "parent": "A",
+    "className": "Link Link_theme_ghost Footer-Item Footer-Item_type_notifications"
+  },
+  {
+    "text": "Справка",
+    "parent": "A",
+    "className": "Link Link_theme_ghost Footer-Item Footer-Item_type_help"
+  },
+  {
+    "text": "Продвижение",
+    "parent": "A",
+    "className": "Link Link_theme_ghost Footer-Item Footer-Item_type_advertising"
+  },
+  {
+    "text": "2001-2026",
+    "parent": "DIV",
+    "className": "Footer-Item Footer-Item_type_copyright"
+  },
+  {
+    "text": "ООО «",
+    "parent": "DIV",
+    "className": "Footer-Item Footer-Item_type_copyright"
+  },
+  {
+    "text": "Яндекс",
+    "parent": "A",
+    "className": "Link Link_theme_ghost"
+  },
+  {
+    "text": "window.__PRELOAD_DATA = {\"globalData\":{\"user\":{\"status\":\"VALID\",\"uid\":27265048,\"lang\":\"ru\",\"displayName\":\"Павел\",\"avatar\":\"43473\\u002Fenc-0200ae4d6b8d6b05e0e6188854686155736058a1fa0e1be9a9100d7115d3f12a\",\"addressList\":[\"NLPkem@yandex.ru\"],\"login\":\"NLPkem\",\"isYandexoid\":false,\"phone\":\"+7 977 330‒77‒20\",\"users\":[],\"hasUserTicket\":true,\"yandexuid\":\"5059445521728560702\",\"permissions\":{},\"experiments\":[\"disable_inject_popups\",\"renewals_leds_user\",\"porg\",\"redirect_for_duplicates\",\"new_moderation_mail\",\"company_sorting\",\"super_sender_emails\",\"booking_category_31529\",\"booking_category_31407\",\"booking_category_31528\",\"booking_category_31649\",\"booking_category_31657\",\"booking_category_31656\",\"booking_category_30689\",\"booking_category_31530\",\"booking_category_30321\",\"booking_category_30681\",\"booking_category_30207\",\"booking_category_30208\",\"booking_category_30214\",\"booking_category_30578\",\"booking_category_31426\",\"booking_category_31546\",\"booking_category_31420\",\"booking_category_30331\",\"booking_category_30210\",\"booking_category_30211\",\"review_new_comments\",\"booking_category_3501624582\",\"booking_category_3501418474\",\"booking_category_31509\",\"booking_category_30657\",\"booking_category_31505\",\"booking_category_31504\",\"booking_category_30658\",\"booking_category_31507\",\"booking_category_31511\",\"booking_category_31634\",\"booking_category_3501611069\",\"booking_category_3491649165\",\"booking_category_3491649163\",\"booking_category_30789\",\"booking_category_31637\",\"booking_category_31636\",\"booking_category_30308\",\"booking_category_31523\",\"booking_category_30434\",\"booking_category_31401\",\"booking_category_31404\",\"booking_category_31525\",\"booking_category_31524\",\"booking_category_30310\",\"booking_category_30795\",\"booking_category_274864961\",\"booking_category_20679\",\"booking_category_30248\",\"booking_category_30485\",\"booking_category_31334\",\"booking_category_31450\",\"booking_category_31588\",\"booking_category_30259\",\"booking_category_31107\",\"booking_category_30495\",\"booking_category_3501621390\",\"booking_category_30377\",\"booking_category_31580\",\"booking_category_31462\",\"booking_category_31461\",\"booking_category_3493720533\",\"booking_category_144152359\",\"booking_category_30345\",\"booking_category_3501604600\",\"booking_category_31316\",\"booking_category_30221\",\"booking_category_31551\",\"booking_category_3501478864\",\"booking_category_3501571789\",\"booking_category_30352\",\"booking_category_30233\",\"booking_category_30355\",\"booking_category_3501598014\",\"booking_category_31137\",\"booking_category_31375\",\"booking_category_31136\",\"booking_category_30289\",\"booking_category_30161\",\"booking_category_31492\",\"booking_category_30163\",\"booking_category_31495\",\"booking_category_31131\",\"booking_category_31252\",\"booking_category_31373\",\"booking_category_3501478922\",\"booking_category_31029\",\"booking_category_31387\",\"booking_category_31265\",\"booking_category_30177\",\"booking_category_31146\",\"booking_category_31022\",\"booking_category_31264\",\"booking_category_30170\",\"booking_category_31116\",\"booking_category_31118\",\"booking_category_3501483288\",\"header_for_geoprod\",\"booking_category_31595\",\"booking_category_30266\",\"booking_category_30387\",\"booking_category_31592\",\"booking_category_30260\",\"booking_category_30261\",\"booking_category_31110\",\"booking_category_31472\",\"booking_category_3501497449\",\"booking_category_31119\",\"booking_category_31368\",\"booking_category_31128\",\"booking_category_30396\",\"booking_category_30155\",\"booking_category_31122\",\"booking_category_30156\",\"booking_category_30157\",\"booking_category_30273\",\"booking_category_30394\",\"booking_category_20276\",\"booking_category_21480\",\"booking_category_3501647395\",\"booking_category_3501571807\",\"booking_category_3501627308\",\"booking_category_1180056060\",\"booking_category_30085\",\"booking_category_31297\",\"booking_category_31293\",\"booking_category_31292\",\"booking_category_21237\",\"booking_category_21470\",\"booking_category_31069\",\"booking_category_30096\",\"booking_category_31066\",\"booking_category_31065\",\"booking_category_21386\",\"booking_category_21023\",\"booking_category_262003042\",\"booking_category_3501569754\",\"booking_category_3501571704\",\"booking_category_31157\",\"booking_category_30181\",\"booking_category_859588950\",\"booking_category_30078\",\"booking_category_31284\",\"booking_category_31286\",\"booking_category_30192\",\"booking_category_3501656614\",\"booking_category_3501539206\",\"booking_category_31098\",\"booking_category_31092\",\"booking_category_31095\",\"booking_category_31094\",\"booking_category_3501479076\",\"booking_category_31072\",\"booking_category_3501523183\",\"booking_category_1191769628\",\"booking_category_31081\",\"booking_category_31084\",\"booking_category_3501631880\",\"booking_category_30810\",\"booking_category_3501527629\",\"booking_category_3501479397\",\"booking_category_30907\",\"booking_category_30905\",\"booking_category_30906\",\"booking_category_3480798811\",\"booking_category_30717\",\"booking_category_30718\",\"booking_category_30719\",\"booking_category_3501632374\",\"booking_category_30961\",\"booking_category_3501624630\",\"booking_category_3501479454\",\"geoprod_geovisor\",\"booking_category_140638190\",\"booking_category_30609\",\"booking_category_30610\",\"booking_category_30853\",\"booking_category_30937\",\"booking_category_30940\",\"booking_category_3501479471\",\"booking_category_263455525\",\"booking_category_30706\",\"booking_category_30703\",\"booking_category_30946\",\"booking_category_3501411425\",\"booking_category_3501620048\",\"booking_category_3501571694\",\"booking_category_3501620049\",\"booking_category_30756\",\"booking_category_30998\",\"booking_category_30757\",\"booking_category_30758\",\"booking_category_30759\",\"booking_category_30764\",\"booking_category_30765\",\"booking_category_30887\",\"booking_category_30761\",\"booking_category_31619\",\"booking_category_30409\",\"booking_category_30767\",\"booking_category_30405\",\"booking_category_30647\",\"booking_category_30768\",\"booking_category_30406\",\"booking_category_30895\",\"booking_category_30412\",\"booking_category_31621\",\"booking_category_30775\",\"booking_category_31503\",\"booking_category_30770\",\"booking_category_30410\",\"booking_category_3501482702\",\"booking_category_20612\",\"booking_category_30738\",\"show_collections_link\",\"booking_category_30735\",\"booking_category_30741\",\"booking_category_30985\",\"booking_category_30740\",\"booking_category_3501478105\",\"booking_category_20728\",\"booking_category_3501478101\",\"booking_category_3501478108\",\"booking_category_3501479439\",\"booking_category_3501479438\",\"booking_category_30626\",\"booking_category_30748\",\"booking_category_30995\",\"booking_category_30755\",\"booking_category_30750\",\"booking_category_3501623876\",\"ya_browser_promo\",\"chain_info_good_place\",\"good_place_badge_change_year\",\"show_good_place_card_2023_order\",\"trial_info_banner\",\"support_gp_promo\",\"paid_promotions\",\"reverse_adv_demo_card_experiment\"],\"expFeatures\":{\"allowSyncLandingCallTrackingTask\":true,\"allowCompaniesChainPage\":true,\"runningCampaignFromLanding\":true,\"tmpSberbStubsDisabled\":true,\"subscriptionCampaignGoals\":true,\"googlePlatformPluggedInTexts\":true,\"hideArbitrageFieldsInProduct\":true,\"activeCampaignsParallelFetching\":true,\"renderMissingGoalLegend\":true,\"permanentHidePriority\":true,\"show-coupon-services\":true,\"tmpLargeChainUseLightweightListForMaterials\":true,\"tmpEnableYmlInDraft\":true,\"companiesCompanySearch\":true,\"useUpsaleCustomBudget\":true,\"zelibobaInPreview\":true,\"subscribtionAutoGoals\":true,\"changeWebUrlParts\":true,\"webSubscriptionMediaExamples\":true,\"useRenewalService\":true,\"landlordDescriptionFeatures\":true,\"hideBooking\":true,\"tmpSpravCreateCompanyV3\":true,\"unAuthSetupPage\":true,\"tmpMapsCampaignAsyncPreview\":true,\"telegramUseLongTimeoutApi\":true,\"newTransitionToTheCampaignAdvertListPage\":true,\"tmpMarketplacesInBlueprints\":true,\"instaCanSee\":true,\"tmpShowFeedsBanner\":true,\"mergedAdvertMaterialsChart\":true,\"hybridBudgetControl\":true,\"priorityProductServicePage\":true,\"newConstructorFeaturesSurvey\":true,\"subscriptionStorefrontFillPopup\":true,\"stopUsingPrivateTycoonAPI\":true,\"forceUpdateProductCategoryToV2\":true,\"allowCompaniesDetailedPage\":true,\"competitorsHeatmapRating\":true,\"subscriptionArbitrageProductPage\":true,\"shortPeriodPay\":true,\"arbitrateControl\":true,\"tmpIntegrationRedirectToDraft\":true,\"featuresForKz\":true,\"tmpPincodeInUserMenu\":true,\"advertName\":true,\"galleryAdvertInPriority\":true,\"handlePayerType\":true,\"crmTelegramNotifications\":true,\"removeTimeTargetingSettings\":true,\"showOwnershipConfirmationLink\":true,\"tmpAllowDirectCampaignsInBusinessByHasBizCampaigns\":true,\"arbitrateMediaPreviewList\":true,\"productServiceCategoryV2\":true,\"allowEnablingAutoGoalInMetrika\":true,\"ownAdvertsDatepickerField\":true,\"tmpRealBannersInPreview\":true,\"tmpProductListDegradation\":true,\"companyCampaignsPriceGuide\":true,\"uniqueSourcesInStorefrontFillPopup\":true,\"pageDimBackground\":true,\"leadToInstagramTitle\":true,\"priorityPurchase\":true,\"tmpAllowLandingUrlOnDirectBoost\":true,\"subscriptionInstagramSettings\":true,\"showSocialButtonsInstagram\":true,\"renewalFromMinPrice\":true,\"showAccordeonSidebar\":true,\"businessSnapshotPriceIncreaseWarning\":true,\"show-free-coupons\":true,\"campaignListGuide\":true,\"kzSubscription\":true,\"installmentProlong\":true,\"createFeedAdvertBeforeDraft\":true,\"tmpExtendedBeneficiaryNotification\":true,\"commonBusinessCabinet\":true,\"newChartDescription\":true,\"promotionMediaAutoArbitrateImage\":true,\"paymentBeneficiaryInfo\":true,\"campaignStatExcel\":true,\"showHeaderOfNewBoostInFrame\":true,\"agencyCommercialProposal\":true,\"stopCreatingCompanyDraft\":true,\"tmpShowSerpAuctionPlatform\":true,\"advertDigestDimBackground\":true,\"showInstagramSocialButton\":true,\"companyModerationStatus\":true,\"businessSnapshotRubricsSuggest\":true,\"accessToCompaniesApp\":true,\"boostApp\":true,\"budgetRecalculate\":true,\"showGoalsStatInstagram\":true,\"clientDelegatesList\":true,\"subscriptionSeparateSwitchingPromoPages\":true,\"showLandingAgreement\":true,\"isCounterBadgeVisible\":true,\"show-search-in-calendar\":true,\"tmpNewStatisticPage\":true,\"useSourceSuggestionsWithMultiLinks\":true,\"integrationCampaign30Days\":true,\"mdsPngRecommendationIcons\":true,\"show-booking-shutdown\":true,\"mdsChainStat\":true,\"productsSort\":true,\"adFixStat\":true,\"collapseIdenticalGoals\":true,\"fancyBudgetControl\":true,\"competitorsRating\":true,\"replacementNumberReissue\":true,\"tmpKzInstagramAccountReconnect\":true,\"audienceSummaryEventsStatistic\":true,\"adUpsaleMinBudget\":true,\"tmpPresaleExtended\":true,\"adUpsaleEndDate\":true,\"neuralNetworkPictures\":true,\"collectUserInfo\":true,\"instagramExtendedSettings\":true,\"subscriptionDigestCampaignFeatures\":true,\"hideExternalMetrika\":true,\"websubscriptionStatisticSurvey\":true,\"instagramSettingsDeletePostButton\":true,\"faqButtons\":true,\"decreaseCampaignDuration\":true,\"newSourceTransitionForOzon\":true,\"newCampaignEndpointTargetOptionsScene\":true,\"showNotMatchedDeepClicks\":true,\"showInstaPreviewSubscription\":true,\"tmpPayerRuInnEdit\":true,\"yandexBug\":true,\"presaleCommercialProposalDownload\":true,\"modalGuide\":true,\"scrollToInvalidInputWithHeaderCorrection\":true,\"satisfactionSurvey\":true,\"tmpBoostCompanySelectReplacement\":true,\"branchStatisticCharts\":true,\"subscriptionProductPage\":true,\"newTelegramPostsListUX\":true,\"webSubscriptionBusinessSnapshotFeatures\":true,\"editObservers\":true,\"openApiCompanySearchUseLaas\":true,\"priorityEcomProductFeed\":true,\"useSelectedFilterForGallery\":true,\"campaignsRedirectFromLanding\":true,\"showAdvertTime\":true,\"showLinkToThePriceList\":true,\"multiLinksForMarketplaceCampaigns\":true,\"webSubscriptionCallTracking\":true,\"allowCompaniesOwnershipConfirmation\":true,\"subscriptionMarketType\":true,\"tmpNewSubscriptionProductsPage\":true,\"showHowItWorksBlock\":true,\"bannersPreviewGEOPROD19600\":true,\"tmpAsyncNeuralBannerSuggest\":true,\"crmRequestsListCompactView\":true,\"tmpGetCampaignWithoutPromo\":true,\"tmpRedirectMediasPagesToSubscription\":true,\"tmpPlatformBasedCampaignStatus\":true,\"markInstagramAccountActual\":true,\"settingsFeaturesImagesForm\":true,\"websubscriptionGoalsStat\":true,\"show-settings-phone\":true,\"callTrackingSubscriptionStatExcel\":true,\"separateGoalsForMarketplaces\":true,\"adRecommendationBadges\":true,\"priorityHandleCompanyModerationStatus\":true,\"navigationToSpravFromCompanySidebar\":true,\"tmpCrmPhotoPicker\":true,\"crmRequestPermissions\":true,\"tmpReplacementNumberReissueNonChain\":true,\"show-custom-cta-button-in-landing\":true,\"telegramStatisticCredentials\":true,\"callTracking\":true,\"multiSubscriptionChangeUrl\":true,\"nonAuthorizedAdvertizeOnLanding\":true,\"chainSubscription\":true,\"headerUserIdPopup\":true,\"show-request-created-checkbox\":true,\"tycoonHeadless\":true,\"telegramPreselectV2\":true,\"useIframeSpravLinkInWidget\":true,\"showOnboardingPrices\":true,\"prioritySearch\":true,\"upsaleWebCampaign\":true,\"tmpDirectCampaignsInBusiness\":true,\"tmpBoostDirectClientNds22\":true,\"galleryAdvertInSubscription\":true,\"campaignDisplayArbitrate\":true,\"dragAndDropForProductList\":true,\"unifiedUpsale\":true,\"icoForCustomBudget\":true,\"isVisiblePlayPauseButton\":true,\"autoActivate\":true,\"landlordAttractCustomers\":true,\"bell\":true,\"tmpWebmasterWebSubscription\":true,\"promocodeBPlusNotification\":true,\"tmpForceRedirectFeaturesPagesToSubscription\":true,\"showGoalsStatLanding\":true,\"usePredictionService\":true,\"websubscriptionStatisticPage\":true,\"webSubscriptionMediaPageV2\":true,\"webSubscriptionMediaPageV3\":true,\"tmpPromotionRemovalFreeze\":true,\"feedPreviewFromCommonEndpoint\":true,\"disablePlatforms\":true,\"tmpInstagramSettingsAddress\":true,\"instagramNewCompany\":true,\"checkBalanceAlreadyRequest\":true,\"tmpEnableSourcesPopup\":true,\"tmpForceRedirectMediasPagesToSubscription\":true,\"tmpUpdateGeoproductAdTexts\":true,\"show-gift-coupons\":true,\"multipleProductCurrency\":true,\"headlineMediaArbitrateImage\":true,\"shortCompanyByPermalink\":true,\"headersAsRecord\":true,\"coloredBanners\":true,\"uxFeedback\":true,\"dndImageUploaderPlate\":true,\"defaultDaysDuration\":true,\"newCompetitorsNotificationPoster\":true,\"stopUsingPrivateTycoonApiCreateUser\":true,\"tmpCacheCreateCampaign\":true,\"tmpAuctionUpsaleCompensation\":true,\"show-services-request-cta\":true,\"importBlockForArbitrageProduct\":true,\"tmpPromotionRemoval\":true,\"productsWebSubscription\":true,\"allowCreateLandingByUrl\":true,\"textImageAds\":true,\"multiSourceImageSelect\":true,\"instagramSettingsHeaderCTAButton\":true,\"tmpAdditionalUpsaleWithBonus\":true,\"webSubscriptionHistory\":true,\"adWhatsAppInChatWidget\":true,\"redirectToSpravVerify\":true,\"tmpChainMultistageBoost\":true,\"createCompany\":true,\"displayPriceFixedUntil\":true,\"presetExternalAdverts\":true,\"tmpAsyncCopyAdvertFromCampaignToCampaign\":true,\"branchesHasCampaignFilterInCampaign\":true,\"launchInstaStatistic\":true,\"totalBusinessSnapshotStat\":true,\"hideStatisticCompetitors\":true,\"dashBackSignTicket\":true,\"spravDeliveryEcom\":true,\"handleCompanyCreatorVerification\":true,\"upsaleBudgetQuery\":true,\"tmpBeneficiaryBackendValidation\":true,\"onlyDiscoveryDeepClicksForSubscription\":true,\"subscriptionCampaign\":true,\"crmSubscriptionButton\":true,\"tmpOneSimpleAmPreview\":true,\"companiesUsersTab\":true,\"okrForOwnAdverts\":true,\"handleNotOwned\":true,\"tmpUnifiedCallTracking\":true,\"tmpValidateProductLinkForWeb\":true,\"hideAdverizeWithActiveGeoproductOrders\":true,\"galleryImageUploader\":true,\"landingEcommerce\":true,\"landingGeoproduct\":true,\"acClientDomain\":true,\"tmpCheckAllowDirectCampaignsInBusinessByPortalUser\":true,\"tmpExtendedBeneficiaryForm\":true,\"beneficiaryOnPayersPage\":true,\"tmpLastPayerInvalidBanner\":true,\"dashCollapseRoles\":true,\"tmpDisplayActualSlugForLandings\":true,\"showLandingPreviewSubscription\":true,\"requestsTab\":true,\"saveCampaignV2\":true,\"presaleSidebar\":true,\"mergeFeedsWithArbitrageProducts\":true,\"partnerWidgetBoostLanding\":true,\"tmpSerpAuctionWithChains\":true,\"statisticGetQueries\":true,\"tmpImagedOwnAdvertMlGeneration\":true,\"tmpQuickPaymentProhibitedForLastInvalidPayer\":true,\"arbitrateMediaPreviewLikeDislike\":true,\"promoRedesignNewCampaigns\":true,\"fancyBudgetControlShiftBreakpoints\":true,\"findBusinessSnapshotAmongChains\":true,\"uxFeedbackSprav\":true,\"tmpWaitLongVisibilityBeforeRequestFeedback\":true,\"listViewAutoGoals\":true,\"instaSiteGdu\":true,\"directInBusinessFeedOnBoost\":true,\"onlineCompanies\":true,\"supportPhone\":true,\"moveCompaniesPermalinks\":true,\"promocodeGoodPlaceNotification\":true,\"tmpEnforceCSP\":true,\"tmpExtendedBeneficiaryDraft\":true,\"hideStatWithoutLabel\":true,\"tmpSupportTelegramLinkForTierConciergeUnmanaged\":true,\"conversionToSubscription\":true,\"calculateCompanyHasAccessToAdv\":true,\"notBoundedPrice\":true,\"showServicesSectionInConstructor\":true,\"campaignsFromDirectInList\":true,\"campaignBranchesSelectV2Available\":true,\"showStatusDescriptionTooltip\":true,\"partnerWidget\":true,\"tmpAuctionRecalculate\":true,\"websubscriptionMultipleCounters\":true,\"hideUxFeedbackInFrame\":true,\"createFeedForSubscription\":true,\"advertBranchesSelectV2Available\":true,\"partnerWidgetFooter\":true,\"stopUsingPrivateTycoonApiUpdateCompany\":true,\"upsaleForDaysHint\":true,\"permalinksMode\":true,\"chainStatCollection\":true,\"prolongationNewUI\":true,\"promocodeGreenNotification\":true,\"showSubscriptionMainStatistic\":true,\"companiesRequests\":true,\"instagramSettingsTabView\":true,\"showSitePreviewSubscription\":true,\"newWidgetMigration\":true,\"showPlatformsBlock\":true,\"webSubscriptionSettings\":true,\"tmpPresaleChainFetchingActiveCampaignIgnore\":true,\"totalDeepUsesStat\":true,\"tmpNewAdvertPlatforms\":true,\"statAdvert\":true,\"tmpCompanyNameOnBoostWithOrganization\":true,\"useGoodApiForPromoutedServices\":true,\"tmpPartnerPromoDistributionId\":true,\"showLendingCookieWallSettings\":true,\"clientPhoneSettings\":true,\"tmpPayerRuNewInnRequired\":true,\"ydoCampaign\":true,\"forecastCtaForInsta\":true,\"tmpInstagramNewPost\":true,\"tmpFixPriceWebSubscription\":true,\"VkontakteTargetingSettings\":true,\"hideInstagramSupportChartAndPhone\":true,\"compactCampaignControls\":true,\"tmpInstagramPostsPage\":true,\"forbidIntegrationCreation\":true,\"multiSubscription\":true,\"settingsStandaloneApp\":true,\"campaignDisplayBudget\":true,\"subscriptionTelegramPostPage\":true,\"multiSubscriptionCTA\":true,\"tmpSplitPspMode\":true,\"instagramCTATabView\":true,\"tmpWebCampaignCompanyOwnership\":true,\"newCategoriesInput\":true,\"checkLandingCampaignForCrm\":true,\"showCompaniesApp\":true,\"tmpLandingsLinkNewCompany\":true,\"ignoreTrialCampaignAvailabilityCheck\":true,\"boostCompanyPreferredProduct\":true,\"newFetchOrGenerateLanding\":true,\"ignoreHideBoostPriority\":true,\"tmpIntegrationSettingActionMenu\":true,\"enableWebExportToMaps\":true,\"sortedWebsubscriptionGoalsStat\":true,\"campaignCompetitorsSurvey\":true,\"CompetitorsPage\":true,\"shortPathCreateSiteSubscription\":true,\"vkAndTelegramPreviewFromCommonEndpoint\":true,\"payerFormV2\":true,\"tmpAuctionUpsaleDaysCharge\":true,\"newBannersInLK\":true,\"websubscriptionStatisticArbitrateChart\":true,\"tmpGetLastFeatureSubmission\":true,\"companiesFeatures\":true,\"mapsOnlyPlatform\":true,\"cropAdvertPhoto\":true,\"textImageAdsPreview\":true,\"lastStableDate\":true,\"tmpIntegrationPermalinkBind\":true,\"tmpShowTotalItemsCountInFeedPreview\":true,\"subscriptionVkType\":true,\"ozonStatisticCredentials\":true,\"scrollablePlatformPreviewGallery\":true,\"tmpPresaleIcoMultiTab\":true,\"competitorsTabInWidget\":true,\"urlValidationInput\":true,\"supportChat\":true,\"companiesDisplayCompanyModerationStatus\":true,\"hideStatWithoutGrants\":true,\"enabledMapsPlatformFeedback\":true,\"tmpShowDynamicInCharts\":true,\"openApiCheckBeneficiaryOnLaunch\":true,\"tmpOpenApiBeneficiaryBackendValidation\":true,\"tmpJingleForCaller\":true,\"imageUploadComponentV2\":true,\"advertizeOnLanding\":true,\"adUpsaleOfferNewUI\":true,\"allowCompanySelect\":true,\"tmpWebCampaignMediaModeration\":true,\"tycoonBookingStat\":true,\"openApiWebSubscription\":true,\"tmpKzPlatformInstagram\":true,\"wildWebFeed\":true,\"allowTextGenerator\":true,\"payersListDisplayType\":true,\"serpAuctionOnlyStatHotfix\":true,\"internalInvoice\":true,\"tmpGetCampaignWithoutAdverts\":true,\"modalOwnershipConfirmation\":true,\"tmpFixateProlongation\":true,\"webSubscriptionBusinessSnapshotDigestPage\":true,\"companiesBookingTab\":true,\"tmpCreateCompanyWithoutWebsite\":true,\"aggregatedClicks\":true,\"allowPorgAsClient\":true,\"quickPayment\":true,\"subscriptionVkWithMaps\":true,\"goalsNothingToShowWithHelpForm\":true,\"advertCtaRequestOption\":true,\"displayAdditionalBudget\":true,\"featureRequestLamp\":true,\"companyMapsPreviewImage\":true,\"upsaleActualPredictionInPaymentLink\":true,\"companyNavNewVerificationCheck\":true,\"tmpExtendedBeneficiaryDescription\":true,\"priorityBusinessFeatures\":true,\"tmpWebWithMapStat\":true,\"innerLogoHeadlineByDefault\":true,\"multistageBoost\":true,\"useSuggestForTheOzon\":true,\"statisticArbitrateChart\":true,\"tmpWebCampaignNinetyDaysDurationBudgets\":true,\"budgetCalculation\":true,\"promotionMediaArbitrateImage\":true,\"campaignFinishDate\":true,\"tmpUpsaleOfferWithBuff\":true,\"sidebarServerComponent\":true,\"tmpCloseNewDirectCampaignsInBusiness\":true,\"TelegramPostAutoParser\":true,\"callTrackingStat\":true,\"convertSubsidy\":true,\"footerInfoLinks\":true,\"spravLoadableSidebar\":true,\"tmpBeneficiaryContractIsChargePaidByAgentCheckbox\":true,\"arbitrateMediaPreview\":true,\"tgPercentBonusPromocodePoster\":true,\"webSubscriptionMediaExamplesForInsta\":true,\"openNewMasterForTelegram\":true,\"recalculateGduCountAndPrice\":true,\"tmpInstagramAccountCreateCampaign\":true,\"adLogoRKList\":true,\"VkEditLandingTab\":true,\"subscriptionCampaignPageTabs\":true,\"subscriptionTelegramPostsPage\":true,\"webCampaignTuningPage\":true,\"showManagerCard\":true,\"companySidebarTouch\":true,\"onlineCampaigns\":true,\"tmpPresalePageRefactoring\":true,\"allowCompaniesPhotosPage\":true,\"promocodeNotificationMessage\":true,\"partnerWidgetLanding\":true,\"tmpBoostUrlLengthChecking\":true,\"hybridBudgetMultiChainFix\":true,\"telegramCampaignTopPosts\":true,\"createWebCampaignV2\":true,\"companiesSiteTab\":true,\"competitorsOwnCompanyHasActiveCampaigns\":true,\"tmpUnifiedKzChain\":true,\"dashShowActualizationStatus\":true,\"multisubStatMapCorrection\":true,\"tmpUseBudgetByInitialAmountUpsale\":true,\"TelegramTargetingSettings\":true,\"directCampaignSkeleton\":true,\"tmpCreationLiteDirectClient\":true,\"lastProcessedDate\":true,\"asyncPreviewForAdditionalAc\":true,\"hideProlongPoster\":true,\"pauseRunAdvert\":true,\"eventSummaryStatOnKinds\":true,\"priorityCampaignCreation\":true,\"tmpCampaignBranchesRefactoring\":true,\"partnerWidgetMultistageBoost\":true,\"useNewBalanceClient\":true,\"tmpAsyncPreview\":true,\"auctionUpsale\":true,\"landlordMessengers\":true,\"newStatisticDownload\":true,\"readAdvertisingTemplates\":true,\"ownAdvertsForLanding\":true,\"subscriptionOzonType\":true,\"sberPayNewWindow\":true,\"totalStatisticMultipleCounters\":true,\"promocode\":true,\"tmpSerpAuctionPlatformPriority\":true,\"tmpStrictMediaLaw\":true,\"nonStaffCampaignCreation\":true,\"companiesReviews\":true,\"boostAppRedirects\":true,\"ICOWebSubscription\":true,\"newBrandingICPGenerator\":true,\"beneficiaryRkBannerAndSettings\":true,\"supportPartnerFeedLink\":true,\"partnerUsers\":true,\"customBudgetControl\":true,\"tmpCampaignStatusFromBackend\":true,\"getImageInfoAvatars\":true,\"newTransitionToTheAdvertProductListPage\":true,\"googleDisabledDisclaimer\":true,\"organizationFeaturesSurvey\":true,\"mapsOnlyForWebOnNewCampaign\":true,\"show-orders-history\":true,\"adPriorityOfferUpsale\":true,\"dynPrice\":true,\"promocodeExperimentPoster\":true,\"deepClicks\":true,\"subsidyPayerAlarm\":true,\"discountAdvertCreation\":true,\"allowCreateCompanyForLanding\":true,\"campaignEndpointDiagram\":true,\"callTrackingStatExcel\":true,\"tmpRedirectFeaturesPagesToSubscription\":true,\"newCtaMechanicsUiForCrm\":true,\"presaleBranchesSelectV2\":true,\"paymentMethods\":true,\"asyncProductFeedSiteAction\":true,\"newDraftLogicForOzon\":true,\"tmpMultiOfferOpenApi\":true,\"tmpSubscriptionShowGoodsFeedInDraft\":true,\"feedMediaPreview\":true,\"hasLandingCalltracking\":true,\"tmpRealBannersInPreviewV2\":true,\"tmpRejectedMediaInDegradationCaseFix\":true,\"statActionsInCard\":true,\"upsale\":true,\"separatePaymentMethods\":true,\"tmpCreateCompanyForMulti\":true,\"tmpShowAdUsefullCasesInputInSurveys\":true,\"webPromotionMoveMapsTab\":true,\"acPartnership\":true,\"presaleCampaignCreation\":true,\"userCardSimpleDropdownInWidget\":true,\"websubscriptionQuickPayment\":true,\"tmpIsCompetitorsPageNew\":true,\"handleCurrencyMismatch\":true,\"subscriptionFor30Days\":true,\"dashCreateCleanTickets\":true,\"boostUnifiedChainWithOldSubscription\":true,\"recurringPaymentWriteOff\":true,\"companiesSettingsTab\":true,\"showBookMapsCtaButtonInLanding\":true,\"instagramPostsEdit\":true,\"showBreadcrumbsForAdvertList\":true,\"arbitrateRate\":true,\"directModeration\":true,\"validateBeneficiaryOnSave\":true,\"webSubscriptionCallDurationTracking\":true,\"showOrganizationSettingsCard\":true,\"tmpExtendedBeneficiarySettings\":true,\"upsaleStraightUrl\":true,\"platformsCountryUnavailable\":true,\"show-services-multi-edit\":true,\"tmpPreviewBeforePurchase\":true,\"showInstagramFacebookStatChart\":true,\"websubscriptionAllowRenewal\":true,\"hideIntegrationsIfNoAccounts\":true,\"priorityCampaignPlatforms\":true,\"upsaleOffer\":true,\"adFeatureImagesAndCampaignGallery\":true,\"tmpYmlWebSubscription\":true,\"boostInstagram\":true,\"customPriceOnPresale\":true,\"subscriptionPreviewCountLimit\":true,\"partnerAttachPromoSettings\":true,\"tmpAuctionUpsaleForGeoChains\":true,\"showNewBoostInFrame\":true,\"forceOnMultiExp\":true,\"clientEmailSettings\":true,\"tmpPaymentModeMapsOnly\":true,\"changeWebUrlFull\":true,\"adFixAverageCallDuration\":true,\"tmpSplit\":true,\"tmpShowPostsInDraft\":true,\"subscriptionCTAPage\":true,\"tmpDirectAllowUseGoalsWithoutAccessGrants\":true,\"tmpICOMultiV2\":true,\"showRequestCtaButtonInLanding\":true,\"audienceServicesChart\":true,\"allowCompaniesEdit\":true,\"callTrackingAllowMultipleShowStat\":true,\"redirectToKzWithTenge\":true,\"previewAdvertTextFromUserInput\":true,\"recalculateV2\":true,\"multistageBoostOpenGoalFromWidget\":true,\"redirectToDraftAfterCompanyCreation\":true,\"hideRubricsForFeedDraft\":true,\"tmpPayersDataCorrection\":true,\"ndaStatisticForLast30Days\":true,\"tmpShowHeaderWithPorg\":true,\"unifiedCampaignTarget\":true,\"innerLogoHeadline\":true,\"tmpQuickPaymentForKzt\":true,\"tmpPreparePromotionRemoval\":true,\"tmpShowSiteStatForSerpAuction\":true,\"allowStatistic\":true,\"salesPhoneOnLanding\":true,\"disableSubsidyClaimFields\":true,\"subscriptionWildberriesType\":true,\"endpointMultilinks\":true,\"companiesCouponsTab\":true,\"recurringPayment\":true},\"systemRole\":\"client\",\"userSegmentation\":{\"balance_client_id\":4056766,\"has_chain_access\":false,\"has_permalink_access\":false,\"for_direct_popup\":false,\"customer_type\":\"free\"},\"testIds\":[\"1464370\",\"1479019\",\"1487788\",\"1499447\",\"1514689\",\"1526869\",\"1522429\",\"1482419\"],\"expBoxesCrypted\":\"BP-nHnHm_Romq1xdSGKddA,,\",\"uatraits\":{\"BrowserBase\":\"Chromium\",\"BrowserBaseVersion\":\"148.0.7778.96\",\"BrowserEngine\":\"WebKit\",\"BrowserEngineVersion\":\"537.36\",\"BrowserName\":\"Chrome\",\"BrowserVersion\":\"148.0.7778.96\",\"CSP1Support\":true,\"CSP2Support\":true,\"OSFamily\":\"Windows\",\"OSName\":\"Windows 10\",\"OSVersion\":\"10\",\"SVGSupport\":true,\"SameSiteSupport\":true,\"WebPSupport\":true,\"historySupport\":true,\"isBrowser\":true,\"isMobile\":false,\"isTouch\":false,\"localStorageSupport\":true,\"postMessageSupport\":true,\"x64\":true,\"isTurboApp\":false,\"isSearchApp\":false,\"isYandexBrowser\":false,\"yaPlatform\":\"desktop\"},\"geo\":{\"region_id\":47,\"position\":[56.326799,44.00652],\"coordinates\":[56.326799,44.00652],\"parents\":[47,120911,11079,40,225,10001,10000],\"region\":{\"id\":47,\"type\":6,\"parent_id\":120911,\"capital_id\":0,\"geo_parent_id\":0,\"name\":\"Нижний Новгород\",\"native_name\":\"\",\"iso_name\":\"RU GOJ\",\"is_main\":true,\"en_name\":\"Nizhny Novgorod\",\"phone_code\":\"831\",\"zip_code\":\"\",\"population\":1204985,\"latitude\":56.326799,\"longitude\":44.00652,\"latitude_size\":0.237959,\"longitude_size\":0.558618,\"zoom\":11,\"tzname\":\"Europe\\u002FMoscow\",\"official_languages\":\"ru\",\"services\":[\"bs\",\"yaca\",\"weather\",\"afisha\",\"maps\",\"tv\",\"ad\",\"etrain\",\"delivery\",\"route\"]}},\"isInternalRequest\":false,\"fromLightVerification\":false,\"hasAccessToAdfox\":false,\"diffs\":{\"companies_with_changes_count\":0}},\"env\":{\"enviroment\":\"production\",\"query\":{},\"metrika\":{\"id\":39321485,\"errorId\":\"45129582\",\"geoadvId\":46231566,\"smb\":56213845},\"delivery\":{\"platform_station\":\"019be62fca7970a49e638312c682f91d\"},\"hosts\":{\"yaRu\":\"https:\\u002F\\u002Fya.ru\",\"businessPriority\":\"\\u002Fbusiness\\u002Fpriority\",\"forms\":\"https:\\u002F\\u002Fforms.yandex.ru\",\"formsCom\":\"https:\\u002F\\u002Fforms.yandex.com\",\"help\":\"https:\\u002F\\u002Fyandex.ru\\u002Fsupport\\u002Fbusiness-priority\",\"promo\":\"https:\\u002F\\u002Fyandex.ru\\u002Fpromo\",\"webmaster\":\"https:\\u002F\\u002Fwebmaster.yandex.ru\",\"goodPlaceLanding\":\"https:\\u002F\\u002Fyandex.ru\\u002Fproject\\u002Fmaps\\u002Fgoodplace\",\"yangoUserAgreementLink\":\"https:\\u002F\\u002Fyango.com\\u002Flegal\\u002Fyangomaps_termsofuse\",\"yangoPrivacyPolicyLink\":\"https:\\u002F\\u002Fyango.com\\u002Flegal\\u002Fyangomaps_privacy\",\"yangoBusinessHelp\":\"https:\\u002F\\u002Fbusiness.yango.com\\u002Fsupport\",\"userAgreementLink\":\"https:\\u002F\\u002Fyandex.ru\\u002Flegal\\u002Frules\",\"privacyPolicyLink\":\"https:\\u002F\\u002Fyandex.ru\\u002Flegal\\u002Fconfidential\",\"yandex\":\"yandex.ru\",\"yandexRu\":\"yandex.ru\",\"altay\":\"https:\\u002F\\u002Faltay.maps.yandex-team.ru\",\"direct\":\"https:\\u002F\\u002Fdirect.yandex.ru\\u002F\",\"photoUploadApi\":\"https:\\u002F\\u002Fphoto.upload.maps.yandex.ru\\u002Fapi\\u002Fv1\",\"yangoPhotoUploadApi\":\"https:\\u002F\\u002Fphoto-upload.maps.yango.com\\u002Fapi\\u002Fv1\",\"yango\":\"https:\\u002F\\u002Fyango.com\",\"yangoPassport\":\"https:\\u002F\\u002Fpassport.yango.com\",\"yangoBusiness\":\"https:\\u002F\\u002Fbusiness.yango.com\",\"yangoMaps\":\"https:\\u002F\\u002Fmaps.yango.com\",\"avatarsGet\":\"https:\\u002F\\u002Favatars.mds.yandex.net\"},\"host\":\"yandex.ru\",\"routePrefix\":\"\\u002Fsprav\",\"csrf\":\"25680dfff5d35826b8984551785f6f8c6afea1f9:1779731982\",\"tld\":{\"value\":\"ru\",\"isKubr\":true,\"hasPayments\":true},\"nonce\":\"f+IWeWXB8Nn8Q1SURn+9+g==\",\"path\":\"\\u002F139964443366\\u002Fp\\u002Fedit\\u002F\",\"isTestplane\":false,\"useStub\":false,\"platform\":\"desktop\",\"icookie\":\"5059445521728560702\",\"langDetect\":{\"id\":\"ru\",\"name\":\"Ru\"},\"version\":\"1173\",\"yandexEnvironment\":\"production\",\"isYangoTouchPage\":false,\"isGoIframe\":false,\"isYaRu\":false}},\"initialState\":{\"flags\":{\"needNotificationsPromo\":false,\"showChatWidget\":true,\"canOrderPriority\":true,\"showAdvertiseGoodPlace\":false,\"showTouchCompanyMenu\":false,\"isKubrAvailable\":true,\"managerHasEditRestrictionData\":false,\"isAdvDemoCardAvailable\":true},\"isLocalStorageSynced\":false,\"user\":{\"status\":\"VALID\",\"uid\":27265048,\"lang\":\"ru\",\"displayName\":\"Павел\",\"avatar\":\"43473\\u002Fenc-0200ae4d6b8d6b05e0e6188854686155736058a1fa0e1be9a9100d7115d3f12a\",\"addressList\":[\"NLPkem@yandex.ru\"],\"login\":\"NLPkem\",\"isYandexoid\":false,\"phone\":\"+7 977 330‒77‒20\",\"users\":[],\"hasUserTicket\":true,\"yandexuid\":\"5059445521728560702\",\"permissions\":{},\"experiments\":[\"disable_inject_popups\",\"renewals_leds_user\",\"porg\",\"redirect_for_duplicates\",\"new_moderation_mail\",\"company_sorting\",\"super_sender_emails\",\"booking_category_31529\",\"booking_category_31407\",\"booking_category_31528\",\"booking_category_31649\",\"booking_category_31657\",\"booking_category_31656\",\"booking_category_30689\",\"booking_category_31530\",\"booking_category_30321\",\"booking_category_30681\",\"booking_category_30207\",\"booking_category_30208\",\"booking_category_30214\",\"booking_category_30578\",\"booking_category_31426\",\"booking_category_31546\",\"booking_category_31420\",\"booking_category_30331\",\"booking_category_30210\",\"booking_category_30211\",\"review_new_comments\",\"booking_category_3501624582\",\"booking_category_3501418474\",\"booking_category_31509\",\"booking_category_30657\",\"booking_category_31505\",\"booking_category_31504\",\"booking_category_30658\",\"booking_category_31507\",\"booking_category_31511\",\"booking_category_31634\",\"booking_category_3501611069\",\"booking_category_3491649165\",\"booking_category_3491649163\",\"booking_category_30789\",\"booking_category_31637\",\"booking_category_31636\",\"booking_category_30308\",\"booking_category_31523\",\"booking_category_30434\",\"booking_category_31401\",\"booking_category_31404\",\"booking_category_31525\",\"booking_category_31524\",\"booking_category_30310\",\"booking_category_30795\",\"booking_category_274864961\",\"booking_category_20679\",\"booking_category_30248\",\"booking_category_30485\",\"booking_category_31334\",\"booking_category_31450\",\"booking_category_31588\",\"booking_category_30259\",\"booking_category_31107\",\"booking_category_30495\",\"booking_category_3501621390\",\"booking_category_30377\",\"booking_category_31580\",\"booking_category_31462\",\"booking_category_31461\",\"booking_category_3493720533\",\"booking_category_144152359\",\"booking_category_30345\",\"booking_category_3501604600\",\"booking_category_31316\",\"booking_category_30221\",\"booking_category_31551\",\"booking_category_3501478864\",\"booking_category_3501571789\",\"booking_category_30352\",\"booking_category_30233\",\"booking_category_30355\",\"booking_category_3501598014\",\"booking_category_31137\",\"booking_category_31375\",\"booking_category_31136\",\"booking_category_30289\",\"booking_category_30161\",\"booking_category_31492\",\"booking_category_30163\",\"booking_category_31495\",\"booking_category_31131\",\"booking_category_31252\",\"booking_category_31373\",\"booking_category_3501478922\",\"booking_category_31029\",\"booking_category_31387\",\"booking_category_31265\",\"booking_category_30177\",\"booking_category_31146\",\"booking_category_31022\",\"booking_category_31264\",\"booking_category_30170\",\"booking_category_31116\",\"booking_category_31118\",\"booking_category_3501483288\",\"header_for_geoprod\",\"booking_category_31595\",\"booking_category_30266\",\"booking_category_30387\",\"booking_category_31592\",\"booking_category_30260\",\"booking_category_30261\",\"booking_category_31110\",\"booking_category_31472\",\"booking_category_3501497449\",\"booking_category_31119\",\"booking_category_31368\",\"booking_category_31128\",\"booking_category_30396\",\"booking_category_30155\",\"booking_category_31122\",\"booking_category_30156\",\"booking_category_30157\",\"booking_category_30273\",\"booking_category_30394\",\"booking_category_20276\",\"booking_category_21480\",\"booking_category_3501647395\",\"booking_category_3501571807\",\"booking_category_3501627308\",\"booking_category_1180056060\",\"booking_category_30085\",\"booking_category_31297\",\"booking_category_31293\",\"booking_category_31292\",\"booking_category_21237\",\"booking_category_21470\",\"booking_category_31069\",\"booking_category_30096\",\"booking_category_31066\",\"booking_category_31065\",\"booking_category_21386\",\"booking_category_21023\",\"booking_category_262003042\",\"booking_category_3501569754\",\"booking_category_3501571704\",\"booking_category_31157\",\"booking_category_30181\",\"booking_category_859588950\",\"booking_category_30078\",\"booking_category_31284\",\"booking_category_31286\",\"booking_category_30192\",\"booking_category_3501656614\",\"booking_category_3501539206\",\"booking_category_31098\",\"booking_category_31092\",\"booking_category_31095\",\"booking_category_31094\",\"booking_category_3501479076\",\"booking_category_31072\",\"booking_category_3501523183\",\"booking_category_1191769628\",\"booking_category_31081\",\"booking_category_31084\",\"booking_category_3501631880\",\"booking_category_30810\",\"booking_category_3501527629\",\"booking_category_3501479397\",\"booking_category_30907\",\"booking_category_30905\",\"booking_category_30906\",\"booking_category_3480798811\",\"booking_category_30717\",\"booking_category_30718\",\"booking_category_30719\",\"booking_category_3501632374\",\"booking_category_30961\",\"booking_category_3501624630\",\"booking_category_3501479454\",\"geoprod_geovisor\",\"booking_category_140638190\",\"booking_category_30609\",\"booking_category_30610\",\"booking_category_30853\",\"booking_category_30937\",\"booking_category_30940\",\"booking_category_3501479471\",\"booking_category_263455525\",\"booking_category_30706\",\"booking_category_30703\",\"booking_category_30946\",\"booking_category_3501411425\",\"booking_category_3501620048\",\"booking_category_3501571694\",\"booking_category_3501620049\",\"booking_category_30756\",\"booking_category_30998\",\"booking_category_30757\",\"booking_category_30758\",\"booking_category_30759\",\"booking_category_30764\",\"booking_category_30765\",\"booking_category_30887\",\"booking_category_30761\",\"booking_category_31619\",\"booking_category_30409\",\"booking_category_30767\",\"booking_category_30405\",\"booking_category_30647\",\"booking_category_30768\",\"booking_category_30406\",\"booking_category_30895\",\"booking_category_30412\",\"booking_category_31621\",\"booking_category_30775\",\"booking_category_31503\",\"booking_category_30770\",\"booking_category_30410\",\"booking_category_3501482702\",\"booking_category_20612\",\"booking_category_30738\",\"show_collections_link\",\"booking_category_30735\",\"booking_category_30741\",\"booking_category_30985\",\"booking_category_30740\",\"booking_category_3501478105\",\"booking_category_20728\",\"booking_category_3501478101\",\"booking_category_3501478108\",\"booking_category_3501479439\",\"booking_category_3501479438\",\"booking_category_30626\",\"booking_category_30748\",\"booking_category_30995\",\"booking_category_30755\",\"booking_category_30750\",\"booking_category_3501623876\",\"ya_browser_promo\",\"chain_info_good_place\",\"good_place_badge_change_year\",\"show_good_place_card_2023_order\",\"trial_info_banner\",\"support_gp_promo\",\"paid_promotions\",\"reverse_adv_demo_card_experiment\"],\"expFeatures\":{\"allowSyncLandingCallTrackingTask\":true,\"allowCompaniesChainPage\":true,\"runningCampaignFromLanding\":true,\"tmpSberbStubsDisabled\":true,\"subscriptionCampaignGoals\":true,\"googlePlatformPluggedInTexts\":true,\"hideArbitrageFieldsInProduct\":true,\"activeCampaignsParallelFetching\":true,\"renderMissingGoalLegend\":true,\"permanentHidePriority\":true,\"show-coupon-services\":true,\"tmpLargeChainUseLightweightListForMaterials\":true,\"tmpEnableYmlInDraft\":true,\"companiesCompanySearch\":true,\"useUpsaleCustomBudget\":true,\"zelibobaInPreview\":true,\"subscribtionAutoGoals\":true,\"changeWebUrlParts\":true,\"webSubscriptionMediaExamples\":true,\"useRenewalService\":true,\"landlordDescriptionFeatures\":true,\"hideBooking\":true,\"tmpSpravCreateCompanyV3\":true,\"unAuthSetupPage\":true,\"tmpMapsCampaignAsyncPreview\":true,\"telegramUseLongTimeoutApi\":true,\"newTransitionToTheCampaignAdvertListPage\":true,\"tmpMarketplacesInBlueprints\":true,\"instaCanSee\":true,\"tmpShowFeedsBanner\":true,\"mergedAdvertMaterialsChart\":true,\"hybridBudgetControl\":true,\"priorityProductServicePage\":true,\"newConstructorFeaturesSurvey\":true,\"subscriptionStorefrontFillPopup\":true,\"stopUsingPrivateTycoonAPI\":true,\"forceUpdateProductCategoryToV2\":true,\"allowCompaniesDetailedPage\":true,\"competitorsHeatmapRating\":true,\"subscriptionArbitrageProductPage\":true,\"shortPeriodPay\":true,\"arbitrateControl\":true,\"tmpIntegrationRedirectToDraft\":true,\"featuresForKz\":true,\"tmpPincodeInUserMenu\":true,\"advertName\":true,\"galleryAdvertInPriority\":true,\"handlePayerType\":true,\"crmTelegramNotifications\":true,\"removeTimeTargetingSettings\":true,\"showOwnershipConfirmationLink\":true,\"tmpAllowDirectCampaignsInBusinessByHasBizCampaigns\":true,\"arbitrateMediaPreviewList\":true,\"productServiceCategoryV2\":true,\"allowEnablingAutoGoalInMetrika\":true,\"ownAdvertsDatepickerField\":true,\"tmpRealBannersInPreview\":true,\"tmpProductListDegradation\":true,\"companyCampaignsPriceGuide\":true,\"uniqueSourcesInStorefrontFillPopup\":true,\"pageDimBackground\":true,\"leadToInstagramTitle\":true,\"priorityPurchase\":true,\"tmpAllowLandingUrlOnDirectBoost\":true,\"subscriptionInstagramSettings\":true,\"showSocialButtonsInstagram\":true,\"renewalFromMinPrice\":true,\"showAccordeonSidebar\":true,\"businessSnapshotPriceIncreaseWarning\":true,\"show-free-coupons\":true,\"campaignListGuide\":true,\"kzSubscription\":true,\"installmentProlong\":true,\"createFeedAdvertBeforeDraft\":true,\"tmpExtendedBeneficiaryNotification\":true,\"commonBusinessCabinet\":true,\"newChartDescription\":true,\"promotionMediaAutoArbitrateImage\":true,\"paymentBeneficiaryInfo\":true,\"campaignStatExcel\":true,\"showHeaderOfNewBoostInFrame\":true,\"agencyCommercialProposal\":true,\"stopCreatingCompanyDraft\":true,\"tmpShowSerpAuctionPlatform\":true,\"advertDigestDimBackground\":true,\"showInstagramSocialButton\":true,\"companyModerationStatus\":true,\"businessSnapshotRubricsSuggest\":true,\"accessToCompaniesApp\":true,\"boostApp\":true,\"budgetRecalculate\":true,\"showGoalsStatInstagram\":true,\"clientDelegatesList\":true,\"subscriptionSeparateSwitchingPromoPages\":true,\"showLandingAgreement\":true,\"isCounterBadgeVisible\":true,\"show-search-in-calendar\":true,\"tmpNewStatisticPage\":true,\"useSourceSuggestionsWithMultiLinks\":true,\"integrationCampaign30Days\":true,\"mdsPngRecommendationIcons\":true,\"show-booking-shutdown\":true,\"mdsChainStat\":true,\"productsSort\":true,\"adFixStat\":true,\"collapseIdenticalGoals\":true,\"fancyBudgetControl\":true,\"competitorsRating\":true,\"replacementNumberReissue\":true,\"tmpKzInstagramAccountReconnect\":true,\"audienceSummaryEventsStatistic\":true,\"adUpsaleMinBudget\":true,\"tmpPresaleExtended\":true,\"adUpsaleEndDate\":true,\"neuralNetworkPictures\":true,\"collectUserInfo\":true,\"instagramExtendedSettings\":true,\"subscriptionDigestCampaignFeatures\":true,\"hideExternalMetrika\":true,\"websubscriptionStatisticSurvey\":true,\"instagramSettingsDeletePostButton\":true,\"faqButtons\":true,\"decreaseCampaignDuration\":true,\"newSourceTransitionForOzon\":true,\"newCampaignEndpointTargetOptionsScene\":true,\"showNotMatchedDeepClicks\":true,\"showInstaPreviewSubscription\":true,\"tmpPayerRuInnEdit\":true,\"yandexBug\":true,\"presaleCommercialProposalDownload\":true,\"modalGuide\":true,\"scrollToInvalidInputWithHeaderCorrection\":true,\"satisfactionSurvey\":true,\"tmpBoostCompanySelectReplacement\":true,\"branchStatisticCharts\":true,\"subscriptionProductPage\":true,\"newTelegramPostsListUX\":true,\"webSubscriptionBusinessSnapshotFeatures\":true,\"editObservers\":true,\"openApiCompanySearchUseLaas\":true,\"priorityEcomProductFeed\":true,\"useSelectedFilterForGallery\":true,\"campaignsRedirectFromLanding\":true,\"showAdvertTime\":true,\"showLinkToThePriceList\":true,\"multiLinksForMarketplaceCampaigns\":true,\"webSubscriptionCallTracking\":true,\"allowCompaniesOwnershipConfirmation\":true,\"subscriptionMarketType\":true,\"tmpNewSubscriptionProductsPage\":true,\"showHowItWorksBlock\":true,\"bannersPreviewGEOPROD19600\":true,\"tmpAsyncNeuralBannerSuggest\":true,\"crmRequestsListCompactView\":true,\"tmpGetCampaignWithoutPromo\":true,\"tmpRedirectMediasPagesToSubscription\":true,\"tmpPlatformBasedCampaignStatus\":true,\"markInstagramAccountActual\":true,\"settingsFeaturesImagesForm\":true,\"websubscriptionGoalsStat\":true,\"show-settings-phone\":true,\"callTrackingSubscriptionStatExcel\":true,\"separateGoalsForMarketplaces\":true,\"adRecommendationBadges\":true,\"priorityHandleCompanyModerationStatus\":true,\"navigationToSpravFromCompanySidebar\":true,\"tmpCrmPhotoPicker\":true,\"crmRequestPermissions\":true,\"tmpReplacementNumberReissueNonChain\":true,\"show-custom-cta-button-in-landing\":true,\"telegramStatisticCredentials\":true,\"callTracking\":true,\"multiSubscriptionChangeUrl\":true,\"nonAuthorizedAdvertizeOnLanding\":true,\"chainSubscription\":true,\"headerUserIdPopup\":true,\"show-request-created-checkbox\":true,\"tycoonHeadless\":true,\"telegramPreselectV2\":true,\"useIframeSpravLinkInWidget\":true,\"showOnboardingPrices\":true,\"prioritySearch\":true,\"upsaleWebCampaign\":true,\"tmpDirectCampaignsInBusiness\":true,\"tmpBoostDirectClientNds22\":true,\"galleryAdvertInSubscription\":true,\"campaignDisplayArbitrate\":true,\"dragAndDropForProductList\":true,\"unifiedUpsale\":true,\"icoForCustomBudget\":true,\"isVisiblePlayPauseButton\":true,\"autoActivate\":true,\"landlordAttractCustomers\":true,\"bell\":true,\"tmpWebmasterWebSubscription\":true,\"promocodeBPlusNotification\":true,\"tmpForceRedirectFeaturesPagesToSubscription\":true,\"showGoalsStatLanding\":true,\"usePredictionService\":true,\"websubscriptionStatisticPage\":true,\"webSubscriptionMediaPageV2\":true,\"webSubscriptionMediaPageV3\":true,\"tmpPromotionRemovalFreeze\":true,\"feedPreviewFromCommonEndpoint\":true,\"disablePlatforms\":true,\"tmpInstagramSettingsAddress\":true,\"instagramNewCompany\":true,\"checkBalanceAlreadyRequest\":true,\"tmpEnableSourcesPopup\":true,\"tmpForceRedirectMediasPagesToSubscription\":true,\"tmpUpdateGeoproductAdTexts\":true,\"show-gift-coupons\":true,\"multipleProductCurrency\":true,\"headlineMediaArbitrateImage\":true,\"shortCompanyByPermalink\":true,\"headersAsRecord\":true,\"coloredBanners\":true,\"uxFeedback\":true,\"dndImageUploaderPlate\":true,\"defaultDaysDuration\":true,\"newCompetitorsNotificationPoster\":true,\"stopUsingPrivateTycoonApiCreateUser\":true,\"tmpCacheCreateCampaign\":true,\"tmpAuctionUpsaleCompensation\":true,\"show-services-request-cta\":true,\"importBlockForArbitrageProduct\":true,\"tmpPromotionRemoval\":true,\"productsWebSubscription\":true,\"allowCreateLandingByUrl\":true,\"textImageAds\":true,\"multiSourceImageSelect\":true,\"instagramSettingsHeaderCTAButton\":true,\"tmpAdditionalUpsaleWithBonus\":true,\"webSubscriptionHistory\":true,\"adWhatsAppInChatWidget\":true,\"redirectToSpravVerify\":true,\"tmpChainMultistageBoost\":true,\"createCompany\":true,\"displayPriceFixedUntil\":true,\"presetExternalAdverts\":true,\"tmpAsyncCopyAdvertFromCampaignToCampaign\":true,\"branchesHasCampaignFilterInCampaign\":true,\"launchInstaStatistic\":true,\"totalBusinessSnapshotStat\":true,\"hideStatisticCompetitors\":true,\"dashBackSignTicket\":true,\"spravDeliveryEcom\":true,\"handleCompanyCreatorVerification\":true,\"upsaleBudgetQuery\":true,\"tmpBeneficiaryBackendValidation\":true,\"onlyDiscoveryDeepClicksForSubscription\":true,\"subscriptionCampaign\":true,\"crmSubscriptionButton\":true,\"tmpOneSimpleAmPreview\":true,\"companiesUsersTab\":true,\"okrForOwnAdverts\":true,\"handleNotOwned\":true,\"tmpUnifiedCallTracking\":true,\"tmpValidateProductLinkForWeb\":true,\"hideAdverizeWithActiveGeoproductOrders\":true,\"galleryImageUploader\":true,\"landingEcommerce\":true,\"landingGeoproduct\":true,\"acClientDomain\":true,\"tmpCheckAllowDirectCampaignsInBusinessByPortalUser\":true,\"tmpExtendedBeneficiaryForm\":true,\"beneficiaryOnPayersPage\":true,\"tmpLastPayerInvalidBanner\":true,\"dashCollapseRoles\":true,\"tmpDisplayActualSlugForLandings\":true,\"showLandingPreviewSubscription\":true,\"requestsTab\":true,\"saveCampaignV2\":true,\"presaleSidebar\":true,\"mergeFeedsWithArbitrageProducts\":true,\"partnerWidgetBoostLanding\":true,\"tmpSerpAuctionWithChains\":true,\"statisticGetQueries\":true,\"tmpImagedOwnAdvertMlGeneration\":true,\"tmpQuickPaymentProhibitedForLastInvalidPayer\":true,\"arbitrateMediaPreviewLikeDislike\":true,\"promoRedesignNewCampaigns\":true,\"fancyBudgetControlShiftBreakpoints\":true,\"findBusinessSnapshotAmongChains\":true,\"uxFeedbackSprav\":true,\"tmpWaitLongVisibilityBeforeRequestFeedback\":true,\"listViewAutoGoals\":true,\"instaSiteGdu\":true,\"directInBusinessFeedOnBoost\":true,\"onlineCompanies\":true,\"supportPhone\":true,\"moveCompaniesPermalinks\":true,\"promocodeGoodPlaceNotification\":true,\"tmpEnforceCSP\":true,\"tmpExtendedBeneficiaryDraft\":true,\"hideStatWithoutLabel\":true,\"tmpSupportTelegramLinkForTierConciergeUnmanaged\":true,\"conversionToSubscription\":true,\"calculateCompanyHasAccessToAdv\":true,\"notBoundedPrice\":true,\"showServicesSectionInConstructor\":true,\"campaignsFromDirectInList\":true,\"campaignBranchesSelectV2Available\":true,\"showStatusDescriptionTooltip\":true,\"partnerWidget\":true,\"tmpAuctionRecalculate\":true,\"websubscriptionMultipleCounters\":true,\"hideUxFeedbackInFrame\":true,\"createFeedForSubscription\":true,\"advertBranchesSelectV2Available\":true,\"partnerWidgetFooter\":true,\"stopUsingPrivateTycoonApiUpdateCompany\":true,\"upsaleForDaysHint\":true,\"permalinksMode\":true,\"chainStatCollection\":true,\"prolongationNewUI\":true,\"promocodeGreenNotification\":true,\"showSubscriptionMainStatistic\":true,\"companiesRequests\":true,\"instagramSettingsTabView\":true,\"showSitePreviewSubscription\":true,\"newWidgetMigration\":true,\"showPlatformsBlock\":true,\"webSubscriptionSettings\":true,\"tmpPresaleChainFetchingActiveCampaignIgnore\":true,\"totalDeepUsesStat\":true,\"tmpNewAdvertPlatforms\":true,\"statAdvert\":true,\"tmpCompanyNameOnBoostWithOrganization\":true,\"useGoodApiForPromoutedServices\":true,\"tmpPartnerPromoDistributionId\":true,\"showLendingCookieWallSettings\":true,\"clientPhoneSettings\":true,\"tmpPayerRuNewInnRequired\":true,\"ydoCampaign\":true,\"forecastCtaForInsta\":true,\"tmpInstagramNewPost\":true,\"tmpFixPriceWebSubscription\":true,\"VkontakteTargetingSettings\":true,\"hideInstagramSupportChartAndPhone\":true,\"compactCampaignControls\":true,\"tmpInstagramPostsPage\":true,\"forbidIntegrationCreation\":true,\"multiSubscription\":true,\"settingsStandaloneApp\":true,\"campaignDisplayBudget\":true,\"subscriptionTelegramPostPage\":true,\"multiSubscriptionCTA\":true,\"tmpSplitPspMode\":true,\"instagramCTATabView\":true,\"tmpWebCampaignCompanyOwnership\":true,\"newCategoriesInput\":true,\"checkLandingCampaignForCrm\":true,\"showCompaniesApp\":true,\"tmpLandingsLinkNewCompany\":true,\"ignoreTrialCampaignAvailabilityCheck\":true,\"boostCompanyPreferredProduct\":true,\"newFetchOrGenerateLanding\":true,\"ignoreHideBoostPriority\":true,\"tmpIntegrationSettingActionMenu\":true,\"enableWebExportToMaps\":true,\"sortedWebsubscriptionGoalsStat\":true,\"campaignCompetitorsSurvey\":true,\"CompetitorsPage\":true,\"shortPathCreateSiteSubscription\":true,\"vkAndTelegramPreviewFromCommonEndpoint\":true,\"payerFormV2\":true,\"tmpAuctionUpsaleDaysCharge\":true,\"newBannersInLK\":true,\"websubscriptionStatisticArbitrateChart\":true,\"tmpGetLastFeatureSubmission\":true,\"companiesFeatures\":true,\"mapsOnlyPlatform\":true,\"cropAdvertPhoto\":true,\"textImageAdsPreview\":true,\"lastStableDate\":true,\"tmpIntegrationPermalinkBind\":true,\"tmpShowTotalItemsCountInFeedPreview\":true,\"subscriptionVkType\":true,\"ozonStatisticCredentials\":true,\"scrollablePlatformPreviewGallery\":true,\"tmpPresaleIcoMultiTab\":true,\"competitorsTabInWidget\":true,\"urlValidationInput\":true,\"supportChat\":true,\"companiesDisplayCompanyModerationStatus\":true,\"hideStatWithoutGrants\":true,\"enabledMapsPlatformFeedback\":true,\"tmpShowDynamicInCharts\":true,\"openApiCheckBeneficiaryOnLaunch\":true,\"tmpOpenApiBeneficiaryBackendValidation\":true,\"tmpJingleForCaller\":true,\"imageUploadComponentV2\":true,\"advertizeOnLanding\":true,\"adUpsaleOfferNewUI\":true,\"allowCompanySelect\":true,\"tmpWebCampaignMediaModeration\":true,\"tycoonBookingStat\":true,\"openApiWebSubscription\":true,\"tmpKzPlatformInstagram\":true,\"wildWebFeed\":true,\"allowTextGenerator\":true,\"payersListDisplayType\":true,\"serpAuctionOnlyStatHotfix\":true,\"internalInvoice\":true,\"tmpGetCampaignWithoutAdverts\":true,\"modalOwnershipConfirmation\":true,\"tmpFixateProlongation\":true,\"webSubscriptionBusinessSnapshotDigestPage\":true,\"companiesBookingTab\":true,\"tmpCreateCompanyWithoutWebsite\":true,\"aggregatedClicks\":true,\"allowPorgAsClient\":true,\"quickPayment\":true,\"subscriptionVkWithMaps\":true,\"goalsNothingToShowWithHelpForm\":true,\"advertCtaRequestOption\":true,\"displayAdditionalBudget\":true,\"featureRequestLamp\":true,\"companyMapsPreviewImage\":true,\"upsaleActualPredictionInPaymentLink\":true,\"companyNavNewVerificationCheck\":true,\"tmpExtendedBeneficiaryDescription\":true,\"priorityBusinessFeatures\":true,\"tmpWebWithMapStat\":true,\"innerLogoHeadlineByDefault\":true,\"multistageBoost\":true,\"useSuggestForTheOzon\":true,\"statisticArbitrateChart\":true,\"tmpWebCampaignNinetyDaysDurationBudgets\":true,\"budgetCalculation\":true,\"promotionMediaArbitrateImage\":true,\"campaignFinishDate\":true,\"tmpUpsaleOfferWithBuff\":true,\"sidebarServerComponent\":true,\"tmpCloseNewDirectCampaignsInBusiness\":true,\"TelegramPostAutoParser\":true,\"callTrackingStat\":true,\"convertSubsidy\":true,\"footerInfoLinks\":true,\"spravLoadableSidebar\":true,\"tmpBeneficiaryContractIsChargePaidByAgentCheckbox\":true,\"arbitrateMediaPreview\":true,\"tgPercentBonusPromocodePoster\":true,\"webSubscriptionMediaExamplesForInsta\":true,\"openNewMasterForTelegram\":true,\"recalculateGduCountAndPrice\":true,\"tmpInstagramAccountCreateCampaign\":true,\"adLogoRKList\":true,\"VkEditLandingTab\":true,\"subscriptionCampaignPageTabs\":true,\"subscriptionTelegramPostsPage\":true,\"webCampaignTuningPage\":true,\"showManagerCard\":true,\"companySidebarTouch\":true,\"onlineCampaigns\":true,\"tmpPresalePageRefactoring\":true,\"allowCompaniesPhotosPage\":true,\"promocodeNotificationMessage\":true,\"partnerWidgetLanding\":true,\"tmpBoostUrlLengthChecking\":true,\"hybridBudgetMultiChainFix\":true,\"telegramCampaignTopPosts\":true,\"createWebCampaignV2\":true,\"companiesSiteTab\":true,\"competitorsOwnCompanyHasActiveCampaigns\":true,\"tmpUnifiedKzChain\":true,\"dashShowActualizationStatus\":true,\"multisubStatMapCorrection\":true,\"tmpUseBudgetByInitialAmountUpsale\":true,\"TelegramTargetingSettings\":true,\"directCampaignSkeleton\":true,\"tmpCreationLiteDirectClient\":true,\"lastProcessedDate\":true,\"asyncPreviewForAdditionalAc\":true,\"hideProlongPoster\":true,\"pauseRunAdvert\":true,\"eventSummaryStatOnKinds\":true,\"priorityCampaignCreation\":true,\"tmpCampaignBranchesRefactoring\":true,\"partnerWidgetMultistageBoost\":true,\"useNewBalanceClient\":true,\"tmpAsyncPreview\":true,\"auctionUpsale\":true,\"landlordMessengers\":true,\"newStatisticDownload\":true,\"readAdvertisingTemplates\":true,\"ownAdvertsForLanding\":true,\"subscriptionOzonType\":true,\"sberPayNewWindow\":true,\"totalStatisticMultipleCounters\":true,\"promocode\":true,\"tmpSerpAuctionPlatformPriority\":true,\"tmpStrictMediaLaw\":true,\"nonStaffCampaignCreation\":true,\"companiesReviews\":true,\"boostAppRedirects\":true,\"ICOWebSubscription\":true,\"newBrandingICPGenerator\":true,\"beneficiaryRkBannerAndSettings\":true,\"supportPartnerFeedLink\":true,\"partnerUsers\":true,\"customBudgetControl\":true,\"tmpCampaignStatusFromBackend\":true,\"getImageInfoAvatars\":true,\"newTransitionToTheAdvertProductListPage\":true,\"googleDisabledDisclaimer\":true,\"organizationFeaturesSurvey\":true,\"mapsOnlyForWebOnNewCampaign\":true,\"show-orders-history\":true,\"adPriorityOfferUpsale\":true,\"dynPrice\":true,\"promocodeExperimentPoster\":true,\"deepClicks\":true,\"subsidyPayerAlarm\":true,\"discountAdvertCreation\":true,\"allowCreateCompanyForLanding\":true,\"campaignEndpointDiagram\":true,\"callTrackingStatExcel\":true,\"tmpRedirectFeaturesPagesToSubscription\":true,\"newCtaMechanicsUiForCrm\":true,\"presaleBranchesSelectV2\":true,\"paymentMethods\":true,\"asyncProductFeedSiteAction\":true,\"newDraftLogicForOzon\":true,\"tmpMultiOfferOpenApi\":true,\"tmpSubscriptionShowGoodsFeedInDraft\":true,\"feedMediaPreview\":true,\"hasLandingCalltracking\":true,\"tmpRealBannersInPreviewV2\":true,\"tmpRejectedMediaInDegradationCaseFix\":true,\"statActionsInCard\":true,\"upsale\":true,\"separatePaymentMethods\":true,\"tmpCreateCompanyForMulti\":true,\"tmpShowAdUsefullCasesInputInSurveys\":true,\"webPromotionMoveMapsTab\":true,\"acPartnership\":true,\"presaleCampaignCreation\":true,\"userCardSimpleDropdownInWidget\":true,\"websubscriptionQuickPayment\":true,\"tmpIsCompetitorsPageNew\":true,\"handleCurrencyMismatch\":true,\"subscriptionFor30Days\":true,\"dashCreateCleanTickets\":true,\"boostUnifiedChainWithOldSubscription\":true,\"recurringPaymentWriteOff\":true,\"companiesSettingsTab\":true,\"showBookMapsCtaButtonInLanding\":true,\"instagramPostsEdit\":true,\"showBreadcrumbsForAdvertList\":true,\"arbitrateRate\":true,\"directModeration\":true,\"validateBeneficiaryOnSave\":true,\"webSubscriptionCallDurationTracking\":true,\"showOrganizationSettingsCard\":true,\"tmpExtendedBeneficiarySettings\":true,\"upsaleStraightUrl\":true,\"platformsCountryUnavailable\":true,\"show-services-multi-edit\":true,\"tmpPreviewBeforePurchase\":true,\"showInstagramFacebookStatChart\":true,\"websubscriptionAllowRenewal\":true,\"hideIntegrationsIfNoAccounts\":true,\"priorityCampaignPlatforms\":true,\"upsaleOffer\":true,\"adFeatureImagesAndCampaignGallery\":true,\"tmpYmlWebSubscription\":true,\"boostInstagram\":true,\"customPriceOnPresale\":true,\"subscriptionPreviewCountLimit\":true,\"partnerAttachPromoSettings\":true,\"tmpAuctionUpsaleForGeoChains\":true,\"showNewBoostInFrame\":true,\"forceOnMultiExp\":true,\"clientEmailSettings\":true,\"tmpPaymentModeMapsOnly\":true,\"changeWebUrlFull\":true,\"adFixAverageCallDuration\":true,\"tmpSplit\":true,\"tmpShowPostsInDraft\":true,\"subscriptionCTAPage\":true,\"tmpDirectAllowUseGoalsWithoutAccessGrants\":true,\"tmpICOMultiV2\":true,\"showRequestCtaButtonInLanding\":true,\"audienceServicesChart\":true,\"allowCompaniesEdit\":true,\"callTrackingAllowMultipleShowStat\":true,\"redirectToKzWithTenge\":true,\"previewAdvertTextFromUserInput\":true,\"recalculateV2\":true,\"multistageBoostOpenGoalFromWidget\":true,\"redirectToDraftAfterCompanyCreation\":true,\"hideRubricsForFeedDraft\":true,\"tmpPayersDataCorrection\":true,\"ndaStatisticForLast30Days\":true,\"tmpShowHeaderWithPorg\":true,\"unifiedCampaignTarget\":true,\"innerLogoHeadline\":true,\"tmpQuickPaymentForKzt\":true,\"tmpPreparePromotionRemoval\":true,\"tmpShowSiteStatForSerpAuction\":true,\"allowStatistic\":true,\"salesPhoneOnLanding\":true,\"disableSubsidyClaimFields\":true,\"subscriptionWildberriesType\":true,\"endpointMultilinks\":true,\"companiesCouponsTab\":true,\"recurringPayment\":true},\"systemRole\":\"client\",\"userSegmentation\":{\"balance_client_id\":4056766,\"has_chain_access\":false,\"has_permalink_access\":false,\"for_direct_popup\":false,\"customer_type\":\"free\"},\"testIds\":[\"1464370\",\"1479019\",\"1487788\",\"1499447\",\"1514689\",\"1526869\",\"1522429\",\"1482419\"],\"expBoxesCrypted\":\"BP-nHnHm_Romq1xdSGKddA,,\",\"uatraits\":{\"BrowserBase\":\"Chromium\",\"BrowserBaseVersion\":\"148.0.7778.96\",\"BrowserEngine\":\"WebKit\",\"BrowserEngineVersion\":\"537.36\",\"BrowserName\":\"Chrome\",\"BrowserVersion\":\"148.0.7778.96\",\"CSP1Support\":true,\"CSP2Support\":true,\"OSFamily\":\"Windows\",\"OSName\":\"Windows 10\",\"OSVersion\":\"10\",\"SVGSupport\":true,\"SameSiteSupport\":true,\"WebPSupport\":true,\"historySupport\":true,\"isBrowser\":true,\"isMobile\":false,\"isTouch\":false,\"localStorageSupport\":true,\"postMessageSupport\":true,\"x64\":true,\"isTurboApp\":false,\"isSearchApp\":false,\"isYandexBrowser\":false,\"yaPlatform\":\"desktop\"},\"geo\":{\"region_id\":47,\"position\":[56.326799,44.00652],\"coordinates\":[56.326799,44.00652],\"parents\":[47,120911,11079,40,225,10001,10000],\"region\":{\"id\":47,\"type\":6,\"parent_id\":120911,\"capital_id\":0,\"geo_parent_id\":0,\"name\":\"Нижний Новгород\",\"native_name\":\"\",\"iso_name\":\"RU GOJ\",\"is_main\":true,\"en_name\":\"Nizhny Novgorod\",\"phone_code\":\"831\",\"zip_code\":\"\",\"population\":1204985,\"latitude\":56.326799,\"longitude\":44.00652,\"latitude_size\":0.237959,\"longitude_size\":0.558618,\"zoom\":11,\"tzname\":\"Europe\\u002FMoscow\",\"official_languages\":\"ru\",\"services\":[\"bs\",\"yaca\",\"weather\",\"afisha\",\"maps\",\"tv\",\"ad\",\"etrain\",\"delivery\",\"route\"]}},\"isInternalRequest\":false,\"fromLightVerification\":false,\"hasAccessToAdfox\":false,\"diffs\":{\"companies_with_changes_count\":0}},\"env\":{\"enviroment\":\"production\",\"query\":{},\"metrika\":{\"id\":39321485,\"errorId\":\"45129582\",\"geoadvId\":46231566,\"smb\":56213845},\"delivery\":{\"platform_station\":\"019be62fca7970a49e638312c682f91d\"},\"hosts\":{\"yaRu\":\"https:\\u002F\\u002Fya.ru\",\"businessPriority\":\"\\u002Fbusiness\\u002Fpriority\",\"forms\":\"https:\\u002F\\u002Fforms.yandex.ru\",\"formsCom\":\"https:\\u002F\\u002Fforms.yandex.com\",\"help\":\"https:\\u002F\\u002Fyandex.ru\\u002Fsupport\\u002Fbusiness-priority\",\"promo\":\"https:\\u002F\\u002Fyandex.ru\\u002Fpromo\",\"webmaster\":\"https:\\u002F\\u002Fwebmaster.yandex.ru\",\"goodPlaceLanding\":\"https:\\u002F\\u002Fyandex.ru\\u002Fproject\\u002Fmaps\\u002Fgoodplace\",\"yangoUserAgreementLink\":\"https:\\u002F\\u002Fyango.com\\u002Flegal\\u002Fyangomaps_termsofuse\",\"yangoPrivacyPolicyLink\":\"https:\\u002F\\u002Fyango.com\\u002Flegal\\u002Fyangomaps_privacy\",\"yangoBusinessHelp\":\"https:\\u002F\\u002Fbusiness.yango.com\\u002Fsupport\",\"userAgreementLink\":\"https:\\u002F\\u002Fyandex.ru\\u002Flegal\\u002Frules\",\"privacyPolicyLink\":\"https:\\u002F\\u002Fyandex.ru\\u002Flegal\\u002Fconfidential\",\"yandex\":\"yandex.ru\",\"yandexRu\":\"yandex.ru\",\"altay\":\"https:\\u002F\\u002Faltay.maps.yandex-team.ru\",\"direct\":\"https:\\u002F\\u002Fdirect.yandex.ru\\u002F\",\"photoUploadApi\":\"https:\\u002F\\u002Fphoto.upload.maps.yandex.ru\\u002Fapi\\u002Fv1\",\"yangoPhotoUploadApi\":\"https:\\u002F\\u002Fphoto-upload.maps.yango.com\\u002Fapi\\u002Fv1\",\"yango\":\"https:\\u002F\\u002Fyango.com\",\"yangoPassport\":\"https:\\u002F\\u002Fpassport.yango.com\",\"yangoBusiness\":\"https:\\u002F\\u002Fbusiness.yango.com\",\"yangoMaps\":\"https:\\u002F\\u002Fmaps.yango.com\",\"avatarsGet\":\"https:\\u002F\\u002Favatars.mds.yandex.net\"},\"host\":\"yandex.ru\",\"routePrefix\":\"\\u002Fsprav\",\"csrf\":\"25680dfff5d35826b8984551785f6f8c6afea1f9:1779731982\",\"tld\":{\"value\":\"ru\",\"isKubr\":true,\"hasPayments\":true},\"nonce\":\"f+IWeWXB8Nn8Q1SURn+9+g==\",\"path\":\"\\u002F139964443366\\u002Fp\\u002Fedit\\u002F\",\"isTestplane\":false,\"useStub\":false,\"platform\":\"desktop\",\"icookie\":\"5059445521728560702\",\"langDetect\":{\"id\":\"ru\",\"name\":\"Ru\"},\"version\":\"1173\",\"yandexEnvironment\":\"production\",\"isYangoTouchPage\":false,\"isGoIframe\":false,\"isYaRu\":false},\"edit\":{\"navigation\":{\"currentPage\":\"info\",\"company\":{\"id\":139964443366,\"tycoon_id\":66036708,\"permanent_id\":139964443366,\"type\":\"ordinal\",\"publishing_status\":\"publish\",\"work_intervals\":[{\"day\":\"everyday\",\"time_minutes_begin\":0,\"time_minutes_end\":1440}],\"unified_work_intervals\":\"круглосуточно\",\"localized_work_intervals\":[{\"value\":\"круглосуточно\",\"locale\":\"ru\"},{\"value\":\"круглосуточно\",\"locale\":\"uk\"},{\"value\":\"24\\u002F7\",\"locale\":\"en\"},{\"value\":\"7\\u002F24\",\"locale\":\"tr\"}],\"scheduled_work_intervals\":[],\"base_work_intervals\":[{\"day\":\"everyday\",\"time_minutes_begin\":0,\"time_minutes_end\":1440}],\"address\":{\"region_code\":\"RU\",\"geo_id\":47,\"formatted\":{\"value\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"locale\":\"ru\"},\"pos\":{\"type\":\"Point\",\"coordinates\":[43.998914,56.294876]},\"bounding_box\":[[43.997875,56.293797],[44.000408,56.295275]],\"precision\":\"other\",\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Россия\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Приволжский федеральный округ\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Нижегородская область\",\"locale\":\"ru\"}},{\"kind\":\"area\",\"name\":{\"value\":\"городской округ Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"СНТ Дружба-2\",\"locale\":\"ru\"}}],\"is_auto\":false,\"translations\":[{\"formatted\":{\"value\":\"Russian Federation, Nizhniy Novgorod, Garden Community Druzhba-2\",\"locale\":\"en\"},\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Russian Federation\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Privolzhskiy federalny okrug\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Nizhniy Novgorod Region\",\"locale\":\"en\"}},{\"kind\":\"area\",\"name\":{\"value\":\"gorodskoy okrug Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Garden Community Druzhba-2\",\"locale\":\"en\"}}],\"is_manual\":false}],\"address_id\":1691415147,\"translocal\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"is_manual_one_line\":true,\"country_geo_id\":225},\"names\":[{\"value\":{\"value\":\"Клубика\",\"locale\":\"ru\"},\"type\":\"main\"}],\"displayName\":\"Клубика\",\"emails\":[],\"phones\":[{\"country_code\":\"7\",\"region_code\":\"977\",\"number\":\"3307720\",\"ext\":\"1\",\"type\":\"phone\",\"infos\":[{\"value\":\" (updated by automation 2026-05-25T17:51:17.533Z)\",\"locale\":\"ru\"}],\"hide\":false,\"rank\":1,\"formatted\":\"+7 (977) 330-77-20\",\"hide_reason\":\"none\"}],\"urls\":[{\"hide\":false,\"type\":\"social\",\"value\":\"https:\\u002F\\u002Fvk.com\\u002Fnanobloger\",\"social_network\":\"vkontakte\",\"social_login\":\"nanobloger\"}],\"rubrics\":[{\"rubric\":{\"id\":30359,\"isMain\":true,\"name\":\"Маркетинговые услуги\",\"features\":[{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502218851,\"internal_name\":\"disable_photopoi\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Скрывать фотопои у моей организации\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501743485,\"internal_name\":\"merchandising\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"мерчандайзинг\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":20422,\"internal_name\":\"payment_by_credit_card\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Оплата картой\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501942428,\"internal_name\":\"promotions\",\"value_type\":\"dict_value\",\"is_multiple\":true,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3501942381,\"name\":\"скидки\",\"highlight_in_callcenter\":false},{\"id\":3501942385,\"name\":\"акции\",\"highlight_in_callcenter\":false},{\"id\":3501942414,\"name\":\"спецпредложения\",\"highlight_in_callcenter\":false},{\"id\":3501942420,\"name\":\"бонусы\",\"highlight_in_callcenter\":false},{\"id\":3501942427,\"name\":\"подарки\",\"highlight_in_callcenter\":false}],\"name\":\"акции\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":12048,\"internal_name\":\"payment_method\",\"value_type\":\"dict_value\",\"is_multiple\":true,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":11522,\"name\":\"наличными\",\"highlight_in_callcenter\":false},{\"id\":11525,\"name\":\"оплата картой\",\"highlight_in_callcenter\":false},{\"id\":11528,\"name\":\"электронными деньгами\",\"highlight_in_callcenter\":false},{\"id\":11532,\"name\":\"банковским переводом\",\"highlight_in_callcenter\":false},{\"id\":11534,\"name\":\"sms-платеж\",\"highlight_in_callcenter\":false},{\"id\":11536,\"name\":\"наложенным платежом\",\"highlight_in_callcenter\":false},{\"id\":10692,\"name\":\"скидки на услуги льготным категориям\",\"highlight_in_callcenter\":false},{\"id\":11516,\"name\":\"дисконтная система скидок\",\"highlight_in_callcenter\":false},{\"id\":11518,\"name\":\"предоплата\",\"highlight_in_callcenter\":false},{\"id\":11520,\"name\":\"постоплата\",\"highlight_in_callcenter\":false},{\"id\":3501630853,\"name\":\"рассрочка\",\"highlight_in_callcenter\":false},{\"id\":3501945328,\"name\":\"безналичная\",\"highlight_in_callcenter\":false},{\"id\":3501945338,\"name\":\"онлайн\",\"highlight_in_callcenter\":false},{\"id\":3502122367,\"name\":\"QR-код\",\"highlight_in_callcenter\":false},{\"id\":3502140866,\"name\":\"СБП\",\"highlight_in_callcenter\":false},{\"id\":3502175071,\"name\":\"оплата кредитной картой\",\"highlight_in_callcenter\":false},{\"id\":3502175072,\"name\":\"оформление кредита\",\"highlight_in_callcenter\":false},{\"id\":3502231013,\"name\":\"банковским чеком\",\"highlight_in_callcenter\":false},{\"id\":3502236399,\"name\":\"бесконтактная оплата\",\"highlight_in_callcenter\":false},{\"id\":3502276278,\"name\":\"по ссылке\",\"highlight_in_callcenter\":false}],\"name\":\"способ оплаты\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501942249,\"internal_name\":\"online_consultations\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"онлайн консультации\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502010918,\"internal_name\":\"call_button\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"кнопка вызова персонала\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502010929,\"internal_name\":\"elevator_wheelchair_accessible\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"лифт\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502010932,\"internal_name\":\"ramp\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"пандус\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3491142672,\"internal_name\":\"parking_disabled\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"парковка для людей с инвалидностью\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501773764,\"internal_name\":\"toilet_for_disabled\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"туалет для людей с инвалидностью\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502132404,\"internal_name\":\"wheelchair_accessible_vocabulary\",\"value_type\":\"dict_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3502132401,\"name\":\"недоступно\",\"highlight_in_callcenter\":false},{\"id\":3502132402,\"name\":\"частично доступно\",\"highlight_in_callcenter\":false},{\"id\":3502132403,\"name\":\"доступно\",\"highlight_in_callcenter\":false}],\"name\":\"доступность помещения на инвалидной коляске\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502157373,\"internal_name\":\"petfriendly\",\"value_type\":\"dict_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3502157368,\"name\":\"разрешено со всеми животными\",\"highlight_in_callcenter\":false},{\"id\":3502157369,\"name\":\"разрешено только с кошками\",\"highlight_in_callcenter\":false},{\"id\":3502157370,\"name\":\"разрешено с кошками и собаками\",\"highlight_in_callcenter\":false},{\"id\":3502157371,\"name\":\"разрешено только с собаками\",\"highlight_in_callcenter\":false},{\"id\":3502157372,\"name\":\"разрешено с собаками до 35 см.\",\"highlight_in_callcenter\":false},{\"id\":3502163523,\"name\":\"запрещено с животными\",\"highlight_in_callcenter\":false}],\"name\":\"посещение с животными\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502218166,\"internal_name\":\"show_briefly_about_the_place_block\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Показывать блок \\\"Коротко о месте\\\"\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502218849,\"internal_name\":\"disable_captions\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Скрывать подписи у моей организации\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":11741,\"internal_name\":\"gift_certificate\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"подарочный сертификат\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502232592,\"internal_name\":\"workshops_guides_sale\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"продажа практикумов и гайдов\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":20407,\"internal_name\":\"preliminary_registration\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"предварительная запись\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502244385,\"internal_name\":\"Possible_with_dog\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Можно с собакой\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502088742,\"internal_name\":\"branding\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"брендинг\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501618484,\"internal_name\":\"wheelchair_access\",\"value_type\":\"dict_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3501618483,\"name\":\"недоступно\",\"highlight_in_callcenter\":true},{\"id\":3501618482,\"name\":\"доступно\",\"highlight_in_callcenter\":false}],\"name\":\"доступность входа на инвалидной коляске\"}}]}}],\"feature_values\":[],\"noAccess\":false,\"photos\":[],\"owner\":27265048,\"object_role\":\"owner\",\"price_lists\":[],\"legal_info\":{},\"is_top_rated\":false,\"has_owner\":true,\"has_active_feedback_request\":false,\"not_for_search\":false,\"all_feedback_rejected\":false,\"is_online\":false,\"service_area\":{},\"service_profiles\":[{\"type\":\"maps\",\"external_path\":\"\\u002Fmaps\\u002Forg\\u002F139964443366\",\"published\":true},{\"type\":\"serp\",\"external_path\":\"\\u002Fsearch?text=%D0%9A%D0%BB%D1%83%D0%B1%D0%B8%D0%BA%D0%B0&oid=b%3A139964443366\",\"published\":true}],\"profile\":{},\"nail\":{\"isNailed\":false},\"fromGeosearch\":true,\"need_actualization\":false,\"moderationStatus\":\"APPROVED\",\"popups_data\":[{\"type\":\"YNDX_CLIENTS_ON_MAIN\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"},{\"type\":\"ReviewsPageNoGeoAdvBanner\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"}],\"geospam\":{\"state\":\"GCS_NOT_FOUND\",\"request_context\":\"GRC_DEFAULT\"},\"rating\":0,\"reviewsCount\":0},\"tdsCompany\":{\"id\":139964443366,\"permanent_id\":139964443366,\"owner\":27265048,\"publishing_status\":\"publish\",\"address\":{\"region_code\":\"RU\",\"geo_id\":47,\"formatted\":{\"value\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"locale\":\"ru\"},\"pos\":{\"type\":\"Point\",\"coordinates\":[43.998914,56.294876]},\"bounding_box\":[[43.997875,56.293797],[44.000408,56.295275]],\"precision\":\"other\",\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Россия\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Приволжский федеральный округ\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Нижегородская область\",\"locale\":\"ru\"}},{\"kind\":\"area\",\"name\":{\"value\":\"городской округ Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"СНТ Дружба-2\",\"locale\":\"ru\"}}],\"is_auto\":false,\"translations\":[{\"formatted\":{\"value\":\"Russian Federation, Nizhniy Novgorod, Garden Community Druzhba-2\",\"locale\":\"en\"},\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Russian Federation\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Privolzhskiy federalny okrug\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Nizhniy Novgorod Region\",\"locale\":\"en\"}},{\"kind\":\"area\",\"name\":{\"value\":\"gorodskoy okrug Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Garden Community Druzhba-2\",\"locale\":\"en\"}}],\"is_manual\":false}],\"address_id\":1691415147,\"translocal\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"is_manual_one_line\":true,\"country_geo_id\":225},\"work_intervals\":[{\"day\":\"everyday\",\"time_minutes_begin\":0,\"time_minutes_end\":1440}],\"names\":[{\"value\":{\"value\":\"Клубика\",\"locale\":\"ru\"},\"type\":\"main\"}],\"phones\":[{\"country_code\":\"7\",\"region_code\":\"977\",\"number\":\"3307720\",\"ext\":\"1\",\"type\":\"phone\",\"infos\":[{\"value\":\" (updated by automation 2026-05-25T17:51:17.533Z)\",\"locale\":\"ru\"}],\"hide\":false,\"rank\":1,\"formatted\":\"+7 (977) 330-77-20\",\"hide_reason\":\"none\"}],\"urls\":[{\"type\":\"social\",\"value\":\"https:\\u002F\\u002Fvk.com\\u002Fnanobloger\",\"hide\":false,\"social_network\":\"vkontakte\",\"social_login\":\"nanobloger\"}],\"rubrics\":[{\"rubric_id\":30359,\"is_main\":true,\"export_to_snippet\":false}],\"is_online\":false,\"not_for_search\":false,\"service_profiles\":[{\"type\":\"maps\",\"external_path\":\"\\u002Fmaps\\u002Forg\\u002F139964443366\",\"published\":true},{\"type\":\"serp\",\"external_path\":\"\\u002Fsearch?text=%D0%9A%D0%BB%D1%83%D0%B1%D0%B8%D0%BA%D0%B0&oid=b%3A139964443366\",\"published\":true}],\"from_geosearch\":true,\"is_exportable\":true,\"was_ever_published\":true,\"type\":\"ordinal\",\"unified_work_intervals\":\"круглосуточно\",\"localized_work_intervals\":[{\"value\":\"круглосуточно\",\"locale\":\"ru\"},{\"value\":\"круглосуточно\",\"locale\":\"uk\"},{\"value\":\"24\\u002F7\",\"locale\":\"en\"},{\"value\":\"7\\u002F24\",\"locale\":\"tr\"}],\"has_owner\":true,\"tycoon_id\":66036708,\"is_top_rated\":false,\"actualized_by_owner\":1779731505697,\"popups_data\":[{\"type\":\"YNDX_CLIENTS_ON_MAIN\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"},{\"type\":\"ReviewsPageNoGeoAdvBanner\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"}],\"has_active_feedback_request\":false,\"is_nailed\":false,\"rubric_defs\":{\"30359\":{\"id\":30359,\"permanent_id\":\"184105524\",\"internal_name\":\"184105524\",\"names\":[{\"value\":\"Маркетинговые услуги\",\"locale\":\"ru\"}],\"features\":[{\"feature\":{\"id\":3502218851,\"internal_name\":\"disable_photopoi\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":true,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"Скрывать фотопои у моей организации\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3501743485,\"internal_name\":\"merchandising\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"мерчандайзинг\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":20422,\"internal_name\":\"payment_by_credit_card\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"Оплата картой\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3501942428,\"internal_name\":\"promotions\",\"value_type\":\"dict_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":true,\"enum_values\":[{\"id\":3501942381,\"internal_name\":\"discounts\",\"names\":[{\"value\":{\"value\":\"скидки\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3501942385,\"internal_name\":\"promotions\",\"names\":[{\"value\":{\"value\":\"акции\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3501942414,\"internal_name\":\"special_offers\",\"names\":[{\"value\":{\"value\":\"спецпредложения\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3501942420,\"internal_name\":\"bonuses\",\"names\":[{\"value\":{\"value\":\"бонусы\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3501942427,\"internal_name\":\"gifts\",\"names\":[{\"value\":{\"value\":\"подарки\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false}],\"names\":[{\"value\":{\"value\":\"акции\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":12048,\"internal_name\":\"payment_method\",\"value_type\":\"dict_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":true,\"enum_values\":[{\"id\":11522,\"internal_name\":\"cash\",\"names\":[{\"value\":{\"value\":\"наличными\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11525,\"internal_name\":\"payment_card\",\"names\":[{\"value\":{\"value\":\"оплата картой\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11528,\"internal_name\":\"electronic_money\",\"names\":[{\"value\":{\"value\":\"электронными деньгами\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11532,\"internal_name\":\"wire_transfer\",\"names\":[{\"value\":{\"value\":\"банковским переводом\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11534,\"internal_name\":\"billing_to_mobile_phones\",\"names\":[{\"value\":{\"value\":\"sms-платеж\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11536,\"internal_name\":\"collect_on_delivery\",\"names\":[{\"value\":{\"value\":\"наложенным платежом\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":10692,\"internal_name\":\"subsidized_discounts\",\"names\":[{\"value\":{\"value\":\"скидки на услуги льготным категориям\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11516,\"internal_name\":\"discount_system\",\"names\":[{\"value\":{\"value\":\"дисконтная система скидок\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11518,\"internal_name\":\"prepayment\",\"names\":[{\"value\":{\"value\":\"предоплата\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":11520,\"internal_name\":\"postpay\",\"names\":[{\"value\":{\"value\":\"постоплата\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3501630853,\"internal_name\":\"installment\",\"names\":[{\"value\":{\"value\":\"рассрочка\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3501945328,\"internal_name\":\"cashless_payment\",\"names\":[{\"value\":{\"value\":\"безналичная\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3501945336,\"internal_name\":\"cash_payment\",\"names\":[{\"value\":{\"value\":\"наличная\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"obsolete\",\"highlight_in_callcenter\":false},{\"id\":3501945338,\"internal_name\":\"online_payment\",\"names\":[{\"value\":{\"value\":\"онлайн\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502122367,\"internal_name\":\"qr_code\",\"names\":[{\"value\":{\"value\":\"QR-код\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502140866,\"internal_name\":\"fast_payment_system\",\"names\":[{\"value\":{\"value\":\"СБП\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502175071,\"internal_name\":\"by_credit_card\",\"names\":[{\"value\":{\"value\":\"оплата кредитной картой\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502175072,\"internal_name\":\"making_a_loan\",\"names\":[{\"value\":{\"value\":\"оформление кредита\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502231013,\"internal_name\":\"bank_cheque\",\"names\":[{\"value\":{\"value\":\"банковским чеком\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502236399,\"internal_name\":\"contactless_payment\",\"names\":[{\"value\":{\"value\":\"бесконтактная оплата\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502276278,\"internal_name\":\"by_the_link\",\"names\":[{\"value\":{\"value\":\"по ссылке\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false}],\"names\":[{\"value\":{\"value\":\"способ оплаты\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3501942249,\"internal_name\":\"online_consultations\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"онлайн консультации\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502010918,\"internal_name\":\"call_button\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"кнопка вызова персонала\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502010929,\"internal_name\":\"elevator_wheelchair_accessible\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"лифт\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502010932,\"internal_name\":\"ramp\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"пандус\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3491142672,\"internal_name\":\"parking_disabled\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"парковка для людей с инвалидностью\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3501773764,\"internal_name\":\"toilet_for_disabled\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"туалет для людей с инвалидностью\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":true,\"is_important_filter\":false},{\"feature\":{\"id\":3502132404,\"internal_name\":\"wheelchair_accessible_vocabulary\",\"value_type\":\"dict_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"enum_values\":[{\"id\":3502132401,\"internal_name\":\"wheelchair_accessible_na\",\"names\":[{\"value\":{\"value\":\"недоступно\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502132402,\"internal_name\":\"wheelchair_accessible_pa\",\"names\":[{\"value\":{\"value\":\"частично доступно\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502132403,\"internal_name\":\"wheelchair_accessible_a\",\"names\":[{\"value\":{\"value\":\"доступно\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false}],\"names\":[{\"value\":{\"value\":\"доступность помещения на инвалидной коляске\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502157373,\"internal_name\":\"petfriendly\",\"value_type\":\"dict_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"enum_values\":[{\"id\":3502157368,\"internal_name\":\"allowed_with_all_animals\",\"names\":[{\"value\":{\"value\":\"разрешено со всеми животными\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502157369,\"internal_name\":\"allowed_only_with_cats\",\"names\":[{\"value\":{\"value\":\"разрешено только с кошками\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502157370,\"internal_name\":\"allowed_with_cats_and_dogs\",\"names\":[{\"value\":{\"value\":\"разрешено с кошками и собаками\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502157371,\"internal_name\":\"allowed_only_with_dogs\",\"names\":[{\"value\":{\"value\":\"разрешено только с собаками\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502157372,\"internal_name\":\"allowed_with_dogs_35_cm\",\"names\":[{\"value\":{\"value\":\"разрешено с собаками до 35 см.\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false},{\"id\":3502163523,\"internal_name\":\"animals_are_prohibited\",\"names\":[{\"value\":{\"value\":\"запрещено с животными\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false}],\"names\":[{\"value\":{\"value\":\"посещение с животными\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502218166,\"internal_name\":\"show_briefly_about_the_place_block\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":true,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"Показывать блок \\\"Коротко о месте\\\"\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502218849,\"internal_name\":\"disable_captions\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":true,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"Скрывать подписи у моей организации\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":11741,\"internal_name\":\"gift_certificate\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"подарочный сертификат\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502232592,\"internal_name\":\"workshops_guides_sale\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"продажа практикумов и гайдов\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":20407,\"internal_name\":\"preliminary_registration\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"предварительная запись\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502244385,\"internal_name\":\"Possible_with_dog\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"Можно с собакой\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3502088742,\"internal_name\":\"branding\",\"value_type\":\"logical_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"names\":[{\"value\":{\"value\":\"брендинг\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false},{\"feature\":{\"id\":3501618484,\"internal_name\":\"wheelchair_access\",\"value_type\":\"dict_value\",\"not_for_search\":false,\"geocontext_ui_hidden\":false,\"geocontext_ui_not_editable\":false,\"hide\":false,\"is_multiple\":false,\"enum_values\":[{\"id\":3501618483,\"internal_name\":\"unavailable\",\"names\":[{\"value\":{\"value\":\"недоступно\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":true},{\"id\":3501618481,\"internal_name\":\"partial_access\",\"names\":[{\"value\":{\"value\":\"частично доступно\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"obsolete\",\"highlight_in_callcenter\":false},{\"id\":3501618482,\"internal_name\":\"full_access\",\"names\":[{\"value\":{\"value\":\"доступно\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"highlight_in_callcenter\":false}],\"names\":[{\"value\":{\"value\":\"доступность входа на инвалидной коляске\",\"locale\":\"ru\"},\"type\":\"main\"}],\"publishing_status\":\"publish\",\"is_tag\":false,\"is_generated\":false},\"is_important\":false,\"export_to_snippet\":false,\"filter\":false,\"is_important_filter\":false}]}},\"moderation_status\":\"APPROVED\",\"user_object_role\":\"owner\",\"need_actualization\":false},\"companyRoles\":[{\"role\":\"owner\",\"category\":\"company\",\"uid\":27265048}]},\"relatedProfiles\":{\"serp\":{\"url\":\"\\u002Fsearch?text=%D0%9A%D0%BB%D1%83%D0%B1%D0%B8%D0%BA%D0%B0&oid=b%3A139964443366\"},\"maps\":{\"type\":\"maps\",\"external_path\":\"\\u002Fmaps\\u002Forg\\u002F139964443366\",\"published\":true},\"ydo\":{\"url\":\"\",\"status\":\"add\"},\"webmaster\":{\"hasProfile\":false,\"url\":\"https:\\u002F\\u002Fwebmaster.yandex.ru\\u002Fwelcome\\u002F?utm_source=yandex.spravochnik&utm_medium=teaser&utm_campaign=new_sites\"}},\"factors\":{\"strength\":75,\"factors\":[{\"name\":\"working_intervals\",\"active\":true,\"strength\":25,\"days_from_update\":23,\"status\":\"normal\",\"actualized_not_processed\":true},{\"name\":\"urls\",\"active\":true,\"strength\":25,\"days_from_update\":23,\"status\":\"normal\",\"actualized_not_processed\":true},{\"name\":\"phone\",\"active\":true,\"strength\":25,\"days_from_update\":23,\"status\":\"normal\",\"actualized_not_processed\":true},{\"name\":\"photos\",\"active\":false,\"strength\":25,\"status\":\"expired\",\"actualized_not_processed\":false},{\"name\":\"logo\",\"active\":false,\"strength\":3,\"status\":\"expired\",\"actualized_not_processed\":false},{\"name\":\"features\",\"active\":false,\"strength\":3,\"status\":\"expired\",\"actualized_not_processed\":true},{\"name\":\"english_name\",\"active\":false,\"strength\":3,\"status\":\"expired\",\"actualized_not_processed\":true},{\"name\":\"messengers\",\"active\":false,\"strength\":3,\"status\":\"expired\",\"actualized_not_processed\":true}],\"to_fill\":[\"photos\",\"logo\",\"features\",\"english_name\",\"messengers\"]},\"allCampaignList\":{\"total\":0,\"limit\":100,\"offset\":0,\"result\":[]},\"hasRuRegion\":true,\"photos\":{\"photos\":[{\"id\":\"2a0000019ded2158d31b4757901144a05070\",\"tags\":[\"exterior\"],\"moderation\":{},\"url_template\":\"https:\\u002F\\u002Favatars.mds.yandex.net\\u002Fget-altay\\u002F19292509\\u002F2a0000019ded2158d31b4757901144a05070\\u002F%s\",\"author\":{\"uid\":27265048},\"time_published\":1777799879000,\"stats\":{\"totalViews\":35,\"weeklyDiff\":13},\"isOrgOwner\":true}],\"panorama\":{\"id\":\"20245311_2a0000019df674a7beebfd48e05a6abc4dbf\",\"tags\":[\"panorama\"],\"moderation\":{},\"url_template\":\"https:\\u002F\\u002Favatars.mds.yandex.net\\u002Fget-altay\\u002F20245311\\u002F2a0000019df674a7beebfd48e05a6abc4dbf\\u002F%s\",\"time_published\":1777956334000},\"order_template\":\"p,v,p,v,v,p,v*,p*\"},\"info\":{\"company\":{\"id\":139964443366,\"tycoon_id\":66036708,\"permanent_id\":139964443366,\"type\":\"ordinal\",\"publishing_status\":\"publish\",\"work_intervals\":[{\"day\":\"everyday\",\"time_minutes_begin\":0,\"time_minutes_end\":1440}],\"unified_work_intervals\":\"круглосуточно\",\"localized_work_intervals\":[{\"value\":\"круглосуточно\",\"locale\":\"ru\"},{\"value\":\"круглосуточно\",\"locale\":\"uk\"},{\"value\":\"24\\u002F7\",\"locale\":\"en\"},{\"value\":\"7\\u002F24\",\"locale\":\"tr\"}],\"scheduled_work_intervals\":[{\"iso_date\":\"2026-05-26\",\"time_minutes_begin\":\"\",\"time_minutes_end\":\"\",\"is_holiday\":false,\"breaks\":[{\"begin\":\"\",\"end\":\"\"}]}],\"base_work_intervals\":[{\"day\":\"everyday\",\"time_minutes_begin\":0,\"time_minutes_end\":1440}],\"address\":{\"region_code\":\"RU\",\"geo_id\":47,\"formatted\":{\"value\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"locale\":\"ru\"},\"pos\":{\"type\":\"Point\",\"coordinates\":[43.998914,56.294876]},\"bounding_box\":[[43.997875,56.293797],[44.000408,56.295275]],\"precision\":\"other\",\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Россия\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Приволжский федеральный округ\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Нижегородская область\",\"locale\":\"ru\"}},{\"kind\":\"area\",\"name\":{\"value\":\"городской округ Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"СНТ Дружба-2\",\"locale\":\"ru\"}}],\"is_auto\":false,\"translations\":[{\"formatted\":{\"value\":\"Russian Federation, Nizhniy Novgorod, Garden Community Druzhba-2\",\"locale\":\"en\"},\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Russian Federation\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Privolzhskiy federalny okrug\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Nizhniy Novgorod Region\",\"locale\":\"en\"}},{\"kind\":\"area\",\"name\":{\"value\":\"gorodskoy okrug Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Garden Community Druzhba-2\",\"locale\":\"en\"}}],\"is_manual\":false}],\"address_id\":1691415147,\"translocal\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"is_manual_one_line\":true,\"country_geo_id\":225},\"names\":[{\"value\":{\"value\":\"Клубика\",\"locale\":\"ru\"},\"type\":\"main\"}],\"displayName\":\"Клубика\",\"emails\":[],\"phones\":[{\"country_code\":\"7\",\"region_code\":\"977\",\"number\":\"3307720\",\"ext\":\"1\",\"type\":\"phone\",\"infos\":[{\"value\":\" (updated by automation 2026-05-25T17:51:17.533Z)\",\"locale\":\"ru\"}],\"hide\":false,\"rank\":1,\"formatted\":\"+7 (977) 330-77-20\",\"hide_reason\":\"none\"}],\"urls\":[{\"hide\":false,\"type\":\"social\",\"value\":\"https:\\u002F\\u002Fvk.com\\u002Fnanobloger\",\"social_network\":\"vkontakte\",\"social_login\":\"nanobloger\"}],\"rubrics\":[{\"id\":30359,\"name\":\"Маркетинговые услуги\",\"isMain\":true}],\"feature_values\":[],\"noAccess\":false,\"photos\":[],\"owner\":27265048,\"object_role\":\"owner\",\"price_lists\":[],\"legal_info\":{},\"is_top_rated\":false,\"has_owner\":true,\"has_active_feedback_request\":false,\"not_for_search\":false,\"all_feedback_rejected\":false,\"is_online\":false,\"service_area\":{},\"service_profiles\":[{\"type\":\"maps\",\"external_path\":\"\\u002Fmaps\\u002Forg\\u002F139964443366\",\"published\":true},{\"type\":\"serp\",\"external_path\":\"\\u002Fsearch?text=%D0%9A%D0%BB%D1%83%D0%B1%D0%B8%D0%BA%D0%B0&oid=b%3A139964443366\",\"published\":true}],\"profile\":{},\"nail\":{\"isNailed\":false},\"fromGeosearch\":true,\"need_actualization\":false,\"moderationStatus\":\"APPROVED\",\"popups_data\":[{\"type\":\"YNDX_CLIENTS_ON_MAIN\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"},{\"type\":\"ReviewsPageNoGeoAdvBanner\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"}],\"geospam\":{\"state\":\"GCS_NOT_FOUND\",\"request_context\":\"GRC_DEFAULT\"},\"rating\":0},\"updatedCompany\":{\"id\":139964443366,\"tycoon_id\":66036708,\"permanent_id\":139964443366,\"type\":\"ordinal\",\"publishing_status\":\"publish\",\"work_intervals\":[{\"day\":\"everyday\",\"time_minutes_begin\":0,\"time_minutes_end\":1440}],\"unified_work_intervals\":\"круглосуточно\",\"localized_work_intervals\":[{\"value\":\"круглосуточно\",\"locale\":\"ru\"},{\"value\":\"круглосуточно\",\"locale\":\"uk\"},{\"value\":\"24\\u002F7\",\"locale\":\"en\"},{\"value\":\"7\\u002F24\",\"locale\":\"tr\"}],\"scheduled_work_intervals\":[{\"iso_date\":\"2026-05-26\",\"time_minutes_begin\":\"\",\"time_minutes_end\":\"\",\"is_holiday\":false,\"breaks\":[{\"begin\":\"\",\"end\":\"\"}]}],\"base_work_intervals\":[{\"day\":\"everyday\",\"time_minutes_begin\":0,\"time_minutes_end\":1440}],\"address\":{\"region_code\":\"RU\",\"geo_id\":47,\"formatted\":{\"value\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"locale\":\"ru\"},\"pos\":{\"type\":\"Point\",\"coordinates\":[43.998914,56.294876]},\"bounding_box\":[[43.997875,56.293797],[44.000408,56.295275]],\"precision\":\"other\",\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Россия\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Приволжский федеральный округ\",\"locale\":\"ru\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Нижегородская область\",\"locale\":\"ru\"}},{\"kind\":\"area\",\"name\":{\"value\":\"городской округ Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Нижний Новгород\",\"locale\":\"ru\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"СНТ Дружба-2\",\"locale\":\"ru\"}}],\"is_auto\":false,\"translations\":[{\"formatted\":{\"value\":\"Russian Federation, Nizhniy Novgorod, Garden Community Druzhba-2\",\"locale\":\"en\"},\"components\":[{\"kind\":\"country\",\"name\":{\"value\":\"Russian Federation\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Privolzhskiy federalny okrug\",\"locale\":\"en\"}},{\"kind\":\"province\",\"name\":{\"value\":\"Nizhniy Novgorod Region\",\"locale\":\"en\"}},{\"kind\":\"area\",\"name\":{\"value\":\"gorodskoy okrug Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Nizhniy Novgorod\",\"locale\":\"en\"}},{\"kind\":\"locality\",\"name\":{\"value\":\"Garden Community Druzhba-2\",\"locale\":\"en\"}}],\"is_manual\":false}],\"address_id\":1691415147,\"translocal\":\"Приволжский федеральный округ, Нижегородская область, городской округ Нижний Новгород, Нижний Новгород, СНТ Дружба-2\",\"is_manual_one_line\":true,\"country_geo_id\":225},\"names\":[{\"value\":{\"value\":\"Клубика\",\"locale\":\"ru\"},\"type\":\"main\"}],\"displayName\":\"Клубика\",\"emails\":[],\"phones\":[{\"country_code\":\"7\",\"region_code\":\"977\",\"number\":\"3307720\",\"ext\":\"1\",\"type\":\"phone\",\"infos\":[{\"value\":\" (updated by automation 2026-05-25T17:51:17.533Z)\",\"locale\":\"ru\"}],\"hide\":false,\"rank\":1,\"formatted\":\"+7 (977) 330-77-20\",\"hide_reason\":\"none\"}],\"urls\":[{\"hide\":false,\"type\":\"social\",\"value\":\"https:\\u002F\\u002Fvk.com\\u002Fnanobloger\",\"social_network\":\"vkontakte\",\"social_login\":\"nanobloger\"}],\"rubrics\":[{\"id\":30359,\"name\":\"Маркетинговые услуги\",\"isMain\":true}],\"feature_values\":[],\"noAccess\":false,\"photos\":[],\"owner\":27265048,\"object_role\":\"owner\",\"price_lists\":[],\"legal_info\":{},\"is_top_rated\":false,\"has_owner\":true,\"has_active_feedback_request\":false,\"not_for_search\":false,\"all_feedback_rejected\":false,\"is_online\":false,\"service_area\":{},\"service_profiles\":[{\"type\":\"maps\",\"external_path\":\"\\u002Fmaps\\u002Forg\\u002F139964443366\",\"published\":true},{\"type\":\"serp\",\"external_path\":\"\\u002Fsearch?text=%D0%9A%D0%BB%D1%83%D0%B1%D0%B8%D0%BA%D0%B0&oid=b%3A139964443366\",\"published\":true}],\"profile\":{},\"nail\":{\"isNailed\":false},\"fromGeosearch\":true,\"need_actualization\":false,\"moderationStatus\":\"APPROVED\",\"popups_data\":[{\"type\":\"YNDX_CLIENTS_ON_MAIN\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"},{\"type\":\"ReviewsPageNoGeoAdvBanner\",\"title\":\"Сейчас в рубрике низкая конкуренция\",\"text\":\"Сейчас в тематике «Маркетинговые услуги» низкая конкуренция в Нижнем Новгороде — только 10% организаций размещают рекламу. Можно стать заметнее раньше остальных\"}],\"geospam\":{\"state\":\"GCS_NOT_FOUND\",\"request_context\":\"GRC_DEFAULT\"},\"rating\":0},\"unifiedWorkIntervals\":\"круглосуточно\",\"addressMeta\":{\"isEditMode\":false,\"selectedPlacemark\":-1,\"showRelocationDialog\":false,\"suggestItems\":[],\"isLoadingSuggest\":false,\"activeTabOnline\":\"region\"},\"featuresGroups\":{\"base\":[{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502157373,\"internal_name\":\"petfriendly\",\"value_type\":\"dict_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3502157368,\"name\":\"разрешено со всеми животными\",\"highlight_in_callcenter\":false},{\"id\":3502157369,\"name\":\"разрешено только с кошками\",\"highlight_in_callcenter\":false},{\"id\":3502157370,\"name\":\"разрешено с кошками и собаками\",\"highlight_in_callcenter\":false},{\"id\":3502157371,\"name\":\"разрешено только с собаками\",\"highlight_in_callcenter\":false},{\"id\":3502157372,\"name\":\"разрешено с собаками до 35 см.\",\"highlight_in_callcenter\":false},{\"id\":3502163523,\"name\":\"запрещено с животными\",\"highlight_in_callcenter\":false}],\"name\":\"посещение с животными\"}}],\"rubrics\":[{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":11741,\"internal_name\":\"gift_certificate\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"подарочный сертификат\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":12048,\"internal_name\":\"payment_method\",\"value_type\":\"dict_value\",\"is_multiple\":true,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":11522,\"name\":\"наличными\",\"highlight_in_callcenter\":false},{\"id\":11525,\"name\":\"оплата картой\",\"highlight_in_callcenter\":false},{\"id\":11528,\"name\":\"электронными деньгами\",\"highlight_in_callcenter\":false},{\"id\":11532,\"name\":\"банковским переводом\",\"highlight_in_callcenter\":false},{\"id\":11534,\"name\":\"sms-платеж\",\"highlight_in_callcenter\":false},{\"id\":11536,\"name\":\"наложенным платежом\",\"highlight_in_callcenter\":false},{\"id\":10692,\"name\":\"скидки на услуги льготным категориям\",\"highlight_in_callcenter\":false},{\"id\":11516,\"name\":\"дисконтная система скидок\",\"highlight_in_callcenter\":false},{\"id\":11518,\"name\":\"предоплата\",\"highlight_in_callcenter\":false},{\"id\":11520,\"name\":\"постоплата\",\"highlight_in_callcenter\":false},{\"id\":3501630853,\"name\":\"рассрочка\",\"highlight_in_callcenter\":false},{\"id\":3501945328,\"name\":\"безналичная\",\"highlight_in_callcenter\":false},{\"id\":3501945338,\"name\":\"онлайн\",\"highlight_in_callcenter\":false},{\"id\":3502122367,\"name\":\"QR-код\",\"highlight_in_callcenter\":false},{\"id\":3502140866,\"name\":\"СБП\",\"highlight_in_callcenter\":false},{\"id\":3502175071,\"name\":\"оплата кредитной картой\",\"highlight_in_callcenter\":false},{\"id\":3502175072,\"name\":\"оформление кредита\",\"highlight_in_callcenter\":false},{\"id\":3502231013,\"name\":\"банковским чеком\",\"highlight_in_callcenter\":false},{\"id\":3502236399,\"name\":\"бесконтактная оплата\",\"highlight_in_callcenter\":false},{\"id\":3502276278,\"name\":\"по ссылке\",\"highlight_in_callcenter\":false}],\"name\":\"способ оплаты\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":20407,\"internal_name\":\"preliminary_registration\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"предварительная запись\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":20422,\"internal_name\":\"payment_by_credit_card\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Оплата картой\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501743485,\"internal_name\":\"merchandising\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"мерчандайзинг\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501942249,\"internal_name\":\"online_consultations\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"онлайн консультации\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501942428,\"internal_name\":\"promotions\",\"value_type\":\"dict_value\",\"is_multiple\":true,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3501942381,\"name\":\"скидки\",\"highlight_in_callcenter\":false},{\"id\":3501942385,\"name\":\"акции\",\"highlight_in_callcenter\":false},{\"id\":3501942414,\"name\":\"спецпредложения\",\"highlight_in_callcenter\":false},{\"id\":3501942420,\"name\":\"бонусы\",\"highlight_in_callcenter\":false},{\"id\":3501942427,\"name\":\"подарки\",\"highlight_in_callcenter\":false}],\"name\":\"акции\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502088742,\"internal_name\":\"branding\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"брендинг\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502218166,\"internal_name\":\"show_briefly_about_the_place_block\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Показывать блок \\\"Коротко о месте\\\"\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502218849,\"internal_name\":\"disable_captions\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Скрывать подписи у моей организации\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502218851,\"internal_name\":\"disable_photopoi\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Скрывать фотопои у моей организации\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502232592,\"internal_name\":\"workshops_guides_sale\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"продажа практикумов и гайдов\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502244385,\"internal_name\":\"Possible_with_dog\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"Можно с собакой\"}}],\"accessibility\":[{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3491142672,\"internal_name\":\"parking_disabled\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"парковка для людей с инвалидностью\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501618484,\"internal_name\":\"wheelchair_access\",\"value_type\":\"dict_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3501618483,\"name\":\"недоступно\",\"highlight_in_callcenter\":true},{\"id\":3501618482,\"name\":\"доступно\",\"highlight_in_callcenter\":false}],\"name\":\"доступность входа на инвалидной коляске\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3501773764,\"internal_name\":\"toilet_for_disabled\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"туалет для людей с инвалидностью\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502010918,\"internal_name\":\"call_button\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"кнопка вызова персонала\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502010929,\"internal_name\":\"elevator_wheelchair_accessible\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"лифт\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502010932,\"internal_name\":\"ramp\",\"value_type\":\"logical_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[],\"name\":\"пандус\"}},{\"is_important\":false,\"export_to_snippet\":false,\"feature\":{\"id\":3502132404,\"internal_name\":\"wheelchair_accessible_vocabulary\",\"value_type\":\"dict_value\",\"is_multiple\":false,\"geocontext_ui_not_editable\":false,\"geocontext_ui_hidden\":false,\"enum_values\":[{\"id\":3502132401,\"name\":\"недоступно\",\"highlight_in_callcenter\":false},{\"id\":3502132402,\"name\":\"частично доступно\",\"highlight_in_callcenter\":false},{\"id\":3502132403,\"name\":\"доступно\",\"highlight_in_callcenter\":false}],\"name\":\"доступность помещения на инвалидной коляске\"}}]},\"commonCurrency\":{\"used\":\"RUB\",\"values\":[{\"code\":\"RUB\"}]},\"reloadModalShow\":false,\"errorAddress\":\"\",\"errorRubrics\":\"\",\"errorServiceArea\":\"\",\"errorUrls\":{},\"errorEmails\":{},\"errorPhones\":{},\"errorNames\":{\"text\":\"\",\"controls\":{}},\"errorWorkIntervals\":false,\"errorLegalInfo\":false,\"errorHolidayWorkInterval\":[]}},\"hasTouchMenuBurger\":true,\"notifications\":[\"company_changes\",\"company_statistic\",\"company_feedback_request_status\",\"company_feedback_request_status_sms\",\"recommendations\",\"premoderation\",\"premoderation_sms\",\"discounts_and_events\",\"discounts_and_events_sms\",\"tycoon_news\"],\"navigation\":\"companies\",\"variables\":{\"MAPS_API_KEY\":\"d952d15e-2c56-4701-9bc8-cbede9de5cc1\",\"STATIC_MAPS_API_KEY\":\"0c47165c-489e-47c5-a163-c4cdf9b5fee4\",\"STATIC_MAPS_SIGNING_SECRET\":\"xbJbUxAkMjg1X1wD6BMwip_j4p_ErkD8QH6EOs0D\"},\"onboarding\":{\"onActionScenario\":{\"media_v2\":true,\"media_v3\":true}}}};",
+    "parent": "SCRIPT",
+    "className": ""
+  },
+  {
+    "text": "[\"yandex-bussines\",\"src_components_CompanyNavigation_CompanyNavigation_tsx-node_modules_fetch-jsonp_build_fetch-j-c51559\",\"company-navigation-desktop\",\"vendors-node_modules_lodash_debounce_js-node_modules_lodash_fp_compose_js-node_modules_lodash-cf5df3\",\"src_features_CompanyInfo_CompanyInfo_tsx-src_features_CompanyInfo_components_AdvDemoBannerPro-7baeb1\",\"company-info-page-desktop\"]",
+    "parent": "SCRIPT",
+    "className": ""
+  },
+  {
+    "text": "{\"namedChunks\":[\"company-navigation-desktop\",\"company-info-page-desktop\",\"onboarding\"]}",
+    "parent": "SCRIPT",
+    "className": ""
+  },
+  {
+    "text": "Работает",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Больше не работает",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Временно не работает",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Май 2026",
+    "parent": "DIV",
+    "className": "ya-business-calendar__name"
+  },
+  {
+    "text": "Праздники и нерабочие дни",
+    "parent": "DIV",
+    "className": "InfoModal-Title"
+  },
+  {
+    "text": "Дата",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Открыто с",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Открыто до",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Выходной",
+    "parent": "DIV",
+    "className": "ya-business-label WorkIntervalsHoliday-CheckboxLabel ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Перерыв с",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Перерыв до",
+    "parent": "SPAN",
+    "className": "ya-business-input__label"
+  },
+  {
+    "text": "Добавить день",
+    "parent": "SPAN",
+    "className": "InfoWorkIntervalsHolidays-AddText"
+  },
+  {
+    "text": "Веб-сайт",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Создать свой сайт на Яндекс Бизнесе",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "MAX",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "YouTube",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Одноклассники",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Х (бывший Twitter)",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Viber",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Telegram",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "WhatsApp",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Snapchat",
+    "parent": "DIV",
+    "className": "ya-business-label InfoUrls-ModalItemText ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "На английском",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "На белорусском",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "На казахском",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "На турецком",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "На узбекском",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "На арабском",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "На иврите",
+    "parent": "SPAN",
+    "className": "ya-business-yabs-button__text"
+  },
+  {
+    "text": "Российский рубль",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Юридическое лицо",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Индивидуальный предприниматель",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Самозанятый",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "наличными",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "оплата картой",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "электронными деньгами",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "банковским переводом",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "sms-платеж",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "наложенным платежом",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "скидки на услуги льготным категориям",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "дисконтная система скидок",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "предоплата",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "постоплата",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "рассрочка",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "безналичная",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "онлайн",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "QR-код",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "СБП",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "оплата кредитной картой",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "оформление кредита",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "банковским чеком",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "бесконтактная оплата",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "по ссылке",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "скидки",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "акции",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "спецпредложения",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "бонусы",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "подарки",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Особенности и реквизиты",
+    "parent": "DIV",
+    "className": "InfoModal-Title"
+  },
+  {
+    "text": "Базовые",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Основные опции всех организаций",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Валюта",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Российский рубль",
+    "parent": "DIV",
+    "className": "ya-business-select__button-content"
+  },
+  {
+    "text": "посещение с животными",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "разрешено со всеми животными",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "разрешено только с кошками",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "разрешено с кошками и собаками",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "разрешено только с собаками",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "разрешено с собаками до 35 см.",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "запрещено с животными",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "Юридическая информация",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Организационная форма",
+    "parent": "SPAN",
+    "className": "ya-business-select__label"
+  },
+  {
+    "text": "Организационная форма",
+    "parent": "SPAN",
+    "className": "ya-business-select__placeholder"
+  },
+  {
+    "text": "Маркетинговые услуги",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Особенности по вашей рубрике – виду деятельности",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "подарочный сертификат",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "способ оплаты",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "способ оплаты",
+    "parent": "SPAN",
+    "className": "ya-business-select__placeholder"
+  },
+  {
+    "text": "предварительная запись",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Оплата картой",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "мерчандайзинг",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "онлайн консультации",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "акции",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "акции",
+    "parent": "SPAN",
+    "className": "ya-business-select__placeholder"
+  },
+  {
+    "text": "брендинг",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Показывать блок \"Коротко о месте\"",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Создано с помощью нейросети",
+    "parent": "DIV",
+    "className": "ya-business-label FeatureName-YGPTSubtitle ya-business-label_level_hint ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "YandexGPT",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Скрывать подписи у моей организации",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Создано с помощью нейросети",
+    "parent": "DIV",
+    "className": "ya-business-label FeatureName-YGPTSubtitle ya-business-label_level_hint ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "YandexGPT",
+    "parent": "SPAN",
+    "className": ""
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Скрывать фотопои у моей организации",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "продажа практикумов и гайдов",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Можно с собакой",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Доступность",
+    "parent": "H2",
+    "className": "ya-business-label InfoBlockCarcass-Title ya-business-label_level_h2 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Опции для людей с инвалидностью",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_text ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "парковка для людей с инвалидностью",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "доступность входа на инвалидной коляске",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "недоступно",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "доступно",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "Если у входа есть ступени, их должен компенсировать пандус. Также нужно, чтобы проём двери был достаточно широким для проезда — от 70 см",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_hint ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "туалет для людей с инвалидностью",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "кнопка вызова персонала",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "лифт",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "пандус",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Есть",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Нет",
+    "parent": "DIV",
+    "className": "ya-business-tab-line-item__child"
+  },
+  {
+    "text": "Если это возможно, сделайте несколько снимков пандуса с разных ракурсов — чтобы можно было оценить ширину и угол уклона",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_hint ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "доступность помещения на инвалидной коляске",
+    "parent": "H3",
+    "className": "ya-business-label FeatureName-Name ya-business-label_level_h3 ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "недоступно",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "частично доступно",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "доступно",
+    "parent": "SPAN",
+    "className": "ya-business-radio__text"
+  },
+  {
+    "text": "Внутри помещения не должно быть ступеней без пандуса, узких проходов (менее 70 см) и других препятствий для передвижения",
+    "parent": "DIV",
+    "className": "ya-business-label ya-business-label_level_hint ya-business-label_view_default ya-business-label_theme_on-white"
+  },
+  {
+    "text": "Не удалось загрузить чат",
+    "parent": "DIV",
+    "className": "ya-chat-error__title"
+  },
+  {
+    "text": "Попробовать ещё раз",
+    "parent": "DIV",
+    "className": "ya-chat-error__button"
+  },
+  {
+    "text": "Нет доступа к cookie.",
+    "parent": "DIV",
+    "className": "ya-chat-new-window__title"
+  },
+  {
+    "text": "Подтвердите переход на новую страницу",
+    "parent": "DIV",
+    "className": "ya-chat-new-window__button"
+  },
+  {
+    "text": "Маркетинговые услуги",
+    "parent": "SPAN",
+    "className": "ya-business-menu-item__control"
+  },
+  {
+    "text": "Профиль заполнен не до конца",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-content__title"
+  },
+  {
+    "text": "Заполните или обновите данные, чтобы получить Синюю Галку",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-content__subtitle"
+  },
+  {
+    "text": "Время работы",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__text"
+  },
+  {
+    "text": "Изменения применятся за 6-8 часов",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__description sc-sidebar-ya-business-company-fill-detailed-items__description_status_normal"
+  },
+  {
+    "text": "Ссылка на сайт",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__text"
+  },
+  {
+    "text": "Изменения применятся за 6-8 часов",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__description sc-sidebar-ya-business-company-fill-detailed-items__description_status_normal"
+  },
+  {
+    "text": "Телефон",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__text"
+  },
+  {
+    "text": "Изменения применятся за 6-8 часов",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__description sc-sidebar-ya-business-company-fill-detailed-items__description_status_normal"
+  },
+  {
+    "text": "+25%",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__percentage"
+  },
+  {
+    "text": "Фото, видео (минимум 3)",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__text"
+  },
+  {
+    "text": "Загрузите новое фото или видео",
+    "parent": "DIV",
+    "className": "sc-sidebar-ya-business-company-fill-detailed-items__description sc-sidebar-ya-business-company-fill-detailed-items__description_status_expired"
+  }
+]
