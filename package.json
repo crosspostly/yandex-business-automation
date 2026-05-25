@@ -5,8 +5,9 @@
   "description": "Automation for Yandex Business cards",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node scripts/run.ts",
-    "auth": "ts-node scripts/auth.ts",
+    "start": "npx tsx scripts/run.ts",
+    "auth": "npx tsx scripts/auth.ts",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
