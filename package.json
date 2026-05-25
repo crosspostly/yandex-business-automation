@@ -7,6 +7,12 @@
   "scripts": {
     "start": "npx tsx scripts/run.ts",
     "auth": "npx tsx scripts/auth.ts",
+    "import-cookies": "npx tsx scripts/import-cookies.ts",
+    "fill": "npx tsx scripts/fill-card.ts",
+    "fill:dry": "npx tsx scripts/fill-card.ts --dry-run",
+    "diagnose": "npx tsx scripts/diagnose.ts",
+    "discover": "npx tsx scripts/discover.ts",
+    "inspect": "npx tsx scripts/inspect-card.ts",
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +27,8 @@
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
   }
 }
