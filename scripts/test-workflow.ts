@@ -38,12 +38,23 @@ async function runTest() {
     console.log('\n--- Phase 2.3: Uploading a test photo ---');
     await client.updatePhotos(['data/test_photo.jpg']);
 
+    // 2.4 Test Attributes (Features)
+    console.log('\n--- Phase 2.4: Updating Features ---');
+    await client.updateFeatures({
+        'Оплата картой': true,
+        'предварительная запись': true
+    });
+
     // 2.5 Test Publication
     console.log('\n--- Phase 2.5: Creating a test publication ---');
     await client.createPublication(
         'Мы обновили нашу карточку! Теперь здесь будет больше актуальной информации о наших услугах в 2026 году. #маркетинг #клубика',
         ['data/test_photo.jpg']
     );
+
+    // 2.6 Test YML Upload
+    console.log('\n--- Phase 2.6: Uploading YML Price List ---');
+    await client.uploadPriceList('data/pricelist.yml');
 
     console.log('\n⏳ Waiting 15 seconds for backend synchronization...');
     await new Promise(r => setTimeout(r, 15000));

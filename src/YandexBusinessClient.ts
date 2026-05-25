@@ -309,31 +309,109 @@ export class YandexBusinessClient {
     }
   }
 
-  async respondToReviews(template: string = "Спасибо за ваш отзыв! Мы рады стараться для вас.") {
+  async updateFeatures(featuresMap: Record<string, boolean>) {
     const page = await this.getPage();
     try {
-      console.log(`\n💬 Responding to unreplied reviews for organization ${this.orgId}...`);
-      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/reviews/`);
+      console.log(`\n⚙️ Updating features (attributes) for organization ${this.orgId}...`);
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/features/`);
       await this.handleAuthAndCaptcha(page);
-
-      const unreplied = page.locator('.ReviewItem:has-not(.ReviewItem-Reply), [class*="ReviewCard"]:not(:has([class*="Reply"]))');
-      const count = await unreplied.count();
-      console.log(`  Found ${count} unreplied reviews`);
-
-      for (let i = 0; i < Math.min(count, 5); i++) {
-          const review = unreplied.nth(i);
-          const replyBtn = review.locator('button:has-text("Ответить"), .reply-button').first();
+      
+      for (const [featureName, isEnabled] of Object.entries(featuresMap)) {
+          console.log(`  Toggling feature "${featureName}" to ${isEnabled ? 'ON' : 'OFF'}...`);
           
-          if (await replyBtn.isVisible()) {
-              await replyBtn.click({ force: true });
-              const textarea = page.locator('textarea[placeholder*="ответ"], textarea').first();
-              await textarea.fill(template);
+          // Features in Yandex are usually represented as a row with the feature name and a switch/radio
+          // or a group of buttons. We look for a label/div with the text, then find the associated input/button.
+          const featureBlock = page.locator(`div:has-text("${featureName}")`).filter({ has: page.locator('button, input[type="radio"], input[type="checkbox"]') }).last();
+          
+          if (await featureBlock.isVisible({ timeout: 3000 })) {
+              // Yandex often uses custom Select/Radio buttons with text like "доступно" / "недоступно" or "да" / "нет"
+              const targetText = isEnabled ? /(доступно|да|разрешено|есть)/i : /(недоступно|нет|запрещено|нет)/i;
+              const toggleBtn = featureBlock.locator('button, label').filter({ hasText: targetText }).first();
               
-              if (!this.dryRun) {
-                  await page.click('button:has-text("Отправить"), button:has-text("Сохранить")', { force: true });
-                  console.log(`    ✓ Replied to review ${i + 1}`);
+              if (await toggleBtn.isVisible()) {
+                  await toggleBtn.click({ force: true });
+                  console.log(`    ✓ Set "${featureName}" successfully`);
+              } else {
+                  console.log(`    ⚠ Could not find exact toggle for "${featureName}" (might be a checkbox)`);
+                  // Fallback for simple checkboxes
+                  const checkbox = featureBlock.locator('input[type="checkbox"]').first();
+                  if (await checkbox.isVisible()) {
+                      const isChecked = await checkbox.isChecked();
+                      if (isChecked !== isEnabled) {
+                          await checkbox.click({ force: true });
+                          console.log(`    ✓ Toggled checkbox for "${featureName}"`);
+                      } else {
+                          console.log(`    ✓ Checkbox already in correct state`);
+                      }
+                  }
               }
-              await page.waitForTimeout(2000);
+          } else {
+              console.log(`    ✗ Feature "${featureName}" not found on page`);
+          }
+      }
+
+      if (!this.dryRun) {
+          const saveBtn = page.locator('button:has-text("Сохранить"), button[type="submit"]').filter({ hasText: /изменения|сохранить/i }).first();
+          if (await saveBtn.isVisible({ timeout: 5000 })) {
+              console.log('  Clicking save button...');
+              await saveBtn.click({ force: true });
+              await page.waitForTimeout(5000);
+              console.log('  ✨ Features saved');
+          }
+      }
+    } finally {
+      await page.close();
+    }
+  }
+
+  async uploadPriceList(ymlPath: string) {
+    const page = await this.getPage();
+    try {
+      console.log(`\n📋 Uploading Price List (YML) for organization ${this.orgId}...`);
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/price-lists/`);
+      await this.handleAuthAndCaptcha(page);
+      
+      const absolutePath = path.resolve(ymlPath);
+      if (!fs.existsSync(absolutePath)) {
+          throw new Error(`YML file not found at ${absolutePath}`);
+      }
+
+      console.log('  Uploading file...');
+      
+      // Usually there's a specific button for Excel/YML upload
+      const uploadInput = page.locator('input[type="file"], input[accept*="xls"], input[accept*="xml"], input[accept*="yml"]').first();
+      
+      if (await uploadInput.isHidden()) {
+          // Look for upload trigger buttons
+          const triggerBtns = ['Загрузить XLS/YML', 'Загрузить прайс-лист', 'Импорт'];
+          for (const text of triggerBtns) {
+              const btn = page.locator(`button:has-text("${text}")`).first();
+              if (await btn.isVisible()) {
+                  await btn.click({ force: true });
+                  break;
+              }
+          }
+      }
+      
+      await uploadInput.setInputFiles(absolutePath);
+      console.log('  ✓ File selected');
+      
+      if (!this.dryRun) {
+          // Sometimes it auto-uploads, sometimes needs a save button
+          const saveBtn = page.locator('button:has-text("Загрузить"), button:has-text("Сохранить")').filter({ hasNotText: /XLS/i }).first();
+          if (await saveBtn.isVisible({ timeout: 3000 })) {
+              await saveBtn.click({ force: true });
+          }
+          
+          console.log('  ⏳ Waiting for processing (10s)...');
+          await page.waitForTimeout(10000);
+          
+          // Check for errors
+          const errorMsg = page.locator('.Error, .Alert_type_error, [class*="error"]').first();
+          if (await errorMsg.isVisible({ timeout: 2000 })) {
+              console.log(`  ✗ Upload failed: ${await errorMsg.textContent()}`);
+          } else {
+              console.log('  ✨ Price list uploaded successfully');
           }
       }
     } finally {
