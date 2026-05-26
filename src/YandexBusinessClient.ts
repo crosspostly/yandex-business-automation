@@ -49,7 +49,14 @@ export class YandexBusinessClient {
 
   private async dismissPopups(page: Page): Promise<void> {
     await page.evaluate(() => {
-      const selectors = ['.ya-business-ui-popup__screen-overlay', '[data-state="popup-visible"]', '.Paranja'];
+      const selectors = [
+        '.ya-business-ui-popup__screen-overlay',
+        '[data-state="popup-visible"]',
+        '.Paranja',
+        '.InfoModal',
+        '.InfoModal-Overlay',
+        '.InfoModal-Content',
+      ];
       for (const sel of selectors) { document.querySelectorAll(sel).forEach(el => { (el as HTMLElement).style.display = 'none'; }); }
       document.body.style.overflow = 'auto';
     });
@@ -90,7 +97,16 @@ export class YandexBusinessClient {
   }
 
   private async fillFieldByLabel(page: Page, labelText: string, value: string): Promise<boolean> {
-      const labelMap: Record<string, string> = { 'description': 'Описание', 'website': 'Сайт', 'name': 'Обычное название', 'title': 'Название', 'email': 'Электронная почта' };
+      const labelMap: Record<string, string> = {
+        'description': 'Описание',
+        'website': 'Сайт',
+        'name': 'Обычное название',
+        'title': 'Название',
+        'email': 'Электронная почта',
+        'phone': 'Телефон',
+        'vk': 'ВКонтакте',
+        'shortName': 'Короткое название',
+      };
       const finalLabel = labelMap[labelText] || labelText;
       console.log(`  📝 Filling "${finalLabel}"...`);
       try {
@@ -117,24 +133,84 @@ export class YandexBusinessClient {
     try {
       await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/`);
       await this.handleAuthAndCaptcha(page);
+
+      // Scroll through full page to trigger lazy-loading of all form sections
+      console.log('  ⏬ Scrolling page to load all sections...');
+      for (let y = 0; y <= 5000; y += 600) {
+        await page.evaluate(pos => window.scrollTo(0, pos), y);
+        await page.waitForTimeout(400);
+      }
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(1000);
+      await this.dismissPopups(page);
       
       if (data.workInterval) {
           const nonstopBtn = page.locator('button:has-text("Круглосуточно")').first();
-          if (await nonstopBtn.isVisible()) await nonstopBtn.evaluate(el => (el as HTMLElement).click());
-      }
-
-      for (const [k, v] of Object.entries(data)) { 
-          if (k === 'names' && typeof v === 'object') {
-              for (const [lang, name] of Object.entries(v as any)) {
-                  await this.fillFieldByLabel(page, lang === 'ru' ? 'На русском' : 'На английском', name as string);
-              }
-          } else if (k === 'emails' && Array.isArray(v)) {
-              await this.fillFieldByLabel(page, 'email', v[0]);
-          } else if (v && k !== 'workInterval') {
-              await this.fillFieldByLabel(page, k, v as string); 
+          if (await nonstopBtn.isVisible().catch(() => false)) {
+            await nonstopBtn.evaluate(el => (el as HTMLElement).click());
+            console.log('  ✓ Режим: Круглосуточно');
           }
       }
-      if (!this.dryRun) { await page.locator('button:has-text("Сохранить")').first().evaluate(el => (el as HTMLElement).click()); await page.waitForTimeout(3000); }
+
+      // Fill simple string fields
+      const simpleFields = ['name', 'description', 'website'] as const;
+      for (const key of simpleFields) {
+        if (data[key]) {
+          await this.dismissPopups(page);
+          const ok = await this.fillFieldByLabel(page, key, data[key] as string);
+          console.log(ok ? `  ✓ ${key}` : `  ✗ ${key} — not found`);
+        }
+      }
+
+      // Names (multi-language)
+      if (data.names && typeof data.names === 'object') {
+        for (const [lang, name] of Object.entries(data.names)) {
+          await this.dismissPopups(page);
+          await this.fillFieldByLabel(page, lang === 'ru' ? 'На русском' : 'На английском', name as string);
+        }
+      }
+
+      // Emails
+      if (data.emails && Array.isArray(data.emails) && data.emails.length > 0) {
+        await this.dismissPopups(page);
+        const ok = await this.fillFieldByLabel(page, 'email', data.emails[0]);
+        console.log(ok ? `  ✓ email` : `  ✗ email — not found`);
+      }
+
+      // Phones
+      if (data.phones && Array.isArray(data.phones) && data.phones.length > 0) {
+        await this.dismissPopups(page);
+        const ok = await this.fillFieldByLabel(page, 'phone', data.phones[0]);
+        console.log(ok ? `  ✓ phone` : `  ✗ phone — not found`);
+      }
+
+      // Social links
+      if (data.socials && typeof data.socials === 'object') {
+        for (const [network, url] of Object.entries(data.socials)) {
+          await this.dismissPopups(page);
+          const ok = await this.fillFieldByLabel(page, network, url as string);
+          console.log(ok ? `  ✓ ${network}` : `  ✗ ${network} — not found`);
+        }
+      }
+
+      // Screenshot before save
+      await page.screenshot({ path: 'data/fill_before_save.png', fullPage: true });
+      console.log('  📸 data/fill_before_save.png');
+
+      if (!this.dryRun) {
+        await this.dismissPopups(page);
+        const saveBtn = page.locator('button:has-text("Сохранить")').first();
+        if (await saveBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+          await saveBtn.evaluate(el => (el as HTMLElement).click());
+          await page.waitForTimeout(3000);
+          console.log('  💾 Saved!');
+        } else {
+          console.log('  ⚠ Save button not found');
+        }
+        await page.screenshot({ path: 'data/fill_after_save.png', fullPage: true });
+      } else {
+        console.log('  ⏩ DRY RUN — save skipped');
+      }
     } finally { await page.close(); }
   }
 
