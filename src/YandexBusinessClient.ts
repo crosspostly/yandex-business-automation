@@ -527,7 +527,7 @@ export class YandexBusinessClient {
     } finally { await page.close(); }
   }
 
-  async addStory(name: string, photoPaths: string[]) {
+  async addStory(name: string, photoPaths: string[], buttonText?: string, buttonLink?: string) {
     const page = await this.getPage();
     try {
       await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/stories/`);
@@ -541,42 +541,71 @@ export class YandexBusinessClient {
       await page.waitForTimeout(4000);
       await this.dismissPopups(page);
 
-      // 1. Заполняем название
+      // 1. Сначала название
       console.log(`    📝 Вводим название: "${name}"`);
       const nameInput = page.locator('.AddStoryForm-TitleTextInput .ya-business-input__control').first();
-      // "Силовой" метод ввода для React
-      await nameInput.evaluate((el, val) => {
-          (el as HTMLInputElement).value = val;
-          el.dispatchEvent(new Event('input', { bubbles: true }));
-          el.dispatchEvent(new Event('change', { bubbles: true }));
-      }, name);
-      await page.keyboard.press('Enter');
+      await this.reactFill(nameInput, name);
 
-      // 2. Загружаем файлы
-      console.log(`    🖼️ Загружаем ${photoPaths.length} слайд(ов)...`);
-      const uploadInput = page.locator('.AddStoryForm input.AddStoryFormImageAttach-HiddenInput').first();
-      await uploadInput.setInputFiles(photoPaths.map(p => path.resolve(p)));
+      // 2. Загружаем ПЕРВЫЙ слайд (это открывает поля для кнопки)
+      if (photoPaths.length > 0) {
+          console.log(`    🖼️ Загружаем первый слайд (для открытия полей кнопки)...`);
+          const uploadInput = page.locator('.AddStoryForm input.AddStoryFormImageAttach-HiddenInput').first();
+          await uploadInput.setInputFiles(path.resolve(photoPaths[0]));
+          await page.waitForTimeout(5000);
+      }
+
+      // 3. Заполняем кнопку и ссылку (теперь они должны быть в DOM)
+      if (buttonText) {
+          console.log(`    🔘 Вводим текст кнопки: "${buttonText}"`);
+          const btnTextInput = page.locator('input[placeholder*="текст кнопки"]').first();
+          if (await btnTextInput.isVisible()) await this.reactFill(btnTextInput, buttonText);
+      }
+      if (buttonLink) {
+          console.log(`    🔗 Вводим ссылку: "${buttonLink}"`);
+          const btnLinkInput = page.locator('input[placeholder*="ссылку"]').first();
+          if (await btnLinkInput.isVisible()) await this.reactFill(btnLinkInput, buttonLink);
+      }
+
+      // 4. Загружаем остальные слайды
+      if (photoPaths.length > 1) {
+          console.log(`    🖼️ Загружаем остальные слайды...`);
+          const uploadInput = page.locator('.AddStoryForm input.AddStoryFormImageAttach-HiddenInput').first();
+          for (let i = 1; i < photoPaths.length; i++) {
+              await uploadInput.setInputFiles(path.resolve(photoPaths[i]));
+              await page.waitForTimeout(3000);
+          }
+      }
       
-      // КРИТИЧНО: Ждем, пока исчезнут все спиннеры загрузки
-      console.log('    ⏳ Ожидаем завершения загрузки (спиннеров)...');
+      console.log('    ⏳ Ожидаем завершения всех загрузок...');
       await page.locator('.Loading-Spinner').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
       await page.waitForTimeout(5000);
 
-      // 3. Публикуем
+      // 5. Публикуем
       if (!this.dryRun) {
           const publishBtn = page.locator('.AddStoryForm-Submit').last();
-          console.log(`    🚀 Нажимаем "Опубликовать" (прямой вызов JS)...`);
+          console.log(`    🚀 Нажимаем "Опубликовать"...`);
           
-          await page.screenshot({ path: 'data/before_final_publish_click.png' });
-          
-          // "Силовой" клик без проверки видимости
+          // Ждем пока кнопка станет активной (React)
+          await page.waitForFunction(() => {
+              const btn = document.querySelector('.AddStoryForm-Submit') as HTMLButtonElement;
+              return btn && !btn.disabled;
+          }, { timeout: 20000 }).catch(() => console.log('    ⚠️ Кнопка все еще disabled, пробую силовой клик...'));
+
           await publishBtn.evaluate(el => (el as HTMLElement).click());
-          
           await page.waitForTimeout(10000);
-          console.log(`    ✅ Попытка публикации завершена.`);
+          console.log(`    ✅ История "${name}" отправлена.`);
       }
     } finally { await page.close(); }
   }
+
+  private async reactFill(locator: Locator, value: string) {
+      await locator.evaluate((el, val) => {
+          (el as HTMLInputElement).value = val;
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+      }, value);
+  }
+
 
   async updateDirectionStory(photoPaths: string[], buttonText?: string, buttonLink?: string) {
     const page = await this.getPage();
