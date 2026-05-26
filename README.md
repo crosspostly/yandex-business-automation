@@ -8,22 +8,42 @@ Professional automation suite for Yandex Business card optimization using Playwr
 - **LSI SEO Injektion**: Automatic keyword density management in descriptions and catalogs.
 - **Dynamic Scheduling**: Automation of work hours, holidays, and breaks.
 - **Media Categorization**: Smart upload into 'Interior', 'Exterior', and 'Entrance' tags.
-- **Interactive Stories**: Uploading stories with call-to-action buttons.
+- **Interactive Stories**: robust management of Stories via React-resilient JS-click logic.
 - **AI Advisor**: Post-run analysis and generation of `ADVICE.md` with ranking boost tips.
 
+## Ключевые возможности автоматизации (Обновление Май 2026)
+
+### 1. 🖼️ Медиа и Гео-привязка
+- **Автоматический инжект GPS**: При загрузке фото скрипт автоматически вшивает координаты организации (56.294876, 43.998914) в EXIF.
+- **Категоризация**: Умная загрузка в разделы «Экстерьер», «Интерьер» и «Вход».
+- **Скрипт**: `npx tsx scripts/sync-media.ts`
+
+### 2. 💰 Прайс-листы (YML)
+- **SEO-синхронизация**: Загрузка товаров и услуг через YML-фиды с автоматическим подтверждением публикации.
+
+### 3. 📝 Публикации (Новости)
+- **Rich Posts**: Поддержка длинных текстов и одновременной загрузки нескольких изображений.
+- **Верификация**: Скрипт проверяет наличие поста в кабинете после создания.
+- **Скрипт**: `npx tsx scripts/verify-publications.ts`
+
+### 4. 📱 Сторис (Stories)
+- **Стандартные истории**: Создание новых историй через модальное окно с обходом ограничений React (прямые JS-клики, эмуляция событий ввода).
+- **Скрипт**: `npx tsx scripts/create-new-story.ts`
+
 ## 🛠 Project Structure
-- `src/YandexBusinessClient.ts`: Core automation engine with viewport-resilient JS-click logic.
-- `scripts/pack-card.ts`: Full card synchronization.
-- `scripts/final-report.ts`: Proof-of-work audit and screenshot generator.
-- `cookies/`: Secure storage for Playwright session states.
-- `data/`: Marketing assets and generated catalogs.
+- `src/YandexBusinessClient.ts`: Основной движок автоматизации.
+- `scripts/sync-media.ts`: Полная синхронизация медиа и прайса.
+- `scripts/create-new-story.ts`: Мастер создания новых Сторис.
+- `scripts/verify-publications.ts`: Тестирование постов с картинками.
 
-## 🚀 Quick Start
-1. **Auth**: \`npm run auth\`
-2. **Sync**: \`npx tsx scripts/pack-card.ts\`
-3. **Report**: \`npx tsx scripts/final-report.ts\`
+## 🚀 Быстрый старт
+1. **Синхронизация (Фото + Прайс + Пост)**:
+   ```bash
+   npx tsx scripts/sync-media.ts
+   ```
+2. **Создание новой Сторис**:
+   ```bash
+   npx tsx scripts/create-new-story.ts
+   ```
 
-## 📈 2026 Ranking Factors Implemented
-1. **Disabled Access Tags**: Hard requirement for Top Rated badge.
-2. **Daily Engagement**: Automated stories and publications.
-3. **Technical Authenticity**: Verified GPS coordinates in all media assets.
+---
