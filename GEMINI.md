@@ -16,7 +16,10 @@ The automation simulates specialized expert roles:
 ## Guidelines
 - **SEO & Keywords**: Every text field must be checked for keyword density based on the provided niche.
 - **Geo-Tagging**: All uploaded photos MUST have EXIF data (GPS coordinates) matching the organization's location.
-- **Stealth**: Always use the stealth plugin.
+- **Stories**:
+    - Title limit: 15 characters (auto-truncated).
+    - Slide-First logic: Interactive button fields appear only after uploading the first slide.
+    - Visibility: Modal can be hidden by generic pop-up dismissers; refined logic excludes `.AddStoryForm`.
 - **Navigation**: Coverage must include:
     - Basic Data (SEO optimized).
     - Photos by category (tags: interior, exterior, entrance, etc.).

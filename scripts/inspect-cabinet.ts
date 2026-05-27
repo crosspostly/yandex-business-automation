@@ -94,7 +94,7 @@ async function main() {
   const storagePath = path.resolve(process.cwd(), 'cookies/yandex.json');
 
   const browser = await chromium.launch({
-    headless: false,  // VISIBLE browser!
+    headless: true,  // Headless for CLI
     args: ['--no-sandbox', '--disable-http2'],
   });
 
@@ -181,7 +181,7 @@ async function main() {
 
     // Keep browser open for user to see
     console.log('\n🖥️  Browser is open for inspection. Press Ctrl+C to close.');
-    await page.waitForTimeout(300000); // 5 minutes
+    // await page.waitForTimeout(300000); // 5 minutes
 
   } finally {
     await browser.close();

@@ -48,6 +48,29 @@ export class YandexBusinessClient {
     return await context.newPage();
   }
 
+  async takeScreenshot(name: string) {
+    const page = await this.getPage();
+    try {
+      const screenshotPath = path.resolve(process.cwd(), `data/${name}.png`);
+      await page.screenshot({ path: screenshotPath, fullPage: true });
+      console.log(`  📸 Screenshot saved to: ${screenshotPath}`);
+    } finally {
+      await page.close();
+    }
+  }
+
+  async navigateToStories() {
+    const page = await this.getPage();
+    try {
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/stories/`);
+      await page.waitForTimeout(5000);
+      return page;
+    } catch (e) {
+      await page.close();
+      throw e;
+    }
+  }
+
   async close() { if (this.browser) await this.browser.close(); }
 
   private async dispatchClick(page: Page, selector: string | Locator) {
@@ -65,17 +88,27 @@ export class YandexBusinessClient {
     await page.evaluate(() => {
       const selectors = [
         '.ya-business-ui-popup__screen-overlay',
-        '[data-state="popup-visible"]',
         '.Paranja',
         '.InfoModal',
         '.InfoModal-Overlay',
         '.InfoModal-Content',
         '.NotificationPopup',
-        '.CrossPlatformModal',
       ];
       for (const sel of selectors) { 
-        document.querySelectorAll(sel).forEach(el => { (el as HTMLElement).style.display = 'none'; }); 
+        document.querySelectorAll(sel).forEach(el => { 
+            const htmlEl = el as HTMLElement;
+            if (!htmlEl.classList.contains('AddStoryForm') && !htmlEl.closest('.AddStoryForm')) {
+                htmlEl.style.display = 'none'; 
+            }
+        }); 
       }
+      // Handle the generic [data-state="popup-visible"] separately and carefully
+      document.querySelectorAll('[data-state="popup-visible"]').forEach(el => {
+          const htmlEl = el as HTMLElement;
+          if (!htmlEl.classList.contains('AddStoryForm') && !htmlEl.closest('.AddStoryForm')) {
+              htmlEl.style.display = 'none';
+          }
+      });
       document.body.style.overflow = 'auto';
     });
   }
@@ -473,16 +506,15 @@ export class YandexBusinessClient {
     try {
       await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/stories/`);
       await this.dismissPopups(page);
+      await page.waitForTimeout(5000);
       
-      const main = page.locator('main, [class*="Content"], [class*="container"]').first();
-      // Look for any text inside plates
-      const items = await main.locator('[class*="CompanyStoryPlate-AddText"], [class*="Story"] [class*="Title"], [class*="StoryName"]').all();
+      const items = await page.locator('.CompanyStoryPlate-Title, [class*="StoryName"]').all();
       
       const names: string[] = [];
       for (const item of items) {
           const text = await item.innerText();
           const cleanText = text?.replace(/\n/g, ' ').trim();
-          if (cleanText && cleanText !== 'Новая история' && !['Главная', 'Данные', 'Сайт'].includes(cleanText)) {
+          if (cleanText) {
               names.push(cleanText);
           }
       }
@@ -495,8 +527,9 @@ export class YandexBusinessClient {
     try {
       await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/stories/`);
       await this.dismissPopups(page);
+      await page.waitForTimeout(3000);
       
-      const storyItem = page.locator(`[class*="CompanyStoryPlate"], [class*="Story"], [class*="Item"]`).filter({ hasText: name }).last();
+      const storyItem = page.locator(`.CompanyStoryPlate`).filter({ hasText: name }).last();
       
       if (await storyItem.isVisible()) {
           console.log(`    🗑️ Deleting story: "${name}"`);
@@ -516,7 +549,7 @@ export class YandexBusinessClient {
               await this.dispatchClick(page, deleteBtn);
               const confirmBtn = page.locator('.ya-business-ui-modal button:has-text("Удалить"), .ya-business-ui-modal button:has-text("Да")').last();
               if (await confirmBtn.isVisible()) await this.dispatchClick(page, confirmBtn);
-              await page.waitForTimeout(3000);
+              await page.waitForTimeout(5000);
               console.log(`    ✅ Story "${name}" deleted.`);
           } else {
               console.log(`    ❌ Could not find delete button for story "${name}".`);
@@ -535,35 +568,44 @@ export class YandexBusinessClient {
       await page.waitForTimeout(5000);
 
       console.log(`    ➕ Открываем модалку "Новая история"...`);
-      const addPlate = page.locator('.CompanyStoryPlate-AddText:has-text("Новая история")').first();
+      const addPlate = page.locator('.CompanyStoryPlate_type_add').first();
       await addPlate.click();
       
       await page.waitForTimeout(4000);
       await this.dismissPopups(page);
 
       // 1. Сначала название
-      console.log(`    📝 Вводим название: "${name}"`);
+      const truncatedName = name.substring(0, 15);
+      console.log(`    📝 Вводим название (truncated to 15): "${truncatedName}"`);
       const nameInput = page.locator('.AddStoryForm-TitleTextInput .ya-business-input__control').first();
-      await this.reactFill(nameInput, name);
+      await nameInput.waitFor({ state: 'visible', timeout: 10000 });
+      await nameInput.fill(truncatedName);
+      await page.keyboard.press('Enter');
 
       // 2. Загружаем ПЕРВЫЙ слайд (это открывает поля для кнопки)
       if (photoPaths.length > 0) {
           console.log(`    🖼️ Загружаем первый слайд (для открытия полей кнопки)...`);
           const uploadInput = page.locator('.AddStoryForm input.AddStoryFormImageAttach-HiddenInput').first();
           await uploadInput.setInputFiles(path.resolve(photoPaths[0]));
-          await page.waitForTimeout(5000);
+          await page.waitForTimeout(8000);
       }
 
       // 3. Заполняем кнопку и ссылку (теперь они должны быть в DOM)
       if (buttonText) {
           console.log(`    🔘 Вводим текст кнопки: "${buttonText}"`);
           const btnTextInput = page.locator('input[placeholder*="текст кнопки"]').first();
-          if (await btnTextInput.isVisible()) await this.reactFill(btnTextInput, buttonText);
+          if (await btnTextInput.isVisible()) {
+              await btnTextInput.fill(buttonText);
+              await page.keyboard.press('Tab');
+          }
       }
       if (buttonLink) {
           console.log(`    🔗 Вводим ссылку: "${buttonLink}"`);
           const btnLinkInput = page.locator('input[placeholder*="ссылку"]').first();
-          if (await btnLinkInput.isVisible()) await this.reactFill(btnLinkInput, buttonLink);
+          if (await btnLinkInput.isVisible()) {
+              await btnLinkInput.fill(buttonLink);
+              await page.keyboard.press('Tab');
+          }
       }
 
       // 4. Загружаем остальные слайды
@@ -572,7 +614,7 @@ export class YandexBusinessClient {
           const uploadInput = page.locator('.AddStoryForm input.AddStoryFormImageAttach-HiddenInput').first();
           for (let i = 1; i < photoPaths.length; i++) {
               await uploadInput.setInputFiles(path.resolve(photoPaths[i]));
-              await page.waitForTimeout(3000);
+              await page.waitForTimeout(4000);
           }
       }
       
@@ -585,13 +627,12 @@ export class YandexBusinessClient {
           const publishBtn = page.locator('.AddStoryForm-Submit').last();
           console.log(`    🚀 Нажимаем "Опубликовать"...`);
           
-          // Ждем пока кнопка станет активной (React)
           await page.waitForFunction(() => {
               const btn = document.querySelector('.AddStoryForm-Submit') as HTMLButtonElement;
               return btn && !btn.disabled;
-          }, { timeout: 20000 }).catch(() => console.log('    ⚠️ Кнопка все еще disabled, пробую силовой клик...'));
+          }, { timeout: 30000 }).catch(() => console.log('    ⚠️ Кнопка все еще disabled, пробую подождать еще...'));
 
-          await publishBtn.evaluate(el => (el as HTMLElement).click());
+          await publishBtn.click();
           await page.waitForTimeout(10000);
           console.log(`    ✅ История "${name}" отправлена.`);
       }
