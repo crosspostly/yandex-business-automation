@@ -18,7 +18,7 @@ The automation simulates specialized expert roles:
 - **Geo-Tagging**: All uploaded photos MUST have EXIF data (GPS coordinates) matching the organization's location.
 - **Stories**:
     - Title limit: 15 characters (auto-truncated).
-    - Slide-First logic: Interactive button fields appear only after uploading the first slide.
+    - Slide-First logic: Interactive button fields (text + URL) appear only after uploading the first slide. The script waits for these fields to mount in the DOM before filling.
     - Visibility: Modal can be hidden by generic pop-up dismissers; refined logic excludes `.AddStoryForm`.
 - **Navigation**: Coverage must include:
     - Basic Data (SEO optimized).
