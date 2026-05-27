@@ -71,6 +71,86 @@ export class YandexBusinessClient {
     }
   }
 
+  async updateFeatures(featuresMap: Record<string, string | string[]>) {
+    const page = await this.getPage();
+    try {
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/`);
+      await this.handleAuthAndCaptcha(page);
+
+      console.log('  ⏬ Scrolling to Features section...');
+      const section = page.locator('h2:has-text("Особенности"), h2:has-text("Маркетинговые услуги"), .Separator + .InfoBlockCarcass').first();
+      await section.scrollIntoViewIfNeeded();
+      await page.waitForTimeout(2000);
+
+      for (const [name, value] of Object.entries(featuresMap)) {
+          const row = page.locator(`.InfoBlockCarcass-Row[feature-name="${name}"]`).first();
+          if (await row.isVisible()) {
+              console.log(`    ⚙️ Updating feature "${name}" to "${value}"`);
+              if (typeof value === 'string') {
+                  // Try tab line items first
+                  const tabOption = row.locator(`.ya-business-tab-line-item:has-text("${value}")`).first();
+                  if (await tabOption.isVisible()) {
+                      await tabOption.click();
+                  } else {
+                      // Try radio group items
+                      const radioOption = row.locator(`.ya-business-radio:has-text("${value}")`).first();
+                      if (await radioOption.isVisible()) {
+                          await radioOption.click();
+                      } else {
+                         // Try generic buttons/spans inside row
+                         const genericBtn = row.locator(`button:has-text("${value}"), span:has-text("${value}")`).first();
+                         if (await genericBtn.isVisible()) await genericBtn.click();
+                      }
+                  }
+              }
+              await page.waitForTimeout(1000);
+          }
+      }
+
+      const saveBtn = page.locator('button:has-text("Сохранить")').first();
+      if (await saveBtn.isVisible() && !this.dryRun) {
+          console.log('    💾 Clicking Save...');
+          await this.dispatchClick(page, saveBtn);
+          await page.waitForTimeout(5000);
+          console.log('    ✅ Features saved.');
+      }
+    } finally { await page.close(); }
+  }
+
+  /**
+   * Bulk confirmation of all features to refresh "last updated" signal.
+   */
+  async confirmAttributes() {
+    const page = await this.getPage();
+    try {
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/`);
+      console.log('  🔄 Bulk confirming all features...');
+      
+      const rows = await page.locator('.InfoBlockCarcass-Row[feature-name]').all();
+      console.log(`    📊 Found ${rows.length} feature rows.`);
+
+      for (const row of rows) {
+          const name = await row.getAttribute('feature-name');
+          // Look for already selected items
+          const activeItem = row.locator('.ya-business-tab-line-item_checked, .ya-business-tab-line-item_active, .ya-business-radio_checked, [class*="_checked"], [class*="_active"]').first();
+          
+          if (await activeItem.isVisible()) {
+              const text = (await activeItem.innerText()).trim();
+              console.log(`    👉 Re-confirming "${name}" (Value: ${text})`);
+              await activeItem.click();
+              await page.waitForTimeout(500);
+          }
+      }
+
+      const saveBtn = page.locator('button:has-text("Сохранить")').first();
+      if (await saveBtn.isVisible() && !this.dryRun) {
+          await this.dispatchClick(page, saveBtn);
+          await page.waitForTimeout(5000);
+          console.log('    ✅ All attributes confirmed/refreshed.');
+      }
+    } finally { await page.close(); }
+  }
+
   async close() { if (this.browser) await this.browser.close(); }
 
   private async dispatchClick(page: Page, selector: string | Locator) {
@@ -418,6 +498,41 @@ export class YandexBusinessClient {
           await uploadInput.setInputFiles(absolutePath);
           await page.waitForTimeout(5000);
           console.log(`    ✅ Uploaded ${p}`);
+      }
+    } finally { await page.close(); }
+  }
+
+  /**
+   * Sets descriptions (ALT tags) for photos in a category.
+   * SEO logic: Each photo gets a unique description with keywords.
+   */
+  async setPhotoDescriptions(category: string, descriptions: string[]) {
+    const page = await this.getPage();
+    try {
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/photos?tag=${category}`);
+      await this.dismissPopups(page);
+      
+      const photoCards = await page.locator('.PhotoList-Item').all();
+      console.log(`    🖼️ Found ${photoCards.length} photos in "${category}"`);
+
+      for (let i = 0; i < Math.min(photoCards.length, descriptions.length); i++) {
+          const card = photoCards[i];
+          const desc = descriptions[i];
+          
+          await card.hover();
+          const editBtn = card.locator('button[class*="edit"], button[class*="Edit"]').first();
+          if (await editBtn.isVisible()) {
+              await editBtn.click();
+              await page.waitForTimeout(1000);
+              
+              const textarea = page.locator('.ya-business-ui-modal textarea, .AddPhotoDescription-Textarea').first();
+              if (await textarea.isVisible()) {
+                  console.log(`    📝 Setting ALT: "${desc.substring(0, 30)}..."`);
+                  await textarea.fill(desc);
+                  await page.locator('button:has-text("Сохранить"), button:has-text("Готово")').first().click();
+                  await page.waitForTimeout(2000);
+              }
+          }
       }
     } finally { await page.close(); }
   }

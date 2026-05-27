@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-05-25T18:34:06.698Z">
+<yml_catalog date="2026-05-27T13:38:18.629Z">
   <shop>
-    <name>Прайс-лист Клубики</name>
-    <company>Клубика</company>
-    <url>https://vk.com/nanobloger</url>
+    <name>Клубика</name>
+    <company>Клубика Маркетинг</company>
+    <url>https://clubika.ru</url>
     <currencies>
       <currency id="RUR" rate="1"/>
     </currencies>
     <categories>
-      <category id="1">Маркетинговые услуги</category>
-      <category id="2" parentId="1">Реклама</category>
+      <category id="1">Маркетинг</category>
+      <category id="2">Контент</category>
     </categories>
     <offers>
-      <offer id="svc-1" available="true">
-        <name>Аудит социальных сетей</name>
-        <price>5000</price>
-        <currencyId>RUR</currencyId>
-        <categoryId>1</categoryId>
-        <description>Полный аудит ваших соцсетей с рекомендациями по улучшению вовлеченности.</description>
-      </offer>
-      <offer id="svc-2" available="true">
-        <name>Настройка таргетированной рекламы</name>
+      <offer id="offer-1" available="true">
+        <name>Продвижение в Яндекс Картах (SEO)</name>
         <price>15000</price>
         <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <description>Вывод карточки в ТОП-3 без рекламного бюджета. Работа с поведенческими факторами, SEO-прайсом и атрибутами.</description>
+      </offer>
+      <offer id="offer-2" available="true">
+        <name>Создание и оформление Сторис</name>
+        <price>5000</price>
+        <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <description>Запуск рекламных кампаний в VK с гарантией результата.</description>
+        <description>Профессиональные истории для Яндекс Бизнеса с интерактивными кнопками и CTA.</description>
       </offer>
     </offers>
   </shop>
