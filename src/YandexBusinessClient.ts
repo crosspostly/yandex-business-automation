@@ -2,8 +2,10 @@ import { chromium } from 'playwright-extra';
 import type { Browser, Page, Locator } from 'playwright';
 import stealth from 'puppeteer-extra-plugin-stealth';
 import * as path from 'path';
-import * as fs from 'fs';
+import fs from 'fs';
+// @ts-ignore
 import piexif from 'piexifjs';
+import { HumanBehavior } from './HumanBehavior.js';
 
 chromium.use(stealth());
 
@@ -29,6 +31,7 @@ export class YandexBusinessClient {
   private browser: Browser | null = null;
   private dryRun: boolean;
   private coords: { lat: number, lon: number } | null = null;
+  private sessionVerified: boolean = false;
 
   constructor(orgId: string, dryRun: boolean = false) {
     this.orgId = orgId;
@@ -36,6 +39,50 @@ export class YandexBusinessClient {
   }
 
   setCoordinates(lat: number, lon: number) { this.coords = { lat, lon }; }
+
+  /**
+   * Proactive session health check.
+   * Returns true if session is valid, false otherwise.
+   */
+  async checkSessionHealth(): Promise<{ ok: boolean, reason?: string }> {
+    const storageStatePath = path.resolve(process.cwd(), 'cookies/yandex.json');
+    if (!fs.existsSync(storageStatePath)) {
+        return { ok: false, reason: 'Session file missing' };
+    }
+
+    const page = await this.getPage();
+    try {
+        // Navigate to a neutral page within the organization
+        await page.goto(`https://yandex.ru/sprav/${this.orgId}/p/edit/`, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await HumanBehavior.sleep(2000, 4000);
+        
+        const url = page.url();
+        if (url.includes('passport.yandex.ru')) {
+            return { ok: false, reason: 'Redirected to Passport (Session Expired)' };
+        }
+
+        const captchaVisible = await page.locator('.CheckboxCaptcha, .smartcaptcha-body').first().isVisible();
+        if (captchaVisible) {
+            return { ok: false, reason: 'Captcha encountered' };
+        }
+
+        // Check for specific element indicating we are in the cabinet
+        const title = await page.title();
+        const editFormVisible = await page.locator('.OrganizationEdit, [class*="EditPage"], [class*="Form"]').first().isVisible();
+        const sidebarVisible = await page.locator('[class*="Sidebar"]').first().isVisible();
+
+        if (title.includes('Яндекс Бизнес') || title.includes('Главная') || editFormVisible || sidebarVisible) {
+            this.sessionVerified = true;
+            return { ok: true };
+        }
+
+        return { ok: false, reason: 'Unknown state - cabinet not detected' };
+    } catch (e: any) {
+        return { ok: false, reason: `Error: ${e.message}` };
+    } finally {
+        await page.close();
+    }
+  }
 
   private async getPage(): Promise<Page> {
     const storageStatePath = path.resolve(process.cwd(), 'cookies/yandex.json');
@@ -151,17 +198,71 @@ export class YandexBusinessClient {
     } finally { await page.close(); }
   }
 
+  /**
+   * Automates the FAQ (Questions and Answers) section.
+   * Since there is no API, it uses UI automation to add questions and answers.
+   */
+  async syncFAQ(faq: { question: string; answer: string }[]) {
+    const page = await this.getPage();
+    try {
+      // FAQ is often under 'reviews' or a separate tab in some cabinet versions, 
+      // but usually, it's a standalone section in the edit interface.
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/faq/`);
+      await this.handleAuthAndCaptcha(page);
+
+      console.log(`  ❓ Syncing ${faq.length} FAQ items...`);
+      
+      for (const item of faq) {
+          const exists = await page.locator(`div:has-text("${item.question}")`).first().isVisible().catch(() => false);
+          if (exists) {
+              console.log(`    ⏭️ FAQ item already exists: "${item.question.substring(0, 30)}..."`);
+              continue;
+          }
+
+          console.log(`    ➕ Adding FAQ: "${item.question.substring(0, 30)}..."`);
+          const addBtn = page.locator('button:has-text("Добавить вопрос"), button:has-text("Задать вопрос")').first();
+          if (await addBtn.isVisible()) {
+              await HumanBehavior.naturalClick(page, addBtn);
+              await HumanBehavior.sleep(1000, 2000);
+              
+              const qInput = page.locator('textarea[placeholder*="вопрос"], input[placeholder*="вопрос"]').first();
+              const aInput = page.locator('textarea[placeholder*="ответ"], input[placeholder*="ответ"]').first();
+              
+              if (await qInput.isVisible() && await aInput.isVisible()) {
+                  await HumanBehavior.typeLikeHuman(page, qInput, item.question);
+                  await HumanBehavior.sleep(500, 1000);
+                  await HumanBehavior.typeLikeHuman(page, aInput, item.answer);
+                  
+                  if (!this.dryRun) {
+                      const saveBtn = page.locator('button:has-text("Сохранить"), button:has-text("Опубликовать")').last();
+                      await HumanBehavior.naturalClick(page, saveBtn);
+                      await HumanBehavior.sleep(3000, 5000);
+                  }
+              }
+          }
+      }
+      console.log('  ✅ FAQ synchronization complete.');
+    } finally {
+      await page.close();
+    }
+  }
+
   async close() { if (this.browser) await this.browser.close(); }
 
   private async dispatchClick(page: Page, selector: string | Locator) {
     const loc = typeof selector === 'string' ? page.locator(selector).first() : selector;
-    await loc.evaluate(el => {
-        el.scrollIntoView();
-        const opts = { bubbles: true, cancelable: true, view: window };
-        el.dispatchEvent(new MouseEvent('mousedown', opts));
-        el.dispatchEvent(new MouseEvent('mouseup', opts));
-        el.dispatchEvent(new MouseEvent('click', opts));
-    });
+    try {
+        await HumanBehavior.naturalClick(page, loc);
+    } catch (e) {
+        console.log('    ⚠ Natural click failed, falling back to dispatchEvent');
+        await loc.evaluate(el => {
+            el.scrollIntoView();
+            const opts = { bubbles: true, cancelable: true, view: window };
+            el.dispatchEvent(new MouseEvent('mousedown', opts));
+            el.dispatchEvent(new MouseEvent('mouseup', opts));
+            el.dispatchEvent(new MouseEvent('click', opts));
+        });
+    }
   }
 
   private async dismissPopups(page: Page): Promise<void> {
@@ -197,7 +298,7 @@ export class YandexBusinessClient {
     console.log(`  → Navigating to ${url}`);
     try {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-      await page.waitForTimeout(4000);
+      await HumanBehavior.sleep(3000, 5000);
       await this.dismissPopups(page);
     } catch (e: any) { console.log(`  ⚠ Navigation warning: ${e.message}`); }
   }
@@ -207,6 +308,14 @@ export class YandexBusinessClient {
     if (url.includes('passport.yandex.ru')) throw new Error('Authentication failed - cookies expired');
     const captchaVisible = await page.locator('.CheckboxCaptcha, .smartcaptcha-body').first().isVisible().catch(() => false);
     if (captchaVisible) throw new Error('Captcha encountered - automation blocked');
+    
+    // Check if we are stuck on some "update data" modal that Yandex sometimes shows
+    const updateModal = page.locator('button:has-text("Все данные верны"), button:has-text("Подтвердить")').first();
+    if (await updateModal.isVisible()) {
+        console.log('  🛡️ Auto-confirming Yandex "data is correct" modal...');
+        await HumanBehavior.naturalClick(page, updateModal);
+        await HumanBehavior.sleep(1000, 2000);
+    }
   }
 
   private injectGeoTags(photoPath: string): string {
@@ -296,22 +405,22 @@ export class YandexBusinessClient {
         let field: Locator | null = null;
         for (const finalLabel of possibleLabels) {
             const selectors = [
-              `label:has-text("${finalLabel}")`,
-              `div:has-text("${finalLabel}")`,
-              `span:has-text("${finalLabel}")`,
+              `.ya-business-input:has-text("${finalLabel}") input`,
+              `.ya-business-textarea:has-text("${finalLabel}") textarea`,
+              `.ya-business-input:has-text("${finalLabel}") [contenteditable="true"]`,
+              `label:has-text("${finalLabel}") + div input`,
+              `label:has-text("${finalLabel}") + div textarea`,
+              `label:has-text("${finalLabel}") input`,
+              `label:has-text("${finalLabel}") textarea`,
+              `div:has-text("${finalLabel}") + div input`,
+              `div:has-text("${finalLabel}") + div textarea`,
               `[placeholder*="${finalLabel}"]`
             ];
             
             for (const sel of selectors) {
-              const locator = page.locator(sel).last();
-              const possible = locator.locator('input, textarea, [contenteditable="true"]').first();
+              const possible = page.locator(sel).first();
               if (await possible.isVisible({ timeout: 500 }).catch(() => false)) {
                 field = possible;
-                break;
-              }
-              const sibling = page.locator(`${sel} + div input, ${sel} + div textarea, ${sel} + span input, ${sel} + div [contenteditable="true"]`).first();
-              if (await sibling.isVisible({ timeout: 500 }).catch(() => false)) {
-                field = sibling;
                 break;
               }
             }
@@ -351,8 +460,17 @@ export class YandexBusinessClient {
           // If we found one, let's find ALL and fill them using localized labels
           const targets: Locator[] = [];
           for (const label of possibleLabels) {
-              const found = await page.locator(`label:has-text("${label}"), div:has-text("${label}"), span:has-text("${label}")`).locator('input, textarea').all();
-              targets.push(...found);
+              const selectors = [
+                `.ya-business-input:has-text("${label}") input`,
+                `.ya-business-textarea:has-text("${label}") textarea`,
+                `label:has-text("${label}") + div input`,
+                `label:has-text("${label}") + div textarea`,
+                `[placeholder*="${label}"]`
+              ];
+              for (const sel of selectors) {
+                  const found = await page.locator(sel).all();
+                  targets.push(...found);
+              }
           }
           
           console.log(`    (Attempt ${attempt}) Found ${targets.length} possible inputs for "${labelText}". Filling all...`);
@@ -361,17 +479,17 @@ export class YandexBusinessClient {
               try {
                   if (await t.isVisible({ timeout: 1000 })) {
                       await t.scrollIntoViewIfNeeded();
-                      await t.click({ force: true });
+                      await HumanBehavior.naturalClick(page, t);
                       await page.keyboard.press('Control+A');
                       await page.keyboard.press('Delete');
-                      await t.type(value, { delay: 50 });
+                      await HumanBehavior.typeLikeHuman(page, t, value);
                       await page.keyboard.press('Enter');
-                      await page.waitForTimeout(500);
+                      await HumanBehavior.sleep(500, 1000);
                   }
               } catch (e) {}
           }
           
-          await page.waitForTimeout(1000);
+          await HumanBehavior.sleep(1000, 2000);
           const actualValue = await this.getFieldValue(targets[0] || field);
           const html = await (targets[0] || field).evaluate(el => el.outerHTML);
           console.log(`    🔍 DEBUG Field HTML: ${html.substring(0, 200)}...`);
@@ -394,6 +512,45 @@ export class YandexBusinessClient {
     return false;
   }
 
+  /**
+   * Reads current organization data from the cabinet.
+   */
+  async getBasicInfo(): Promise<OrganizationData> {
+    const page = await this.getPage();
+    try {
+      await this.safeGoto(page, `https://yandex.ru/sprav/${this.orgId}/p/edit/`);
+      await this.handleAuthAndCaptcha(page);
+      
+      return await page.evaluate(() => {
+        const data: any = {};
+        const inputs = Array.from(document.querySelectorAll('input, textarea'));
+        
+        const findVal = (labels: string[]) => {
+            for (const label of labels) {
+                const input = inputs.find((i: any) => {
+                    const l = i.placeholder || "";
+                    const parent = i.closest('.ya-business-input, .ya-business-textarea');
+                    const labelText = parent?.querySelector('label, .ya-business-input__label')?.textContent || "";
+                    return l.includes(label) || labelText.includes(label);
+                });
+                if (input) return (input as any).value;
+            }
+            return "";
+        };
+
+        data.name = findVal(['Обычное название', 'Название']);
+        data.description = findVal(['Описание', 'О компании']);
+        data.website = findVal(['Сайт', 'Веб-сайт']);
+        data.emails = [findVal(['Электронная почта', 'Email'])].filter(Boolean);
+        data.phones = [findVal(['Телефон'])].filter(Boolean);
+        
+        return data as OrganizationData;
+      });
+    } finally {
+      await page.close();
+    }
+  }
+
   async updateBasicInfo(data: OrganizationData) {
     const page = await this.getPage();
     try {
@@ -401,23 +558,25 @@ export class YandexBusinessClient {
       await this.handleAuthAndCaptcha(page);
 
       console.log('  ⏬ Scrolling page to load all sections...');
-      for (let y = 0; y <= 6000; y += 800) { await page.evaluate(pos => window.scrollTo(0, pos), y); await page.waitForTimeout(400); }
+      for (let i = 0; i < 5; i++) { 
+          await HumanBehavior.naturalScroll(page); 
+      }
       await page.evaluate(() => window.scrollTo(0, 0));
-      await page.waitForTimeout(1000);
+      await HumanBehavior.sleep(1000, 2000);
       
       const results: Record<string, boolean> = {};
 
       if (data.workInterval) {
           const nonstopBtn = page.locator('button:has-text("Круглосуточно")').first();
           if (await nonstopBtn.isVisible().catch(() => false)) {
-            await nonstopBtn.click({ force: true });
+            await HumanBehavior.naturalClick(page, nonstopBtn);
             console.log('  ✓ Режим: Круглосуточно');
             results['workInterval'] = true;
           }
       }
 
-      // Fill simple string fields (SKIPPING description as requested)
-      const simpleFields = ['name', 'website', 'email'] as const;
+      // Fill simple string fields
+      const simpleFields = ['name', 'website', 'email', 'description'] as const;
       for (const key of simpleFields) {
         const val = key === 'email' ? (data.emails?.[0]) : data[key];
         if (val) {

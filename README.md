@@ -16,7 +16,7 @@ Professional automation suite for Yandex Business card optimization using Playwr
 ### 1. 🖼️ Медиа и Гео-привязка
 - **Автоматический инжект GPS**: При загрузке фото скрипт автоматически вшивает координаты организации (56.294876, 43.998914) в EXIF.
 - **Категоризация**: Умная загрузка в разделы «Экстерьер», «Интерьер» и «Вход».
-- **Скрипт**: `npx tsx scripts/sync-media.ts`
+- **Скрипт**: `npx tsx scripts/upload-and-seo-media.ts` (Загрузка + SEO-теги).
 
 ### 2. 💰 Прайс-листы (YML)
 - **SEO-синхронизация**: Загрузка товаров и услуг через YML-фиды с автоматическим подтверждением публикации.
@@ -24,17 +24,23 @@ Professional automation suite for Yandex Business card optimization using Playwr
 ### 3. 📝 Публикации (Новости)
 - **Rich Posts**: Поддержка длинных текстов и одновременной загрузки нескольких изображений.
 - **Верификация**: Скрипт проверяет наличие поста в кабинете после создания.
-- **Скрипт**: `npx tsx scripts/verify-publications.ts`
 
-### 4. 📱 Сторис (Stories)
-- **Стандартные истории**: Создание новых историй через модальное окно с обходом ограничений React (прямые JS-клики, эмуляция событий ввода).
-- **Скрипт**: `npx tsx scripts/create-new-story.ts`
+### 4. 🕵️ Аналитика и FAQ (NEW)
+- **Niche Analyst**: Парсинг конкурентов и генерация `niche_config.json` с LSI-ключами.
+- **FAQ Sync**: Автоматическое наполнение раздела «Вопросы и ответы» на основе данных аналитика.
+- **Скрипты**: `scripts/niche-analyst.ts`, `scripts/sync-faq.ts`.
+
+### 5. 🛡️ Anti-Detection & Health (NEW)
+- **HumanBehavior**: Плавные движения мыши, натуральная печать, рандомные задержки.
+- **Health Check**: Автоматическая проверка валидности сессии перед запуском.
+- **Скрипты**: `scripts/check-health.ts`, `src/HumanBehavior.ts`.
 
 ## 🛠 Project Structure
 - `src/YandexBusinessClient.ts`: Основной движок автоматизации.
-- `scripts/sync-media.ts`: Полная синхронизация медиа и прайса.
-- `scripts/create-new-story.ts`: Мастер создания новых Сторис.
-- `scripts/verify-publications.ts`: Тестирование постов с картинками.
+- `src/HumanBehavior.ts`: Модуль эмуляции поведения человека.
+- `scripts/upload-and-seo-media.ts`: Полная синхронизация медиа с GPS и ALT-тегами.
+- `scripts/sync-faq.ts`: Мастер синхронизации FAQ.
+- `scripts/niche-analyst.ts`: Агент конкурентной разведки.
 
 ## 🚀 Быстрый старт
 1. **Синхронизация (Фото + Прайс + Пост)**:

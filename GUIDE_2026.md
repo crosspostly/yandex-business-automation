@@ -1,21 +1,32 @@
-# Yandex Maps 2026: The Golden Standard
+# Guide 2026: Organic Promotion Blueprint
 
-This guide explains the strategic logic behind our automation and how to maintain a high-ranking business card.
+This guide integrates the latest (May 2026) insights for organic growth on Yandex Maps.
 
-## 1. The Power of Personas
-Instead of a generic script, we use specialized logic modules:
-- **SEO Expert**: Ensures "Маркетинговое агентство" and "SEO" keywords appear in the first 100 characters of the description. 
-- **Designer**: Every photo is processed to include EXIF metadata. For Klubika, we use `56.294876, 43.998914`.
-- **Content Manager**: Uses 'Events' for temporary promos and 'Stories' for daily algorithm signals.
+## 🚀 Key Ranking Factors
+1. **Category Accuracy**: First filter of the algorithm.
+2. **SEO Price List**: Mass injection of up to 500 positions with keywords (The "SEO Core").
+3. **Geo-Location**: Accurate physical address.
+4. **Site Sync**: SEO synergy between the website and the Maps card.
+5. **Photo SEO**: Mandatory ALT tags (keywords) + EXIF Geotags.
+6. **Attributes (Features)**: MUST be confirmed/updated every 3 months.
+7. **CTR & Behavior**: Visual appeal drives user interaction, which drives ranking.
 
-## 2. Technical Hacks for 2026
-- **Accessibility**: Filling "Доступность входа на инвалидной коляске" is the easiest way to jump ahead of 50% of competitors who leave it empty.
-- **YML Pricing**: Always use YML instead of manual entry. Yandex parses YML faster and indexes it for 'Goods' search in the main Yandex interface.
-- **Reviews**: Always respond within 24h. Our script targets 'unreplied' reviews first to minimize the 'Silent Gap'.
+## 📅 Weekly Rhythm (The "Live Card" Signal)
+| Days | Task | Details |
+| :--- | :--- | :--- |
+| **Mon / Tue** | Post + Photos | Publication with keywords + 2 photos with ALT tags. |
+| **Wed / Thu** | Reviews | Answer all new reviews (mention service + company name). |
+| **Fri / Sat** | Offers/Price | Update promotion or price list positions. |
+| **Every 3 Mon** | Attributes | Bulk confirmation of all organization features. |
 
-## 3. Deployment to Production (GitHub)
-- **Security**: Never commit `cookies/` or `.env`.
-- **Modularity**: Use `YandexBusinessClient` in your CI/CD pipelines to keep the card fresh automatically.
+## 🛠 Technical Requirements
+- **Photos**: Horizontal, real scenarios, no stock, no text on top.
+- **Posts**: Up to 3,000 chars, CTA at the end.
+- **Reviews**: Ask customers to mention specific services in their reviews.
 
-## 4. Why 24/7 Schedule?
-Even if you are an agency, having 'Always Open' status (if applicable) keeps your card in the 'Open Now' filter, which is the most used filter in Yandex Maps mobile app.
+## ⚠️ Critical Mistakes to Avoid
+- Buying fake reviews (IP tracking leads to shadowbans).
+- Template-only responses (Zero SEO value).
+- Activity gaps (Card goes "cold" in the eyes of the algorithm).
+- Generic descriptions like "Individual approach" (Low CTR).
+- Uploading photos without ALT/Geo metadata.
